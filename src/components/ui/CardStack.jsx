@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-const CardStack = ({ items, offset = 10, scaleFactor = 0.06 }) => {
+const CardStack = ({ items, offset = 12, scaleFactor = 0.08 }) => {
   const [cards, setCards] = useState(items);
 
   useEffect(() => {
@@ -22,13 +22,17 @@ const CardStack = ({ items, offset = 10, scaleFactor = 0.06 }) => {
   }, [items]);
 
   return (
-    <div className="relative h-60 w-60 md:h-60 md:w-96">
+    <div className="relative h-72 w-72 md:h-72 md:w-108">
       {cards.map((card, index) => (
         <motion.div
           key={card.id}
-          className="absolute bg-white dark:bg-black h-60 w-60 md:h-60 md:w-96 rounded-3xl p-4 shadow-xl border border-neutral-200 dark:border-white/10 shadow-black/10 dark:shadow-white/5 flex flex-col justify-between"
+          className="absolute h-72 w-72 md:h-72 md:w-108 rounded-3xl shadow-xl shadow-black/10 dark:shadow-white/5 flex flex-col justify-end"
           style={{
             transformOrigin: "top center",
+            backgroundImage: card.image ? `url(${card.image})` : "none", // Use image if available
+            backgroundColor: card.image ? "transparent" : "black", // Fallback to black background
+            backgroundSize: "cover", // Ensure image covers the card
+            backgroundPosition: "center", // Center the image
           }}
           animate={{
             top: index * -offset,
@@ -36,16 +40,18 @@ const CardStack = ({ items, offset = 10, scaleFactor = 0.06 }) => {
             zIndex: cards.length - index, // Decrease z-index for cards behind
           }}
         >
-          <div className="font-normal text-neutral-700 dark:text-neutral-200">
-            {card.content}
-          </div>
-          <div>
-            <p className="text-neutral-500 font-medium dark:text-white">
-              {card.name}
-            </p>
-            <p className="text-neutral-400 font-normal dark:text-neutral-200">
-              {card.designation}
-            </p>
+          {/* Gradient Overlay */}
+          <div
+            className="absolute bottom-0 left-0 right-0 h-20 rounded-b-3xl"
+            style={{
+              background: "linear-gradient(to top, black, black)",
+            }}
+          ></div>
+
+          {/* Text Content */}
+          <div className="relative p-4 text-white font-normal">
+            <h3 className="text-lg">{card.title}</h3>
+            <p className="text-sm text-muted">{card.description}</p>
           </div>
         </motion.div>
       ))}

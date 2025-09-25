@@ -13,8 +13,8 @@ const Button = ({ theme = "black", text, onClick, type, width, className }) => {
       } items-center justify-center px-6 py-2 text-md  hover:px-8 transition-all duration-300 cursor-pointer border-2 rounded-tl-xl rounded-br-xl relative hover:rounded-tl-none hover:rounded-br-none 
         ${
           isBlackTheme
-            ? "bg-primary text-white border-white hover:bg-white hover:text-black"
-            : "bg-primary text-black border-black hover:bg-black hover:text-white"
+            ? "bg-black text-white border-white hover:bg-white hover:text-black"
+            : "bg-white text-black border-black hover:bg-black hover:text-white"
         } ${className}`}
     >
       {text}
