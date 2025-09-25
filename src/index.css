@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+@theme {
+    --color-primary: #fd7e14;
+    --color-muted: #6c757d; /*for dark and light both*/
+    --color-line:rgb(20, 20, 20)
+}
+
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
