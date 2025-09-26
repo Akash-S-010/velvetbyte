@@ -40,6 +40,7 @@ const StickyScrollLayout = () => {
               "https://i.pinimg.com/736x/af/85/c9/af85c9cc2c2a8034f9be36a35dfb743a.jpg",
               "https://i.pinimg.com/736x/14/e1/b0/14e1b04d2f6a3bd6d409f85a1ad08164.jpg",
               "https://i.pinimg.com/736x/9c/6d/cf/9c6dcfb7317df7a432d397ebe7c11688.jpg",
+              "https://i.pinimg.com/736x/80/98/7e/80987e388dd2023cd6d527b999783fa4.jpg"
             ].map((src, i) => (
               <figure
                 key={i}
