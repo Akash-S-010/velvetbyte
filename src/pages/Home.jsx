@@ -5,6 +5,7 @@ import About from '../components/homeSections/About'
 import VideoSection from '../components/homeSections/VideoSection'
 import ServicesComponent from '../components/homeSections/ServicesComponent'
 import Footer from '../components/Footer'
+import StickySections from '../components/ui/StickySection'
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <About />
       <VideoSection />
       <ServicesComponent />
+      <StickySections />
       <Footer />
     </div>
   )

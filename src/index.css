@@ -5,6 +5,16 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+::-webkit-scrollbar {
+    width: 0.5rem;
+    background-color: var(--color-line);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary);
+    border-radius: 20px;
+}
+
 html {
     overflow-x: hidden;
     scroll-behavior: smooth;
