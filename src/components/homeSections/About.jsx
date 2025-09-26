@@ -36,7 +36,7 @@ const About = () => {
       {/* Left: Text Content */}
       <div className="flex-1 text-center lg:text-left">
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-semibold">
-          About Us
+          About <span className="text-primary">Us</span>
         </h2>
         <p className="text-base md:text-xl max-w-2xl text-gray-600 my-7 mx-auto lg:mx-0">
           At Velvetbyte, we specialize in delivering cutting-edge digital

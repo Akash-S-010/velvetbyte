@@ -16,7 +16,7 @@ const VideoSection = () => {
       </video>
       <div className="absolute inset-0 opacity-50 bg-black backdrop-blur z-2"></div>
       <div className="relative z-20 flex flex-col items-center justify-center h-full text-white text-center px-4">
-        <h2 className="text-3xl md:text-4xl lg:text-6xl font-semibold mb-4">Unlock Unique Ideas</h2>
+        <h2 className="text-3xl md:text-4xl lg:text-6xl font-semibold mb-4">Unlock Unique <span className="text-primary">Ideas</span></h2>
         <p className="text-lg max-w-xl">
           Today's businesses need more than just digital tools—they need clear
           strategic direction, backed by deep customer insight.
