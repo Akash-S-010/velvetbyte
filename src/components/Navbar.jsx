@@ -40,10 +40,10 @@ const Navbar = () => {
   return (
     <nav className="fixed w-full px-5 md:px-10 lg:px-20 py-10 bg-transparent z-50">
       <div className="w-full flex justify-between items-center">
-        <img src={logo} alt="logo" className="w-36" />
+        <img src={logo} alt="logo" className="w-36 cursor-pointer" onClick={() => navigate("/")} />
         <button className="text-white z-50" onClick={() => setIsOpen(true)}>
           <motion.div whileHover={{ scale: 1.1 }}>
-            <div className="text-white">
+            <div className="text-gray-500 cursor-pointer">
               <Menu size={28} />
             </div>
           </motion.div>
