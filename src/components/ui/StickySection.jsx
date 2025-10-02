@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { ShoppingCart, Code, BarChart2, Palette } from "lucide-react";
 import Button from "./Button";
 
@@ -15,13 +14,13 @@ const StickySections = () => {
         "https://i.pinimg.com/736x/e1/62/9c/e1629c2ef715f4e8be3a349f461dd6b9.jpg",
       ],
       description:
-        "Our creative agency builds growth-driven ecommerce solutions with a focus on performance, scalability, and design. From strategy to launch, we streamline development procedures, ensuring efficiency and quality. Specializing in WooCommerce and Shopify, we deliver tailored online stores that engage customers, strengthen brands, and drive measurable business success.thrives.",
+        "Our creative agency builds growth-driven ecommerce solutions with a focus on performance, scalability, and design. From strategy to launch, we streamline development procedures, ensuring efficiency and quality. Specializing in WooCommerce and Shopify, we deliver tailored online stores that engage customers, strengthen brands, and drive measurable business success.",
       technologies: [
         "Fully Bespoke Web Design",
         "Engaging User Experience",
         "SEO Optimised Websites",
         "WordPress CMS",
-        "Shopyfy & WooCommerce",
+        "Shopify & WooCommerce",
       ],
     },
     {
@@ -85,33 +84,24 @@ const StickySections = () => {
   ];
 
   return (
-    <div className="relative">
+    <div className="relative max-w-7xl mx-auto">
       {services.map((service, index) => (
-        <section key={index} className="min-h-screen bg-white">
+        <section key={index} className="bg-white py-10">
           <div className="grid grid-cols-2 h-full">
             {/* Left sticky title */}
-            <motion.div
-              className="sticky top-0 h-screen flex items-center justify-start pl-32 z-20"
-              initial={{ opacity: 0, y: -50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false }}
-              transition={{ duration: 0.5 }}
+            <div
+              className="sticky top-0 h-screen flex items-center justify-start pl-3 z-10"
+              style={{ willChange: "transform" }}
             >
-              <h1 className="text-6xl font-bold text-bold leading-tight">
+              <h1 className="text-6xl font-bold leading-tight">
                 {service.title}
               </h1>
-            </motion.div>
+            </div>
 
             {/* Right content panels */}
             <div className="relative">
               {/* Panel 1 - Image Grid with Color Swatches */}
-              <motion.div
-                className="min-h-screen flex items-start justify-start px-8 pt-20"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-              >
+              <div className="flex items-start justify-start px-8 pt-20">
                 <div className="w-full space-y-8">
                   <div className="grid grid-cols-2 gap-4">
                     {service.images.map((img, i) => (
@@ -120,6 +110,7 @@ const StickySections = () => {
                         src={img}
                         alt={`${service.title} ${i + 1}`}
                         className="w-full h-48 object-cover rounded-lg"
+                        loading="lazy"
                       />
                     ))}
                   </div>
@@ -135,32 +126,20 @@ const StickySections = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Panel 2 - Description */}
-              <motion.div
-                className="min-h-screen flex items-start justify-start px-8"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-              >
+              <div className="flex items-start justify-start px-8 py-12">
                 <div className="w-full space-y-8">
                   <p className="text-lg text-gray-700 max-w-2xl leading-relaxed">
                     {service.description}
                   </p>
-                  <Button text={"Get Started"} className="mt-8" theme="white"/>
+                  <Button text={"Get Started"} className="mt-8" theme="white" />
                 </div>
-              </motion.div>
+              </div>
 
               {/* Panel 3 - Technologies */}
-              <motion.div
-                className="min-h-screen flex items-start justify-start px-8"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-              >
+              <div className="flex items-start justify-start px-8 py-12">
                 <div className="w-full space-y-8">
                   {service.technologies.map((tech, i) => (
                     <h2
@@ -172,7 +151,7 @@ const StickySections = () => {
                     </h2>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -181,4 +160,4 @@ const StickySections = () => {
   );
 };
 
-export default StickySections;
+export default React.memo(StickySections);
