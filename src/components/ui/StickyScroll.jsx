@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import Button from "./Button";
 
 const StickyScrollLayout = () => {
@@ -58,42 +57,6 @@ const StickyScrollLayout = () => {
           </div>
         </div>
       </section>
-
-      {/* IMAGE GRID RIGHT / TEXT LEFT */}
-      {/* <section className="text-white w-full bg-black">
-        <div className="grid grid-cols-2 px-8">
-          <div className="sticky top-0 h-screen grid place-content-center text-left px-10">
-            <h1 className="text-4xl font-medium tracking-tight leading-[120%]">
-              Web Design & Development
-            </h1>
-            <p className="mt-4 w-xl">
-              We create stunning and responsive websites that captivate your
-              audience and drive results. Our designs are tailored to reflect
-              your brand's identity and values.
-            </p>
-            <Button className="mt-4 w-50" text={"Learn More"} />
-          </div>
-          <div className="grid gap-2">
-            {[
-              "https://images.unsplash.com/photo-1718183120769-ece47f31045b?w=500&auto=format&fit=crop",
-              "https://images.unsplash.com/photo-1715432362539-6ab2ab480db2?w=500&auto=format&fit=crop",
-              "https://images.unsplash.com/photo-1685904042960-66242a0ac352?w=500&auto=format&fit=crop",
-              "https://images.unsplash.com/photo-1718838541476-d04e71caa347?w=500&auto=format&fit=crop",
-            ].map((src, i) => (
-              <figure
-                key={i}
-                className="sticky top-0 h-screen grid place-content-center"
-              >
-                <img
-                  src={src}
-                  alt=""
-                  className="transition-all duration-300 w-96 h-96 object-cover rounded-md"
-                />
-              </figure>
-            ))}
-          </div>
-        </div>
-      </section> */}
     </div>
   );
 };
