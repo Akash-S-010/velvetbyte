@@ -10,9 +10,9 @@ const Card = ({
   linkHref = "#",
 }) => {
   return (
-    <div className="w-full h-[460px] group mx-auto dark:bg-black bg-white border border-gray-800 overflow-hidden rounded-md dark:text-white text-black shadow-lg transition-all duration-300 cursor-pointer ">
+    <div className="w-full h-[400px] sm:h-[460px] group mx-auto dark:bg-black bg-white border border-gray-800 overflow-hidden rounded-md dark:text-white text-black shadow-lg transition-all duration-300 cursor-pointer">
       {/* Image Section */}
-      <figure className="w-full h-80 group-hover:h-72 transition-all duration-300 dark:bg-gray-950 bg-[#f0f5fa] p-2 rounded-md relative overflow-hidden">
+      <figure className="w-full h-64 sm:h-80 group-hover:h-56 sm:group-hover:h-72 transition-all duration-300 dark:bg-gray-950 bg-[#f0f5fa] p-2 rounded-md relative overflow-hidden">
         {/* Gradient overlay */}
         <div
           style={{
@@ -29,20 +29,20 @@ const Card = ({
             alt={title}
             width={600}
             height={600}
-            className="absolute -bottom-1 group-hover:-bottom-5 right-0 h-64 w-[80%] rounded-lg object-cover transition-all duration-300"
+            className="absolute -bottom-1 group-hover:-bottom-5 right-0 h-56 sm:h-64 w-[80%] rounded-lg object-cover transition-all duration-300"
           />
         )}
       </figure>
 
       {/* Text Content */}
-      <article className="p-4 space-y-2 text-left">
-        <h1 className="text-xl font-semibold capitalize">{title}</h1>
-        <p className="text-muted leading-[120%]">{description}</p>
+      <article className="p-3 sm:p-4 space-y-1 sm:space-y-2 text-left">
+        <h1 className="text-lg sm:text-xl font-semibold capitalize">{title}</h1>
+        <p className="text-muted text-sm sm:text-base leading-[120%] line-clamp-2 sm:line-clamp-none">{description}</p>
 
         {/* Link */}
         <Link
           to={linkHref}
-          className="text-base text-primary font-medium flex gap-1 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300"
+          className="text-sm sm:text-base text-primary font-medium flex gap-1 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300"
         >
           {linkText}
           <MoveRight className="ml-2" />

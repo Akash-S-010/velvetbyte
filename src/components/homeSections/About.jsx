@@ -32,13 +32,13 @@ const About = () => {
 
 
   return (
-    <section className="min-h-screen flex flex-col lg:flex-row items-center justify-center gap-12 px-5 py-8 md:px-10 lg:px-30 bg-white text-black">
+    <section className="min-h-screen flex flex-col lg:flex-row items-center justify-center gap-8 sm:gap-12 px-4 sm:px-5 py-8 md:px-10 lg:px-30 bg-white text-black">
       {/* Left: Text Content */}
-      <div className="flex-1 text-center lg:text-left">
-        <h2 className="text-3xl md:text-5xl lg:text-6xl font-semibold">
+      <div className="flex-1 text-center lg:text-left w-full px-2 sm:px-4">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-semibold">
           About <span className="text-primary">Us</span>
         </h2>
-        <p className="text-base md:text-xl max-w-2xl text-gray-600 my-7 mx-auto lg:mx-0">
+        <p className="text-sm sm:text-base md:text-xl max-w-2xl text-gray-600 my-4 sm:my-7 mx-auto lg:mx-0">
           At Velvetbyte, we specialize in delivering cutting-edge digital
           solutions that empower businesses to thrive in the digital world. Our
           team of talented developers and designers work tirelessly to create
@@ -49,8 +49,8 @@ const About = () => {
       </div>
 
       {/* Right: Cards */}
-      <div className="flex-1 flex justify-center">
-        <CardStack items={cardData} offset={12} scaleFactor={0.08} />
+      <div className="flex-1 flex justify-center w-full mt-6 lg:mt-0">
+        <CardStack items={cardData} offset={10} scaleFactor={0.06} />
       </div>
     </section>
   );
