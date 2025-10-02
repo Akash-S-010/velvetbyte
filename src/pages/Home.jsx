@@ -7,6 +7,7 @@ import ServicesComponent from '../components/homeSections/ServicesComponent'
 import Footer from '../components/Footer'
 import StickySections from '../components/ui/StickySection'
 import ContactSection from '../components/homeSections/ContactSection'
+import PortfolioSection from '../components/homeSections/PortfolioSection'
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <VideoSection />
       <ServicesComponent />
       <StickySections />
+      <PortfolioSection />
       <ContactSection />
       <Footer />
     </div>
