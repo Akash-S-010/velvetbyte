@@ -26,7 +26,7 @@ const StickyScrollLayout = () => {
       {/* Second section contend*/}
       <section className="text-white w-full bg-black hidden md:block">
         <div className="grid grid-cols-2">
-          <div className="sticky top-0 h-screen flex items-center justify-center">
+          <div className="sticky top-0 reen flex items-center justify-center">
             <h1 className="2xl:text-7xl text-5xl px-8 font-semibold text-center tracking-tight leading-[120%]">
               We Have The Best
               <br />
