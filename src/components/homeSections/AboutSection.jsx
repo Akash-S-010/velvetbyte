@@ -2,7 +2,7 @@ import React from "react";
 import CardStack from "../ui/CardStack";
 import Button from "../ui/Button";
 
-const About = () => {
+const AboutSection = () => {
   const cardData = [
   {
     id: 1,
@@ -56,4 +56,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutSection;

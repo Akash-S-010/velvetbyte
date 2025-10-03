@@ -7,14 +7,14 @@ import Footer from '../components/Footer'
 import StickySections from '../components/ui/StickySection'
 import ContactSection from '../components/homeSections/ContactSection'
 import PortfolioSection from '../components/homeSections/PortfolioSection'
-import About from '../components/homesections/About'
+import AboutSection from '../components/homeSections/AboutSection'
 
 const Home = () => {
   return (
     <div className='h-screen'>
       <Navbar />
       <Hero />
-      <About />
+      <AboutSection />
       <VideoSection />
       <ServicesComponent />
       <StickySections />
