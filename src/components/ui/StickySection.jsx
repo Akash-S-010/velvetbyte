@@ -90,7 +90,7 @@ const StickySections = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 h-full">
             {/* Left sticky title */}
             <div
-              className="sticky top-[0px] md:top-0 h-auto md:h-screen flex items-start justify-start pl-0  z-60 md:items-center md:justify-center"
+              className="sticky top-[0px] md:top-0 h-auto md:h-screen flex items-start justify-start pl-0  z-60 md:items-center md:justify-start"
               style={{ willChange: "transform" }}
             >
               <h1 className="text-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-gray-200 md:bg-transparent p-2 inline-block">
