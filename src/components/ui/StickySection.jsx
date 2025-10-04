@@ -84,7 +84,7 @@ const StickySections = () => {
   ];
 
   return (
-    <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="relative max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
       {services.map((service, index) => (
         <section key={index} className="bg-white py-6 sm:py-10">
           <div className="grid grid-cols-1 md:grid-cols-2 h-full">

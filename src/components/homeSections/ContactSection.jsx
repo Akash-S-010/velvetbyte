@@ -26,7 +26,7 @@ const ContactSection = () => {
     </div>
 
      {/* Contact Form */}
-      <div className="bg-white text-black min-h-screen flex flex-col items-center justify-center space-y-8 sm:space-y-14 px-4 py-12">
+      <div className="bg-white text-black min-h-screen flex flex-col items-center justify-center space-y-8 sm:space-y-14 px-6 py-12">
         <div>
           <h1 className="text-xl sm:text-2xl md:text-4xl font-semibold">Let's Talk</h1>
         </div>

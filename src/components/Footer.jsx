@@ -5,7 +5,7 @@ import logo from "../assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-gray-400 py-12 px-6 md:px-12 lg:px-20">
+    <footer className="bg-black text-gray-400 py-12 px-2 md:px-12 lg:px-20">
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Tagline */}
