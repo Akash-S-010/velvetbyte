@@ -114,7 +114,7 @@ const StickySections = () => {
                       />
                     ))}
                   </div>
-                  <div className="flex flex-wrap gap-2 sm:gap-0 sm:space-x-4">
+                  {/* <div className="flex flex-wrap gap-2 sm:gap-0 sm:space-x-4">
                     <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-blue-300 rounded-lg flex items-center justify-center">
                       <span className="text-xs sm:text-sm text-white">#72CDFB</span>
                     </div>
@@ -124,7 +124,7 @@ const StickySections = () => {
                     <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-white rounded-lg flex items-center justify-center">
                       <span className="text-xs sm:text-sm text-black">#FFFFFF</span>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 

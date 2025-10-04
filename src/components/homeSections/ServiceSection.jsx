@@ -1,10 +1,10 @@
 import React from "react";
-import StickyScrollLayout from "../ui/StickyScroll";
+import StickySection from "../ui/StickySection";
 
 const ServicesComponent = () => {
   return (
     <>
-      <StickyScrollLayout />
+      <StickySection />
     </>
   );
 };

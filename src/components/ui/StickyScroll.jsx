@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "./Button";
 
-const StickyScrollLayout = () => {
+const StickyScroll = () => {
   return (
     <div>
       {/* HERO */}
@@ -62,4 +62,4 @@ const StickyScrollLayout = () => {
   );
 };
 
-export default StickyScrollLayout;
+export default StickyScroll;

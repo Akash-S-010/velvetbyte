@@ -2,12 +2,12 @@ import React from 'react'
 import Hero from '../components/homeSections/Hero'
 import Navbar from '../components/Navbar'
 import VideoSection from '../components/homeSections/VideoSection'
-import ServicesComponent from '../components/homeSections/ServicesComponent'
 import Footer from '../components/Footer'
-import StickySections from '../components/ui/StickySection'
 import ContactSection from '../components/homeSections/ContactSection'
 import PortfolioSection from '../components/homeSections/PortfolioSection'
 import AboutSection from '../components/homeSections/AboutSection'
+import ServiceSection from '../components/homeSections/ServiceSection'
+import StickyScroll from '../components/ui/StickyScroll'
 
 const Home = () => {
   return (
@@ -16,8 +16,8 @@ const Home = () => {
       <Hero />
       <AboutSection />
       <VideoSection />
-      <ServicesComponent />
-      <StickySections />
+      <StickyScroll />
+      <ServiceSection />
       <PortfolioSection />
       <ContactSection />
       <Footer />
