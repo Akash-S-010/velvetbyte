@@ -2,7 +2,7 @@ import React from "react";
 
 const CreativeWebSection = () => {
   return (
-    <section className="bg-white py-16">
+    <section className="bg-white py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left Images */}
         <div className="flex flex-col gap-6">
