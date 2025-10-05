@@ -14,7 +14,7 @@ import CreativeWebSection from '../components/homeSections/CreativeWebSection'
 const Home = () => {
   return (
     <div className='h-screen'>
-      <Navbar />
+      
       <Hero />
       <AboutSection />
       <ArticlePreviews />
