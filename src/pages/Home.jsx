@@ -8,6 +8,8 @@ import PortfolioSection from '../components/homeSections/PortfolioSection'
 import AboutSection from '../components/homeSections/AboutSection'
 import ServiceSection from '../components/homeSections/ServiceSection'
 import StickyScroll from '../components/ui/StickyScroll'
+import ArticlePreviews from '../components/homeSections/ArticlePreviews'
+import CreativeWebSection from '../components/homeSections/CreativeWebSection'
 
 const Home = () => {
   return (
@@ -15,7 +17,9 @@ const Home = () => {
       <Navbar />
       <Hero />
       <AboutSection />
+      <ArticlePreviews />
       <VideoSection />
+      <CreativeWebSection />
       <StickyScroll />
       <ServiceSection />
       <PortfolioSection />
