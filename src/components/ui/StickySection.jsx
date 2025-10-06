@@ -13,7 +13,7 @@ const StickySections = ({ services }) => {
               className="sticky top-[0px] md:top-0 h-auto md:h-screen flex items-start justify-start pl-0  z-60 md:items-center md:justify-start"
               style={{ willChange: "transform" }}
             >
-              <h1 className="text-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-gray-200 w-full md:w-1/2 md:bg-transparent p-2 inline-block">
+              <h1 className="text-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-gray-200 w-full md:w-lg md:bg-transparent p-2 inline-block">
                 {service.title}
               </h1>
             </div>

@@ -1,13 +1,11 @@
 import React from "react";
 import StickySection from "../ui/StickySection";
-import { ShoppingCart, Code, BarChart2, Palette } from "lucide-react";
 
 
 const ServicesComponent = () => {
   const services = [
     {
       title: "Ecommerce Website Development",
-      icon: <ShoppingCart size={48} />,
       images: [
         "https://i.pinimg.com/736x/e1/62/9c/e1629c2ef715f4e8be3a349f461dd6b9.jpg",
         "https://i.pinimg.com/736x/8d/02/39/8d0239697ffc0840e7e19d5356a8228c.jpg",
@@ -26,7 +24,6 @@ const ServicesComponent = () => {
     },
     {
       title: "Website Design & Development",
-      icon: <Code size={48} />,
       images: [
         "https://i.pinimg.com/736x/e1/62/9c/e1629c2ef715f4e8be3a349f461dd6b9.jpg",
         "https://i.pinimg.com/736x/8d/02/39/8d0239697ffc0840e7e19d5356a8228c.jpg",
@@ -47,7 +44,6 @@ const ServicesComponent = () => {
     },
     {
       title: "Digital Marketing",
-      icon: <BarChart2 size={48} />,
       images: [
         "https://i.pinimg.com/736x/e1/62/9c/e1629c2ef715f4e8be3a349f461dd6b9.jpg",
         "https://i.pinimg.com/736x/8d/02/39/8d0239697ffc0840e7e19d5356a8228c.jpg",
@@ -66,7 +62,6 @@ const ServicesComponent = () => {
     },
     {
       title: "Graphic Design",
-      icon: <Palette size={48} />,
       images: [
         "https://i.pinimg.com/736x/e1/62/9c/e1629c2ef715f4e8be3a349f461dd6b9.jpg",
         "https://i.pinimg.com/736x/8d/02/39/8d0239697ffc0840e7e19d5356a8228c.jpg",

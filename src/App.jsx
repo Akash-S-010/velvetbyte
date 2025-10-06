@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ContactUs from "./pages/ContactUs";
 import Footer from "./components/Footer";
 import ScrollProgressBar from "./components/ui/ScrollProgressBar";
+import Services from "./pages/Services";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/services" element={<Services />} />
         </Routes>
         <Footer />
       </Router>
