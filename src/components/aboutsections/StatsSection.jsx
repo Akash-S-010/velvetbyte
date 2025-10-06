@@ -46,7 +46,7 @@ const StatsSection = () => {
   );
 };
 
-// Counter animation logic
+
 const CounterCard = ({ targetValue, label, visible }) => {
   const [count, setCount] = useState(0);
 
