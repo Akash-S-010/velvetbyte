@@ -33,7 +33,7 @@ const CreativeWebSection = () => {
           </div>
 
           <h2 className="text-4xl font-bold mb-6">
-            Creative<span className="text-pink-600">Web.</span>
+            Creative<span className="text-primary">{" "}Web.</span>
           </h2>
 
           <p className="text-gray-700 mb-4">
