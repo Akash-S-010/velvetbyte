@@ -31,7 +31,7 @@ const Services = () => {
         "https://i.pinimg.com/736x/e1/62/9c/e1629c2ef715f4e8be3a349f461dd6b9.jpg",
       ],
       description:
-        "Discover our cross-platform apps, designed with intuitive, user-friendly interfaces to captivate and engage customers. Seamlessly connect across devices, delivering immersive experiences that boost interaction, loyalty, and satisfaction. Elevate your brand with dynamic, responsive apps crafted to keep users hooked and drive meaningful engagement in every interaction.udience.",
+        "Discover our cross-platform apps, designed with intuitive, user-friendly interfaces to captivate and engage customers. Seamlessly connect across devices, delivering immersive experiences that boost interaction, loyalty, and satisfaction. Elevate your brand with dynamic, responsive apps crafted to keep users hooked and drive meaningful engagement in every interaction.",
       technologies: [
         "Fully Responsive Designs",
         "Animated & Interactive",
