@@ -86,7 +86,7 @@ const Footer = () => {
 
         {/* Brand Name */}
         <div className="text-center mt-12 py-12 border-t border-line border-b ">
-            <h1 className="text-5xl font-semibold text-muted">Unlock Your <span className="text-primary">Success</span></h1>
+            <h1 className="text-2xl md:text-5xl font-semibold text-muted">Unlock Your <span className="text-primary">Success</span></h1>
         </div>
 
         <div className=" flex justify-between">
