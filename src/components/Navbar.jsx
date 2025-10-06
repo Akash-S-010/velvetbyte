@@ -1,215 +1,256 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import styled, { keyframes } from 'styled-components';
 
-// The CSS as a JavaScript template literal string
-const NAVBAR_STYLES = `
-/* --- Variables for consistency --- */
-:root {
-  --black: #000000;
-  --white: #ffffff;
-  --red: #f0003c; /* A strong red for the dot */
-}
+// --- STYLED COMPONENTS (CSS-in-JS) ---
 
-/* --- Main Navbar Container --- */
-.navbar {
+const COLORS = {
+  primaryOrange: '#FF9900',
+  textDark: '#000000',
+  buttonBackground: '#000000',
+  buttonText: '#FFFFFF',
+};
+
+// 1. Navbar Container
+const NavbarContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 5%; 
-  background-color: var(--white);
-  position: relative; 
-  min-height: 80px; 
+  padding: 15px 30px;
+  background-color: white;
+  height: 80px;
+  width: 100%;
+  box-sizing: border-box;
   z-index: 100;
-}
+  border-bottom: 1px solid #f0f0f0;
 
-/* --- Logo Styling --- */
-.navbar-logo {
-  display: flex;
-  align-items: flex-end; 
+  @media (max-width: 600px) {
+    padding: 15px 20px;
+  }
+`;
+
+// 2. Logo
+const Logo = styled(Link)`
   font-family: Arial, sans-serif;
-  font-size: 2.2rem;
-  font-weight: 900; 
-  line-height: 1; 
-  z-index: 101; 
-}
-
-.logo-text-black {
-  color: var(--black);
-}
-
-.logo-dot-red {
-  color: var(--red);
-  font-size: 3rem; 
-  margin-left: -5px; 
-}
-
-/* --- CTA Button Styling (Start a Project) --- */
-.navbar-cta-wrapper {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-}
-
-.cta-button {
-  background-color: var(--black);
-  color: var(--white);
-  border: none;
-  padding: 12px 25px;
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: 700;
+  color: ${COLORS.textDark};
+  text-decoration: none;
   cursor: pointer;
+
+  &::after {
+    content: '.';
+    color: ${COLORS.primaryOrange};
+    font-size: 1.5em;
+    line-height: 0;
+    vertical-align: top;
+    font-weight: 900;
+    margin-left: 1px;
+  }
+`;
+
+// 3. Right-Side Controls
+const Controls = styled.div`
   display: flex;
   align-items: center;
-  border-radius: 0; 
-  transition: background-color 0.3s;
-}
+`;
 
-.cta-button:hover {
-  background-color: #333333;
-}
+// 4. Start A Project Button
+const StartProjectButton = styled(Link)`
+  background-color: ${COLORS.buttonBackground};
+  color: ${COLORS.buttonText};
+  font-weight: 600;
+  font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-right: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+  display: flex;
+  align-items: center;
 
-.arrow-icon {
-  margin-left: 10px;
-  font-size: 1.2rem;
-  line-height: 1;
-}
+  &:hover {
+    background-color: #333;
+  }
 
-/* --- Hamburger Button Styling --- */
-.hamburger-button {
+  &::before,
+  &::after {
+    content: '/';
+    margin: 0 5px;
+    color: ${COLORS.primaryOrange};
+    font-weight: 400;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+// 5. Hamburger Button
+const HamburgerButton = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 30px;
   height: 25px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
   padding: 0;
-  margin-left: 20px; 
-  z-index: 101; 
-}
-
-.line {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: var(--black);
-  transition: all 0.3s ease-in-out;
-}
-
-/* --- Mobile Menu Overlay Styling --- */
-.mobile-menu-overlay {
-  position: fixed; /* Use fixed to cover the entire viewport */
-  top: 80px; /* Start right below the navbar (assuming navbar height is ~80px) */
-  left: 0;
-  width: 100%;
-  height: calc(100vh - 80px); /* Fill the rest of the screen */
-  transform: translateX(100%); /* Start off-screen to the right */
-  background-color: var(--white);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 99; 
-  padding-bottom: 20px;
-  transition: transform 0.4s ease-out;
-  overflow-y: auto; /* Allow scrolling if menu content is large */
-}
-
-.mobile-menu-overlay.open {
-  transform: translateX(0); /* Slide into view */
-}
-
-.mobile-menu-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: left;
-}
-
-.mobile-menu-list li {
-  padding: 15px 5%;
-  border-bottom: 1px solid #eeeeee;
-}
-
-.mobile-menu-list a {
-  text-decoration: none;
-  color: var(--black);
-  font-size: 1.2rem;
-  font-weight: 600;
-  display: block; 
-  transition: color 0.2s;
-}
-
-.mobile-menu-list a:hover {
-  color: var(--red);
-}
-
-/* --- Desktop View: Hide the mobile menu --- */
-@media (min-width: 992px) {
-  .mobile-menu-overlay {
-    display: none; 
-  }
-}
+  margin-left: 15px;
+  z-index: 101;
 `;
 
-// Helper component to inject the style tag once
-const GlobalStyleInjector = ({ styles }) => {
-  useEffect(() => {
-    // Check if the style tag already exists to prevent duplicates
-    if (!document.getElementById('navbar-style-injector')) {
-      const style = document.createElement('style');
-      style.id = 'navbar-style-injector';
-      style.textContent = styles;
-      document.head.appendChild(style);
-    }
-  }, [styles]); // Dependency on styles (though it won't change)
+const BurgerLine = styled.div`
+  width: 100%;
+  height: 3px;
+  background-color: ${COLORS.textDark};
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  transform-origin: 1px;
+`;
 
-  return null; // This component doesn't render anything itself
-};
+// Animations
+const slideIn = keyframes`
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+`;
 
+const slideOut = keyframes`
+  from { transform: translateX(0); }
+  to { transform: translateX(100%); }
+`;
+
+const fadeIn = keyframes`
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+`;
+
+// Sidebar
+const SidebarOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 400px;
+  max-width: 90%;
+  background-color: ${COLORS.buttonBackground};
+  color: ${COLORS.buttonText};
+  padding: 80px 40px;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  animation: ${({ isOpen }) => (isOpen ? slideIn : slideOut)} 0.5s forwards;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 600px) {
+    width: 100%;
+    padding: 80px 20px;
+  }
+`;
+
+const SidebarList = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin-top: 50px;
+`;
+
+const SidebarItem = styled.li`
+  margin-bottom: 25px;
+  opacity: 0;
+  animation: ${({ isOpen }) => (isOpen ? fadeIn : 'none')} 0.8s forwards;
+  animation-delay: ${({ delay }) => delay}s;
+`;
+
+const SidebarLink = styled(Link)`
+  color: ${COLORS.buttonText};
+  text-decoration: none;
+  font-size: 36px;
+  font-weight: 700;
+  transition: color 0.3s;
+
+  &:hover {
+    color: ${COLORS.primaryOrange};
+  }
+
+  @media (max-width: 600px) {
+    font-size: 28px;
+  }
+`;
+
+// --- REACT COMPONENT ---
 const Navbar = () => {
-  // State to manage the visibility of the mobile menu
   const [isOpen, setIsOpen] = useState(false);
 
-  // Function to toggle the menu's state
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleSidebar = () => setIsOpen(!isOpen);
+
+  const menuItems = [
+    { name: 'About', href: '/about' },
+    { name: 'Services', href: '/services' },
+    { name: 'Portfolio', href: '/portfolio' },
+    { name: 'Contact', href: '/contact' },
+  ];
+
+  // Prevent background scroll when sidebar open
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : 'unset';
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
+  // Sidebar component
+  const Sidebar = () => (
+    <SidebarOverlay isOpen={isOpen}>
+      <SidebarList>
+        {menuItems.map((item, index) => (
+          <SidebarItem
+            key={item.name}
+            isOpen={isOpen}
+            delay={0.2 + index * 0.1}
+            onClick={toggleSidebar}
+          >
+            <SidebarLink to={item.href}>{item.name}</SidebarLink>
+          </SidebarItem>
+        ))}
+      </SidebarList>
+    </SidebarOverlay>
+  );
 
   return (
-    // Inject the CSS into the document head
     <>
-      <GlobalStyleInjector styles={NAVBAR_STYLES} />
-      
-      <nav className="navbar">
-        {/* Logo/Brand Name */}
-        <div className="navbar-logo">
-          <span className="logo-text-black">creative</span>
-          <span className="logo-dot-red">.</span>
-        </div>
+      <NavbarContainer>
+       <div className="logo">velvetbyte.</div>
 
-        {/* Primary Call-to-Action Button */}
-        <div className="navbar-cta-wrapper">
-          <button className="cta-button">
-            Start a Project <span className="arrow-icon">→</span>
-          </button>
-        </div>
+        <Controls>
+          <button className="start-project-btn">
 
-        {/* Hamburger Icon */}
-        <button className="hamburger-button" onClick={toggleMenu} aria-label="Toggle menu">
-          <span className="line"></span>
-          <span className="line"></span>
-          <span className="line"></span>
-        </button>
+            <span>Start A Project</span>
 
-        {/* Full-Screen Mobile Menu Overlay */}
-        <div className={`mobile-menu-overlay ${isOpen ? 'open' : ''}`}>
-          <ul className="mobile-menu-list">
-            <li><a href="#home" onClick={toggleMenu}>Home</a></li>
-            <li><a href="#about" onClick={toggleMenu}>About Us</a></li>
-            <li><a href="#contact" onClick={toggleMenu}>Contact Us</a></li>
-            <li><a href="#blog" onClick={toggleMenu}>Blog</a></li>
-            <li><a href="#portfolio" onClick={toggleMenu}>Portfolio</a></li>
-          </ul>
-        </div>
-      </nav>
+          </button>
+
+          <HamburgerButton onClick={toggleSidebar} aria-expanded={isOpen}>
+            <BurgerLine
+              style={{
+                transform: isOpen
+                  ? 'rotate(45deg) translate(2px, 2px)'
+                  : 'rotate(0)',
+              }}
+            />
+            <BurgerLine style={{ opacity: isOpen ? 0 : 1 }} />
+            <BurgerLine
+              style={{
+                transform: isOpen
+                  ? 'rotate(-45deg) translate(2px, -2px)'
+                  : 'rotate(0)',
+              }}
+            />
+          </HamburgerButton>
+        </Controls>
+      </NavbarContainer>
+
+      {isOpen && <Sidebar />}
     </>
   );
 };

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import StickySection from "../components/ui/StickySection";
 
@@ -122,3 +123,14 @@ const Services = () => {
 };
 
 export default Services;
+=======
+import React from 'react'
+
+function Services() {
+  return (
+    <div>Services</div>
+  )
+}
+
+export default Services
+>>>>>>> 9be1767 (about us)

@@ -10,32 +10,9 @@ function Hero() {
 
  {/* Header Section */}
 
-<header className="header">
 
-        <div className="logo">velvetbyte.</div>
 
-        <div className="nav-actions">
-
-          <button className="start-project-btn">
-
-            <span>Start A Project</span>
-
-          </button>
-
-          <div className="hamburger-menu">
-
-            <span></span>
-
-            <span></span>
-
-            <span></span>
-
-          </div>
-
-        </div>
-
-      </header>
-
+        
 
 
       {/* Scroll Indicator */}

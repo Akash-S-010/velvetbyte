@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 
 const Portfolio = () => {
@@ -9,3 +10,14 @@ const Portfolio = () => {
 }
 
 export default Portfolio
+=======
+import React from 'react'
+
+function Portfolio() {
+  return (
+    <div>Portfolio</div>
+  )
+}
+
+export default Portfolio
+>>>>>>> 9be1767 (about us)
