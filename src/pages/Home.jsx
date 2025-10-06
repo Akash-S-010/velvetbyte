@@ -8,7 +8,6 @@ import ServiceSection from '../components/homeSections/ServiceSection'
 import StickyScroll from '../components/ui/StickyScroll'
 import ArticlePreviews from '../components/homeSections/ArticlePreviews'
 import CreativeWebSection from '../components/homeSections/CreativeWebSection'
-import ContactUs from './ContactUs'
 
 const Home = () => {
   return (
@@ -21,7 +20,6 @@ const Home = () => {
       <StickyScroll />
       <ServiceSection />
       <PortfolioSection />
-      <ContactUs />
     </>
   )
 }
