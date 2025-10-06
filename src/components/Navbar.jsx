@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 
-// --- STYLED COMPONENTS (CSS-in-JS) ---
-
 const COLORS = {
   primaryOrange: '#FF9900',
   textDark: '#000000',
@@ -186,7 +184,8 @@ const Navbar = () => {
   const toggleSidebar = () => setIsOpen(!isOpen);
 
   const menuItems = [
-    { name: 'About', href: '/about' },
+    {name:'Home' ,href:'/'},
+    { name: 'About', href: '/aboutus' },
     { name: 'Services', href: '/services' },
     { name: 'Portfolio', href: '/portfolio' },
     { name: 'Contact', href: '/contact' },

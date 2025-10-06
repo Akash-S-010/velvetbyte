@@ -82,7 +82,13 @@ function Hero() {
         </div>
 
 
+  <div className="scroll-indicator">
 
+        <span className="scroll-circle"></span>
+
+        <span className="scroll-text">SCROLL DOWN</span>
+
+      </div>
         {/* Large, faded background text */}
 
         <div className="faded-bg-text">

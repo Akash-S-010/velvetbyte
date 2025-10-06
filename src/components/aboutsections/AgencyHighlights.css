@@ -1,0 +1,121 @@
+/* Color Variables for easy theme change */
+:root {
+  --dark-background: #191919;
+  --dark-orange: #D97F37; /* The primary accent color */
+  --light-text: #E0E0E0;
+  --faded-text: #A0A0A0;
+}
+
+/* --- Main Section Styling --- */
+.agency-highlights-section {
+  background-color: var(--dark-background);
+  color: var(--light-text);
+  padding: 60px 8%; /* Top/bottom padding and horizontal spacing */
+  position: relative;
+  overflow: hidden; /* To contain the absolute button */
+  min-height: 450px; /* Ensure sufficient height */
+}
+
+/* --- Header Area --- */
+.section-header {
+  margin-bottom: 40px;
+}
+
+.dot-prefix {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: var(--dark-orange);
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: var(--faded-text);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 5px 0;
+}
+
+.main-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0;
+  max-width: 600px;
+}
+
+/* --- Highlights Container --- */
+.highlights-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px; /* Space between the items */
+  padding-top: 40px; /* Space from the main title */
+}
+
+/* --- Individual Highlight Item --- */
+.highlight-item {
+  flex: 1; /* Distribute space equally */
+  max-width: 300px; /* Limit width on very large screens */
+}
+
+.highlight-dot {
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--dark-orange);
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.highlight-title {
+  color: var(--light-text);
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 10px 0;
+}
+
+.highlight-description {
+  color: var(--faded-text);
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --- CTA Button --- */
+.cta-button {
+  position: absolute;
+  bottom: 0;
+  right: 0; /* Position at the bottom right corner */
+  
+  /* Button specific styles */
+  background-color: var(--dark-orange);
+  color: var(--dark-background);
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  padding: 20px 30px;
+  cursor: pointer;
+  font-size: 14px;
+  
+  /* Rounded corner only for the top-left to mimic the original image */
+  border-top-left-radius: 8px; 
+}
+
+/* Optional: Media Query for Responsiveness */
+@media (max-width: 768px) {
+  .highlights-container {
+    flex-direction: column;
+  }
+  
+  .highlight-item {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .cta-button {
+    /* Adjust position for smaller screens if needed */
+    bottom: 0;
+    right: 0;
+  }
+}

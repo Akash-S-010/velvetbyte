@@ -162,9 +162,7 @@ const CreativeWebHero = () => {
       <ScrollIndicator />
       
       {/* The 'Speak To Us' button is fixed to the viewport, which is why its container is the main HeroContainer */}
-      <SpeakToUsButton href="#contact">
-        SPEAK TO US
-      </SpeakToUsButton>
+    
     </HeroContainer>
   );
 };
