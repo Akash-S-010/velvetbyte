@@ -6,19 +6,15 @@
 }
 
 ::-webkit-scrollbar {
-    width: 0.5rem;
-    background-color: var(--color-line);
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: var(--color-primary);
-    border-radius: 20px;
+    display: none;
 }
 
 html {
     overflow-x: hidden;
+    overflow-y: hidden;
     scroll-behavior: smooth;
 }
+
 
 @theme {
     --color-primary: #fd7e14;
