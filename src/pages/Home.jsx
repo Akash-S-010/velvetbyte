@@ -12,7 +12,7 @@ import ContactUs from './ContactUs'
 
 const Home = () => {
   return (
-    <div className='h-screen'>
+    <>
       <Hero />
       <AboutSection />
       <ArticlePreviews />
@@ -22,8 +22,7 @@ const Home = () => {
       <ServiceSection />
       <PortfolioSection />
       <ContactUs />
-      <Footer />
-    </div>
+    </>
   )
 }
 
