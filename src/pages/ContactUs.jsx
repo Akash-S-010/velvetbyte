@@ -20,12 +20,12 @@ const ContactUs = () => {
             <FloatingInput label="Required Service" type="text" />
           </div>
           <FloatingInput label="Message" type="text" />
-          <div className="pt-4 sm:pt-8">
+          <div className="sm:pt-8 flex justify-between items-center">
+            <p className="text-sm text-muted"><span className="text-primary">*</span> We promise not to disclose your personal information to third parties.</p>
             <Button
               text="Send Message"
               theme="white"
               type={"submit"}
-              width={"full"}
             />
           </div>
         </form>
