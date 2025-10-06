@@ -40,13 +40,13 @@ function Hero() {
 
       {/* Scroll Indicator */}
 
-      <div className="scroll-indicator">
+{/*       <div className="scroll-indicator">
 
         <span className="scroll-circle"></span>
 
         <span className="scroll-text">SCROLL DOWN</span>
 
-      </div>
+      </div> */}
 
 
 
