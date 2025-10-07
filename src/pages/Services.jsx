@@ -115,7 +115,7 @@ const Services = () => {
 
   return (
     <section className="min-h-screen">
-      <div className="relative w-full h-[50vh] overflow-hidden bg-black">
+      <div className="relative w-full h-[50vh] overflow-hidden">
         <video
           autoPlay
           loop
