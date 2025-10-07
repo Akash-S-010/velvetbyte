@@ -1,5 +1,6 @@
 import React from "react";
 import "./Home.css";
+import Button from "../ui/Button";
 
 function Hero() {
   return (
@@ -41,7 +42,7 @@ function Hero() {
               <span className="bold-text">web experiences</span> for aspiring &
               established businesses and enterprises.{" "}
             </p>
-            <button className="work-btn">Our Work</button>{" "}
+            <Button text="Learn More" className={"mx-auto"} theme="white"/>
           </div>{" "}
           {/* <div className="scroll-indicator">
             <span className="scroll-circle"></span>{" "}

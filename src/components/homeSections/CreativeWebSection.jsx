@@ -1,4 +1,6 @@
 import React from "react";
+import Button from "../ui/Button";
+import { Navigate } from "react-router-dom";
 
 const CreativeWebSection = () => {
   return (
@@ -55,9 +57,7 @@ const CreativeWebSection = () => {
             clients a competitive edge and delivering strong ROI on their investment.
           </p>
 
-          <button className="px-4 sm:px-6 py-2 sm:py-3 border border-gray-800 rounded-lg text-sm sm:text-base hover:bg-gray-900 hover:text-white transition w-full sm:w-auto">
-            About Us
-          </button>
+          <Button theme="white" text="About Us" onClick={() => {()=>Navigate('/about')}} />
         </div>
       </div>
     </section>
