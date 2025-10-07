@@ -13,7 +13,7 @@ import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
-    <div>
+    <div className="pt-16">
       <ScrollProgressBar />
       <Router>
         <Navbar />

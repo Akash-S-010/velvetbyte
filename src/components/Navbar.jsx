@@ -308,7 +308,7 @@ const Navbar = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-40 bg-white/60 backdrop-blur-md transition-opacity duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-40 bg-white/80 backdrop-blur-md transition-opacity duration-300 ${
           isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
