@@ -4,7 +4,7 @@ import { Navigate } from "react-router-dom";
 
 const CreativeWebSection = () => {
   return (
-    <section className="bg-white py-8 sm:py-12 md:py-16 lg:py-24">
+    <section className="bg-white py-8 sm:py-12 md:py-16 lg:py-24 px-6 md:px-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
         {/* Left Images */}
         <div className="flex flex-col gap-4">
