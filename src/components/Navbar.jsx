@@ -258,9 +258,10 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Menu, X, MoveRight } from "lucide-react";
+import { Link} from "react-router-dom";
 import logoDark from "../assets/logoDark.png";
+
 
 const navItems = [
   { name: "Home", to: "/" },
@@ -272,7 +273,7 @@ const navItems = [
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(true); // Initialize as true
+  const [isVisible, setIsVisible] = useState(true);
 
   const mobileMenuVariants = {
     closed: { opacity: 0, x: "100%", transition: { duration: 0.3 } },
@@ -289,7 +290,6 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    // Set initial visibility based on scroll position
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       setIsVisible(currentScrollY <= 0 || window.scrollY < lastScrollY);
@@ -298,7 +298,6 @@ const Navbar = () => {
 
     let lastScrollY = window.scrollY;
 
-    // Check initial scroll position on mount
     setIsVisible(window.scrollY <= 0);
 
     window.addEventListener("scroll", handleScroll);
@@ -321,12 +320,7 @@ const Navbar = () => {
             </div>
 
             <div className="flex items-center space-x-4">
-              <Link
-                to="/signup"
-                className="bg-gray-900 text-white hover:bg-gray-800 rounded-lg px-4 py-2 font-medium transition-all duration-200"
-              >
-                Get Started
-              </Link>
+              <button onClick={()=>{window.location.href="/contact"}} className="bg-gray-900 text-white hover:bg-gray-700 px-4 py-2 rounded-lg cursor-pointer transition-colors duration-200">Start Now</button>
               <motion.button
                 className="text-gray-900 hover:bg-gray-100 rounded-lg p-2 transition-colors duration-200 cursor-pointer"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -360,40 +354,32 @@ const Navbar = () => {
               animate="open"
               exit="closed"
             >
-              <div className="space-y-6 p-6">
+              <div className="flex justify-end p-4">
+                <motion.button
+                  className="text-gray-900 hover:bg-gray-100 rounded-lg p-2 transition-colors duration-200 cursor-pointer"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <X className="h-6 w-6" />
+                </motion.button>
+              </div>
+              <div className="flex flex-row justify-between px-6 pb-6">
                 <div className="space-y-1">
                   {navItems.map((item) => (
                     <motion.div key={item.name} variants={mobileItemVariants}>
                       <Link
                         to={item.to}
-                        className="text-gray-900 hover:bg-gray-100 block rounded-lg px-4 py-3 font-medium transition-colors duration-200"
+                        className="text-gray-900 hover:bg-gray-100 flex items-center rounded-lg px-4 py-3 font-medium transition-colors duration-200 group"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        {item.name}
+                        <span>{item.name}</span>
+                        <div className="ml-6">
+                          <MoveRight className="h-5 w-5 text-primary opacity-0 group-hover:opacity-100" />
+                        </div>
                       </Link>
                     </motion.div>
                   ))}
                 </div>
-
-                <motion.div
-                  className="border-t border-gray-200 pt-6 space-y-3"
-                  variants={mobileItemVariants}
-                >
-                  <Link
-                    to="/login"
-                    className="text-gray-900 hover:bg-gray-100 block w-full rounded-lg py-3 text-center font-medium transition-colors duration-200"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Sign In
-                  </Link>
-                  <Link
-                    to="/signup"
-                    className="bg-gray-900 text-white hover:bg-gray-800 block w-full rounded-lg py-3 text-center font-medium transition-all duration-200"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Get Started
-                  </Link>
-                </motion.div>
               </div>
             </motion.div>
           </>
