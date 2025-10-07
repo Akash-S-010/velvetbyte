@@ -1,6 +1,5 @@
 import React from "react";
 import StickySection from "../components/ui/StickySection";
-import Button from "../components/ui/Button";
 
 const Services = () => {
   const services = [
