@@ -1,9 +1,7 @@
 import React from "react";
 import Button from "./Button";
-import { useNavigate } from "react-router-dom";
 
 const StickySections = ({ services }) => {
-  const navigate = useNavigate();
   
   return (
     <div className="relative max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
@@ -56,7 +54,7 @@ const StickySections = ({ services }) => {
                   <p className="text-base sm:text-lg text-gray-700 max-w-2xl leading-relaxed">
                     {service.description}
                   </p>
-                  <Button text={"Get Started"} className="mt-4 sm:mt-6 md:mt-8" theme="white" onClick={()=>navigate("/contact")}/>
+                  <Button text={"Get Started"} className="mt-4 sm:mt-6 md:mt-8" theme="white" onClick={() => window.location.replace("/contact")}/>
                 </div>
               </div>
 
