@@ -45,7 +45,7 @@ const AboutSection = () => {
           innovative and user-friendly platforms that drive growth and
           engagement.
         </p>
-        <Button text="Learn More" theme="white" className={"mx-auto lg:mx-0"}/>
+        <Button text="Learn More" theme="white" className={"mx-auto lg:mx-0"} onClick={() => {window.location.href = "/aboutus"}}/>
       </div>
 
       {/* Right: Cards */}
