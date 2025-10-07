@@ -1,5 +1,6 @@
 import React from "react";
 import StickySection from "../components/ui/StickySection";
+import Button from "../components/ui/Button";
 
 const Services = () => {
   const services = [
@@ -107,17 +108,36 @@ const Services = () => {
         "IoT",
         "Automation",
         "Custom Software",
-        "Cloud Computing",],
+        "Cloud Computing",
+      ],
     },
   ];
 
   return (
-    <div className="min-h-screen">
-      <div>
-        
+    <section className="min-h-screen">
+      <div className="relative w-full h-[50vh] overflow-hidden bg-black">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover sm:object-fill"
+        >
+          <source
+            src="https://www.pexels.com/download/video/15196747/"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute inset-0 opacity-50 bg-black z-2"></div>
+        <div className="relative z-10 flex flex-col items-start justify-center h-full text-white text-start px-4 md:px-20">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-semibold mb-2 sm:mb-4 leading-18">
+            Services We <br /><span className="text-primary">Confidently</span> Deliver.
+          </h2>
+        </div>
       </div>
       <StickySection services={services} />
-    </div>
+    </section>
   );
 };
 
