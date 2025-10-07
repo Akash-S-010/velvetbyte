@@ -6,11 +6,14 @@ import Footer from "./components/Footer";
 import ScrollProgressBar from "./components/ui/ScrollProgressBar";
 import Services from "./pages/Services";
 
+import ScrollToTop from "./components/ui/ScrollToTop";
+
 const App = () => {
   return (
     <div>
       <ScrollProgressBar />
       <Router>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<ContactUs />} />
