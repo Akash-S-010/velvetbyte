@@ -1,6 +1,7 @@
 import React from "react";
 import StickySection from "../components/ui/StickySection";
 import videoBg from "../assets/videoBg.png";
+import serviceBg from "../assets/serviceBg.mp4";
 
 const Services = () => {
   const services = [
@@ -126,7 +127,7 @@ const Services = () => {
           className="absolute top-0 left-0 w-full h-full object-cover sm:object-fill"
         >
           <source
-            src="https://www.pexels.com/download/video/15196747/"
+            src={serviceBg}
             type="video/mp4"
           />
           Your browser does not support the video tag.
