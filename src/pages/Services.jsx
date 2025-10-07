@@ -1,5 +1,6 @@
 import React from "react";
 import StickySection from "../components/ui/StickySection";
+import videoBg from "../assets/videoBg.png";
 
 const Services = () => {
   const services = [
@@ -120,6 +121,8 @@ const Services = () => {
           loop
           muted
           playsInline
+          poster={videoBg}
+          preload="auto"
           className="absolute top-0 left-0 w-full h-full object-cover sm:object-fill"
         >
           <source
