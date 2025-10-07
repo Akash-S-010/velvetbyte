@@ -25,4 +25,9 @@ html {
     ::-webkit-scrollbar {
         display: none;
     }
+
+  .bg-fixed-attachment {
+    background-attachment: fixed;
+  }
+
 }
