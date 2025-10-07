@@ -12,7 +12,7 @@ const ContactUs = () => {
             Let's Talk
           </h1>
         </div>
-        <form className="w-full max-w-4xl space-y-8 sm:space-y-12">
+        <form className="w-full max-w-4xl space-y-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
             <FloatingInput label="Name" type="text" />
             <FloatingInput label="Email" type="email" />
@@ -20,12 +20,13 @@ const ContactUs = () => {
             <FloatingInput label="Required Service" type="text" />
           </div>
           <FloatingInput label="Message" type="text" />
-          <div className="sm:pt-8 flex justify-between items-center">
+          <div className="sm:pt-8 flex-col md:flex-row flex justify-between items-center">
             <p className="text-sm text-muted"><span className="text-primary">*</span> We promise not to disclose your personal information to third parties.</p>
             <Button
               text="Send Message"
               theme="white"
               type={"submit"}
+              className={"mt-5"}
             />
           </div>
         </form>

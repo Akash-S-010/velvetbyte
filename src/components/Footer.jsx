@@ -25,6 +25,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/aboutus" className="hover:text-primary">
+                  About Us
+                </Link>
+              </li>
+              <li>
                 <Link to="/services" className="hover:text-primary">
                   Services
                 </Link>
@@ -36,7 +41,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/contact" className="hover:text-primary">
-                  Contact Us
+                  Contact US
                 </Link>
               </li>
             </ul>
