@@ -7,7 +7,7 @@ const StickyScroll = () => {
       {/* HERO */}
       <section className="h-screen w-full bg-white text-black grid place-content-center sticky top-0">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
-        <h1 className="2xl:text-7xl text-6xl px-8 font-semibold text-center tracking-tight leading-[120%]">
+        <h1 className="text-3xl sm:text-4xl md:text-7xl px-8 font-semibold text-center tracking-tight leading-[120%]">
           We Present Unique Strategy for <br /> Your{" "}
           <span className="text-primary">Business.</span>
         </h1>

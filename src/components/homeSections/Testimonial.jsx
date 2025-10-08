@@ -118,10 +118,10 @@ const Testimonial = () => {
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center mx-auto"
         >
-          <h2 className="text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl font-semibold tracking-tighter mt-5">
+          <h2 className="text-center text-3xl sm:text-4xl md:text-6xl font-semibold tracking-tighter mt-5">
             <span className='text-primary'>Trusted</span> By <br />Startups and Entrepreneurs
           </h2>
-          <p className="text-center mt-5 opacity-75">
+          <p className="text-center text-xs md:text-lg mt-5 opacity-75">
             See what our customers have to say about us.
           </p>
         </motion.div>
