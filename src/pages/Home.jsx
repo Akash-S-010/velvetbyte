@@ -13,7 +13,6 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <AboutSection />
       <ArticlePreviews />
       <VideoSection />
       <CreativeWebSection />

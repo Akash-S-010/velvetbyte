@@ -44,10 +44,10 @@ function Hero() {
             </p>
             <Button text="Learn More" className={"mx-auto"} theme="white"/>
           </div>{" "}
-          {/* <div className="scroll-indicator">
+          <div className="scroll-indicator">
             <span className="scroll-circle"></span>{" "}
             <span className="scroll-text">SCROLL DOWN</span>{" "}
-          </div> */}
+          </div>
           {/* Large, faded background text */}{" "}
           <div className="faded-bg-text"> VELVET </div>{" "}
         </main>
