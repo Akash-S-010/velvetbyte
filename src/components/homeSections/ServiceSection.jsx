@@ -117,21 +117,21 @@ export const Card = ({
           scale,
           top: `calc(-5vh + ${i * 25}px)`,
         }}
-        className="text-white relative -top-[15%] h-[500px] w-[80%] rounded-xl p-12 shadow-lg transform transition-all duration-300 hover:shadow-xl flex items-center justify-between"
+        className="text-white relative top-0 md:-top-[15%] min-h-[400px] md:h-[500px] w-[90%] md:w-[80%] rounded-xl p-6 md:p-12 shadow-lg transform transition-all duration-300 hover:shadow-xl flex flex-col md:flex-row items-center justify-between"
       >
         {/* Left Content */}
-        <div className="w-[60%] flex flex-col justify-center">
+        <div className="w-full md:w-[60%] flex flex-col justify-center text-center md:text-left">
           <h2 className="text-4xl font-bold  mb-4 drop-shadow-lg">
             {title}
           </h2>
           <p className="text-gray-300 leading-relaxed mb-8">
             {description}
           </p>
-         <Button text="Get Started" theme="black" className={"w-50"}/>
+         <Button text="Get Started" theme="black" className={"w-50 mx-auto md:mx-0"}/>
         </div>
 
         {/* Right Content */}
-        <div className="w-[50%] flex justify-start ml-40">
+        <div className="w-full md:w-[50%] flex justify-center md:justify-start mt-8 md:mt-0 ml-0 md:ml-40">
           <ul className="text-lg md:text-2xl space-y-4">
             {technologies.map((tech, idx) => (
               <>
