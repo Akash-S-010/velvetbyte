@@ -27,8 +27,8 @@ const Hero = () => {
         </div>
         {/* Scroll Indicator */}
         <div className="absolute left-5 top-1/2 -translate-y-1/2 -rotate-90 flex items-center text-[10px] font-semibold tracking-wider text-gray-600 select-none">
-          <span className="w-2.5 h-2.5 border border-gray-500 rounded-full mr-2.5"></span>
-          <span className="text-gray-400">SCROLL DOWN</span>
+          <span className="w-2.5 h-2.5 border border-gray-500 rounded-full mr-2.5 hidden md:block"></span>
+          <span className="text-gray-400 hidden md:block">SCROLL DOWN</span>
         </div>
         {/* Faded Background Text */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[100px] md:text-[250px] font-black text-black/3 pointer-events-none whitespace-nowrap z-0">
