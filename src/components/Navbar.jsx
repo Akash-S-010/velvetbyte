@@ -306,7 +306,7 @@ const Navbar = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-40 bg-white/60 backdrop-blur-xl transition-opacity duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 bg-white/60 backdrop-blur-xl transition-opacity duration-300 ${
           isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
@@ -354,7 +354,7 @@ const Navbar = () => {
               onClick={() => setIsMobileMenuOpen(false)}
             />
             <motion.div
-              className="fixed right-4 z-50 overflow-hidden rounded-2xl bg-white border border-gray-white md:border-gray-200 p-6 shadow-2xl flex justify-between items-center max-w-xl"
+              className="fixed right-4 z-50 overflow-hidden rounded-2xl bg-white border border-gray-200 p-6 shadow-2xl flex justify-between items-center max-w-xl"
               variants={mobileMenuVariants}
               initial="closed"
               animate="open"
@@ -383,9 +383,9 @@ const Navbar = () => {
                 <h3 className="text-lg font-semibold mb-2 text-gray-900">
                   Contact Info
                 </h3>
-                <p className="text-sm mb-2">📧 hello@velvetbyte.com</p>
-                <p className="text-sm mb-2">📞 +1 (555) 123-4567</p>
-                <p className="text-sm">🏢 123 Main Street, New York</p>
+                <p className="text-xs mb-2">📧 hello@velvetbyte.com</p>
+                <p className="text-xs mb-2">📞 +1 (555) 123-4567</p>
+                <p className="text-xs">🏢 123 Main Street, New York</p>
               </div>
             </motion.div>
           </>

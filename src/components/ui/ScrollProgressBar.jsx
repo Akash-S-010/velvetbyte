@@ -29,7 +29,7 @@ export default function ScrollProgressBar() {
   }, []);
 
   return (
-    <div className="fixed top-0 right-0 w-1 h-screen bg-transparent z-50">
+    <div className="fixed top-0 right-0 w-1 h-screen bg-transparent z-60">
       <div
         ref={barRef}
         className="w-full bg-gradient-to-b from-yellow-500 via-yellow-600 to-primary rounded-full transition-all duration-300 ease-out"
