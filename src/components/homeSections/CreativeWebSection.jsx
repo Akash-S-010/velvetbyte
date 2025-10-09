@@ -17,7 +17,7 @@ const CreativeWebSection = () => {
             <img
               src="https://i.postimg.cc/Z54MFG3J/3d-rendering-three-devices-with-responsive-directory-interior-design-website-screen-wooden-desktop-t.jpg"
               alt="Creative work 2"
-              className="rounded-2xl shadow-lg w-44 md:w-60 h-40 object-cover max-w-full"
+              className="rounded-2xl shadow-lg w-38 md:w-60 h-40 object-cover max-w-full"
             />
           </div>
           <img

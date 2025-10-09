@@ -259,9 +259,8 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, MoveRight } from "lucide-react";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import logoDark from "../assets/logoDark.png";
-
 
 const navItems = [
   { name: "Home", to: "/" },
@@ -307,7 +306,7 @@ const Navbar = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-40 bg-white/80 backdrop-blur-md transition-opacity duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-40 bg-white/60 backdrop-blur-xl transition-opacity duration-300 ${
           isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
@@ -320,9 +319,16 @@ const Navbar = () => {
             </div>
 
             <div className="flex items-center space-x-4">
-              <button onClick={()=>{window.location.href="/contact"}} className="bg-gray-900 text-white hover:bg-gray-700 px-4 py-2 rounded-lg cursor-pointer transition-colors duration-200">Start Now</button>
+              <button
+                onClick={() => {
+                  window.location.href = "/contact";
+                }}
+                className="bg-black text-white hover:bg-gray-900 rounded-tl-lg rounded-br-lg text-sm md:text-base px-2 md:px-4 py-1 cursor-pointer transition"
+              >
+                Start Now
+              </button>
               <motion.button
-                className="text-gray-900 hover:bg-gray-100 rounded-lg p-2 transition-colors duration-200 cursor-pointer"
+                className="text-gray-900 rounded-lg p-2 transition duration-200 cursor-pointer"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 whileTap={{ scale: 0.95 }}
               >
@@ -341,45 +347,45 @@ const Navbar = () => {
         {isMobileMenuOpen && (
           <>
             <motion.div
-              className="fixed inset-0 z-40 bg-black/20 backdrop-blur-sm"
+              className="fixed inset-0 z-40 bg-black/20 backdrop-blur-xs"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsMobileMenuOpen(false)}
             />
             <motion.div
-              className="fixed top-16 right-4 z-50 w-80 overflow-hidden rounded-2xl bg-white border border-gray-200 shadow-2xl"
+              className="fixed right-4 z-50 overflow-hidden rounded-2xl bg-white border border-gray-white md:border-gray-200 p-6 shadow-2xl flex justify-between items-center max-w-xl"
               variants={mobileMenuVariants}
               initial="closed"
               animate="open"
               exit="closed"
             >
-              <div className="flex justify-end p-4">
-                <motion.button
-                  className="text-gray-900 hover:bg-gray-100 rounded-lg p-2 transition-colors duration-200 cursor-pointer"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <X className="h-6 w-6" />
-                </motion.button>
+              {/* Left: Menu Links */}
+              <div className="flex-1 pr-10 md:mr-10 border-r border-gray-300">
+                {navItems.map((item) => (
+                  <motion.div key={item.name} variants={mobileItemVariants}>
+                    <Link
+                      to={item.to}
+                      className="text-gray-700 hover:text-black flex items-center rounded-lg px-3 py-2 font-medium transition-colors duration-200 group"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      <span>{item.name}</span>
+                      <div className="ml-6">
+                        <MoveRight className="h-5 w-5 text-primary opacity-0 group-hover:opacity-100" />
+                      </div>
+                    </Link>
+                  </motion.div>
+                ))}
               </div>
-              <div className="flex flex-row justify-between px-6 pb-6">
-                <div className="space-y-1">
-                  {navItems.map((item) => (
-                    <motion.div key={item.name} variants={mobileItemVariants}>
-                      <Link
-                        to={item.to}
-                        className="text-gray-900 hover:bg-gray-100 flex items-center rounded-lg px-4 py-3 font-medium transition-colors duration-200 group"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        <span>{item.name}</span>
-                        <div className="ml-6">
-                          <MoveRight className="h-5 w-5 text-primary opacity-0 group-hover:opacity-100" />
-                        </div>
-                      </Link>
-                    </motion.div>
-                  ))}
-                </div>
+
+              {/* Right: Contact Info */}
+              <div className="flex-1 text-gray-700 hidden md:block">
+                <h3 className="text-lg font-semibold mb-2 text-gray-900">
+                  Contact Info
+                </h3>
+                <p className="text-sm mb-2">📧 hello@velvetbyte.com</p>
+                <p className="text-sm mb-2">📞 +1 (555) 123-4567</p>
+                <p className="text-sm">🏢 123 Main Street, New York</p>
               </div>
             </motion.div>
           </>

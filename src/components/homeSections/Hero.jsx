@@ -42,7 +42,7 @@ function Hero() {
               <span className="bold-text">web experiences</span> for aspiring &
               established businesses and enterprises.{" "}
             </p>
-            <Button text="Learn More" className={"mx-auto"} theme="white"/>
+            <Button text="Learn More" className={"mx-auto text-sm"} theme="white"/>
           </div>{" "}
           <div className="scroll-indicator">
             <span className="scroll-circle"></span>{" "}
