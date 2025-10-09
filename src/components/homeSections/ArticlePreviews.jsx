@@ -1,91 +1,6 @@
 import React from 'react';
 
-// A functional component for the small tag/button at the bottom
-const Tag = ({ children }) => (
-  <span
-    style={{
-      padding: '5px 10px',
-      marginRight: '8px',
-      border: '1px solid #ccc',
-      borderRadius: '20px',
-      fontSize: '14px',
-      whiteSpace: 'nowrap',
-      cursor: 'pointer',
-    }}
-  >
-    {children}
-  </span>
-);
-
-// A functional component for a single article card
-const ArticleCard = ({ title, summary, tags, imageUrl }) => (
-  <div
-    style={{
-      flex: '1 1 30%',
-      margin: '10px',
-      maxWidth: '350px',
-      minWidth: '250px',
-    }}
-  >
-    {/* Image Area */}
-    <div
-      style={{
-        width: '100%',
-        height: '200px',
-        backgroundColor: '#000',
-        marginBottom: '15px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        color: 'white',
-        fontSize: '18px',
-        fontWeight: 'bold',
-        borderRadius: '5px',
-        overflow: 'hidden',
-        backgroundImage: `url(${imageUrl})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
-      {!imageUrl && 'Image Placeholder'}
-    </div>
-
-    {/* Title */}
-    <h3 style={{ fontSize: '20px', fontWeight: 'bold', margin: '0 0 10px 0' }}>
-      {title}
-    </h3>
-
-    {/* Summary */}
-    <p style={{ fontSize: '16px', color: '#555', lineHeight: '1.4' }}>
-      {summary}
-    </p>
-
-    {/* Tags and Link */}
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        marginTop: '20px',
-      }}
-    >
-      <div>
-        {tags.map((tag, index) => (
-          <Tag key={index}>{tag}</Tag>
-        ))}
-      </div>
-      
-      {/* Link Arrow */}
-      <span style={{ fontSize: '20px', fontWeight: 'bold', marginLeft: '10px', cursor: 'pointer' }}>
-        &rarr;
-      </span>
-    </div>
-  </div>
-);
-
-// Main component to render all cards
 const ArticlePreviews = () => {
-  // Data for the three cards with your actual image URLs
   const articlesData = [
     {
       title: 'AI Websites: The Future of Lead Generation',
@@ -111,24 +26,31 @@ const ArticlePreviews = () => {
   ];
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'center',
-        padding: '20px',
-        fontFamily: 'Arial, sans-serif',
-      }}
-    >
-      {articlesData.map((article, index) => (
-        <ArticleCard
-          key={index}
-          title={article.title}
-          summary={article.summary}
-          tags={article.tags}
-          imageUrl={article.imageUrl}
-        />
-      ))}
+    <div className="container mx-auto px-4 py-12 mb-20 lg:px-24">
+      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-6 justify-center">
+        {articlesData.map((article, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col h-full cursor-pointer"
+          >
+            <img src={article.imageUrl} alt={article.title} className="w-full h-48 object-cover" />
+            <div className="p-4 flex flex-col flex-grow">
+              <h3 className="text-lg font-semibold text-gray-900">{article.title}</h3>
+              <p className="text-gray-600 mt-2 flex-grow">{article.summary}</p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {article.tags.map((tag, tagIndex) => (
+                  <button
+                    key={tagIndex}
+                    className="px-2 py-1 text-xs text-gray-800 rounded-full border border-gray-400"
+                  >
+                    {tag}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
