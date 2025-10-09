@@ -264,10 +264,10 @@ import logoDark from "../assets/logoDark.png";
 
 const navItems = [
   { name: "Home", to: "/" },
-  { name: "About Us", to: "/aboutus" },
+  { name: "About", to: "/aboutus" },
   { name: "Services", to: "/services" },
   { name: "Portfolio", to: "/portfolio" },
-  { name: "Contact Us", to: "/contact" },
+  { name: "Contact", to: "/contact" },
 ];
 
 const Navbar = () => {
@@ -384,8 +384,8 @@ const Navbar = () => {
                   Contact Info
                 </h3>
                 <p className="text-xs mb-2">📧 hello@velvetbyte.com</p>
-                <p className="text-xs mb-2">📞 +1 (555) 123-4567</p>
-                <p className="text-xs">🏢 123 Main Street, New York</p>
+                <p className="text-xs mb-2">📞 +91 1234567891</p>
+                <p className="text-xs">🏢 Kochi, Kerala</p>
               </div>
             </motion.div>
           </>

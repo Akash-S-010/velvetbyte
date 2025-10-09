@@ -1,3 +1,4 @@
+import { MoveRight } from 'lucide-react';
 import React from 'react';
 
 const ArticlePreviews = () => {
@@ -41,9 +42,10 @@ const ArticlePreviews = () => {
                 {article.tags.map((tag, tagIndex) => (
                   <button
                     key={tagIndex}
-                    className="px-2 py-1 text-xs text-gray-800 rounded-full border border-gray-400"
+                    className="px-2 py-1 text-xs text-gray-800 rounded-full border border-gray-400 flex items-center gap-2"
                   >
                     {tag}
+                    <MoveRight size={12} />
                   </button>
                 ))}
               </div>
