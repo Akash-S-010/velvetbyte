@@ -31,7 +31,7 @@ const StickyScroll = () => {
             </h1>
           </div>
 
-          <div className="grid gap-2">
+          <div className="grid gap-2 overflow-hidden">
             {[
               "https://i.pinimg.com/736x/99/e4/a4/99e4a4b5714b232dc966371cd0ae8709.jpg",
               "https://i.pinimg.com/736x/af/85/c9/af85c9cc2c2a8034f9be36a35dfb743a.jpg",

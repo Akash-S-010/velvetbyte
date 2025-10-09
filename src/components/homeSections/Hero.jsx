@@ -1,9 +1,10 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Button from "../ui/Button";
 
-function Hero() {
+const Hero = () => {
   return (
-    <div className="flex flex-col min-h-screen relative bg-white text-black font-sans">
+    <div className="min-h-screen w-full bg-white text-black relative">
       {/* Hero Section */}
       <main className="flex justify-center items-center text-center px-10 py-20 min-h-[calc(100vh-80px)] relative overflow-hidden">
         <div className="z-10 max-w-[650px]">
@@ -30,12 +31,12 @@ function Hero() {
           <span className="text-gray-400">SCROLL DOWN</span>
         </div>
         {/* Faded Background Text */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[250px] font-black text-black/3 pointer-events-none whitespace-nowrap z-0">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[100px] md:text-[250px] font-black text-black/3 pointer-events-none whitespace-nowrap z-0">
           VELVET
         </div>
       </main>
     </div>
   );
-}
+};
 
 export default Hero;
