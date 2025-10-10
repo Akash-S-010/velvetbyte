@@ -26,9 +26,7 @@ const ContactUs = () => {
         <div className="absolute inset-0 opacity-20 bg-black z-2"></div>
         <div className="relative z-10 flex items-center h-full text-white text-start px-5 md:px-20">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-semibold md:leading-18">
-            Ready to Start
-            <br />
-            your Next
+            Ready to Start<br />Your Next
             <span className="text-primary"> Project ?</span>
           </h2>
         </div>

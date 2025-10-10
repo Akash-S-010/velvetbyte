@@ -28,14 +28,14 @@ export default function ClientsSection() {
     <section className="bg-white mb-20">
       <div className="max-w-6xl mx-auto px-6 text-center">
         {/* Heading */}
-        <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-8">
+        <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-6">
           Trusted By Leading
           <br />
           <span className="text-primary">Companies</span>
         </h2>
 
         {/* Logo grid */}
-        <div className="flex flex-wrap justify-center gap-6 md:gap-10 items-center">
+        <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 md:gap-x-14 items-center">
           {clients.map((client) => (
             <div
               key={client.name}
