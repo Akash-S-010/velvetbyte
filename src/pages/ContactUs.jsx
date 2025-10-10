@@ -34,7 +34,7 @@ const ContactUs = () => {
         </div>
       </div>
       {/* Contact Form */}
-      <div className="bg-white text-black flex flex-col items-center justify-center space-y-8 sm:space-y-14 px-10 py-18">
+      <div className="bg-white text-black flex flex-col items-center justify-center space-y-8 sm:space-y-14 px-8 py-18">
         <div>
           <h1 className="text-xl sm:text-2xl md:text-4xl font-semibold">
             Let's Talk
@@ -85,7 +85,7 @@ const ContactUs = () => {
 
           <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-10 mt-16">
             {/* Email */}
-            <div className="bg-gray-100 hover:shadow-md transition p-4 rounded-md">
+            <div className="bg-gray-100/70 hover:shadow-md transition p-4 rounded-md">
               <div className="text-primary bg-primary/10 p-2.5 rounded-full w-fit">
                 <Mail className="w-5 h-5" />
               </div>
@@ -102,7 +102,7 @@ const ContactUs = () => {
             </div>
 
             {/* Office */}
-            <div className="bg-gray-100 hover:shadow-md transition p-4 rounded-md">
+            <div className="bg-gray-100/70 hover:shadow-md transition p-4 rounded-md">
               <div className="text-primary bg-primary/10 p-2.5 rounded-full w-fit">
                 <MapPin className="w-5 h-5" />
               </div>
@@ -112,7 +112,7 @@ const ContactUs = () => {
             </div>
 
             {/* Phone */}
-            <div className="bg-gray-100 hover:shadow-md transition p-4 rounded-md">
+            <div className="bg-gray-100/70 hover:shadow-md transition p-4 rounded-md">
               <div className="text-primary bg-primary/10 p-2.5 rounded-full w-fit">
                 <Phone className="w-5 h-5" />
               </div>
