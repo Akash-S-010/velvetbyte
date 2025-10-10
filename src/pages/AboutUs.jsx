@@ -1,23 +1,19 @@
-import React from 'react'
-import CreativeWebHero from '../components/aboutsections/CreateWebHero'
-import Navbar from '../components/Navbar'
-import StatsSection from '../components/aboutsections/StatsSection'
-import AgencyHighlights from '../components/aboutsections/AgencyHighlights'
-import SpeakUsBtn from '../components/ui/SpeakUsBtn'
-import CareerOpportunities from '../components/aboutsections/CareerOpportunities'
+import React from "react";
+import CreativeWebHero from "../components/aboutsections/CreateWebHero";
+import StatsSection from "../components/aboutsections/StatsSection";
+import AgencyHighlights from "../components/aboutsections/AgencyHighlights";
+import CareerOpportunities from "../components/aboutsections/CareerOpportunities";
+import SpeakUsBtn from "../components/ui/SpeakUsBtn";
 function AboutUs() {
   return (
     <div>
-        
-      
-        <CreativeWebHero/>
-        <StatsSection/>
-        <AgencyHighlights/>
-        <SpeakUsBtn/>
-        <CareerOpportunities/>
-
+      <CreativeWebHero />
+      <StatsSection />
+      <AgencyHighlights />
+      <CareerOpportunities />
+      <SpeakUsBtn>Speak to Us</SpeakUsBtn>
     </div>
-  )
+  );
 }
 
-export default AboutUs
+export default AboutUs;
