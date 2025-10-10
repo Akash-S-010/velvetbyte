@@ -4,8 +4,8 @@ import FloatingInput from "../components/ui/FloatingInput";
 import videoBg from "../assets/contactVideoBg.png";
 import contactBg from "../assets/contactBg.mp4";
 import { Mail, MapPin, Phone } from "lucide-react";
-import whatsapp from "../assets/whatsapp.png";
 import ClientsSection from "../components/ui/ClientSection";
+import WhatsappBtn from "../components/ui/WhatsappBtn";
 
 const ContactUs = () => {
   return (
@@ -25,7 +25,7 @@ const ContactUs = () => {
         </video>
         <div className="absolute inset-0 opacity-20 bg-black z-2"></div>
         <div className="relative z-10 flex items-center h-full text-white text-start px-5 md:px-20">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-semibold leading-18 md:leading-18">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-semibold md:leading-18">
             Ready to Start
             <br />
             your Next
@@ -125,22 +125,7 @@ const ContactUs = () => {
           </div>
         </div>
       </section>
-      {/* WhatsApp Button */}
-      <a
-        href="https://wa.me/919865214756"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 flex items-center justify-center size-16 bg-white rounded-full shadow-lg hover:bg-gray-200 transition-colors"
-        aria-label="Contact us on WhatsApp"
-      >
-        <img
-          src={whatsapp}
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          className="size-full"
-        />
-      </a>
+      <WhatsappBtn />
     </>
   );
 };

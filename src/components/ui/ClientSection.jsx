@@ -35,7 +35,7 @@ export default function ClientsSection() {
         </h2>
 
         {/* Logo grid */}
-        <div className="flex flex-wrap justify-center gap-6 md:gap-10 items-center">
+        <div className="flex flex-wrap justify-center gap-x-6 md:gap-x-16 items-center">
           {clients.map((client) => (
             <div
               key={client.name}

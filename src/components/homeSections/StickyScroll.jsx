@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./Button";
+import Button from "../ui/Button";
 
 const StickyScroll = () => {
   return (
@@ -21,7 +21,7 @@ const StickyScroll = () => {
 
 
       {/* Second section contend*/}
-      <section className="text-white w-full bg-slate-950 relative z-10 hidden md:block">
+      <section className="text-white w-full bg-black relative z-10 hidden md:block">
         <div className="grid grid-cols-2">
           <div className="sticky top-0 h-screen flex items-center justify-end">
             <h1 className="text-2xl md:text-4xl lg:text-7xl font-semibold text-center tracking-tight leading-[120%]">
