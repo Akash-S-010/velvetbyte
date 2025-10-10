@@ -7,11 +7,13 @@ import StickyScroll from '../components/ui/StickyScroll'
 import ArticlePreviews from '../components/homeSections/ArticlePreviews'
 import CreativeWebSection from '../components/homeSections/CreativeWebSection'
 import Testimonial from '../components/homeSections/Testimonial'
+import ClientSection from '../components/ui/ClientSection'
 
 const Home = () => {
   return (
     <>
       <Hero />
+      <ClientSection />
       <ArticlePreviews />
       <VideoSection />
       <CreativeWebSection />

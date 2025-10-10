@@ -2,6 +2,7 @@ import React from "react";
 import StickySection from "../components/ui/StickySection";
 import videoBg from "../assets/videoBg.png";
 import serviceBg from "../assets/serviceBg.mp4";
+import ClientsSection from "../components/ui/ClientSection";
 
 const Services = () => {
   const services = [
@@ -126,22 +127,23 @@ const Services = () => {
           preload="auto"
           className="absolute top-0 left-0 w-full h-full object-cover sm:object-fill"
         >
-          <source
-            src={serviceBg}
-            type="video/mp4"
-          />
+          <source src={serviceBg} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 opacity-50 bg-black z-2"></div>
         <div className="relative z-10 flex items-center h-full text-white text-start px-5 md:px-20">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-semibold leadming-18 md:leading-18">
-            Services We <br /><span className="text-primary">Confidently</span> Deliver.
+            Services We <br />
+            <span className="text-primary">Confidently</span> Deliver.
           </h2>
         </div>
+      </div>
+      <div className="mt-20">
+        <ClientsSection />
       </div>
       <StickySection services={services} />
     </section>
   );
 };
 
-export default Services
+export default Services;
