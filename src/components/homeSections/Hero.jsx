@@ -31,7 +31,7 @@ const Hero = () => {
           <span className="text-gray-400 hidden md:block">SCROLL DOWN</span>
         </div>
         {/* Faded Background Text */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[100px] md:text-[250px] font-black text-black/3 pointer-events-none whitespace-nowrap z-0">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[100px] md:text-[250px] font-black text-black/4 pointer-events-none whitespace-nowrap z-0">
           VELVET
         </div>
       </main>

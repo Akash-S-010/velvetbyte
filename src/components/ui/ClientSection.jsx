@@ -35,7 +35,7 @@ export default function ClientsSection() {
         </h2>
 
         {/* Logo grid */}
-        <div className="flex flex-wrap justify-center gap-10 items-center">
+        <div className="flex flex-wrap justify-center gap-6 md:gap-10 items-center">
           {clients.map((client) => (
             <div
               key={client.name}
@@ -44,7 +44,7 @@ export default function ClientsSection() {
               <img
                 src={client.logo}
                 alt={client.name}
-                className="size-30 md:h-12 object-contain"
+                className="size-20 md:size-30 object-contain"
               />
             </div>
           ))}
