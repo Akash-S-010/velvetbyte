@@ -60,7 +60,7 @@ const NotFoundPage = () => {
           >
             <button
               onClick={handleGoHome}
-              className="flex items-center bg-primary/80 hover:bg-primary transition-colors px-6 py-3 rounded-lg cursor-pointer font-semibold"
+              className="text-white flex  items-center bg-primary/80 hover:bg-primary transition-colors px-6 py-3 rounded-lg cursor-pointer font-semibold"
               aria-label="Go to home"
             >
               <Home className="w-5 h-5 mr-2 transition-transform duration-200 group-hover:scale-105" />

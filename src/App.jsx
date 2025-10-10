@@ -16,7 +16,7 @@ const App = () => {
   return (
     <div className="pt-16">
       <ScrollProgressBar />
-      <FollowingCursor />
+      {/* <FollowingCursor /> */}
       <Router>
         <Navbar />
         <ScrollToTop />
