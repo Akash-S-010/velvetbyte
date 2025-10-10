@@ -28,7 +28,7 @@ export default function ClientsSection() {
     <section className="bg-white mb-20">
       <div className="max-w-6xl mx-auto px-6 text-center">
         {/* Heading */}
-        <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-12">
+        <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-8">
           Trusted By Leading
           <br />
           <span className="text-primary">Companies</span>
