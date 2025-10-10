@@ -3,11 +3,12 @@ import Hero from '../components/homeSections/Hero'
 import VideoSection from '../components/homeSections/VideoSection'
 import PortfolioSection from '../components/homeSections/PortfolioSection'
 import ServiceSection from '../components/homeSections/ServiceSection'
-import StickyScroll from '../components/ui/StickyScroll'
+import StickyScroll from '../components/homeSections/StickyScroll'
 import ArticlePreviews from '../components/homeSections/ArticlePreviews'
 import CreativeWebSection from '../components/homeSections/CreativeWebSection'
 import Testimonial from '../components/homeSections/Testimonial'
 import ClientSection from '../components/ui/ClientSection'
+import WhatsappBtn from '../components/ui/WhatsappBtn'
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
       <ServiceSection />
       <PortfolioSection />
       <Testimonial />
+      <WhatsappBtn />
     </>
   )
 }
