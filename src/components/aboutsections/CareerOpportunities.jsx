@@ -30,7 +30,7 @@ const CareerOpportunities = () => {
     >
       {/* Header */}
       <div className="mb-12 sm:mb-16">
-        <span className="inline-block w-2 h-2 sm:w-2.5 sm:h-2.5 bg-orange-500 rounded-full mr-2"></span>
+        <span className="inline-block w-2 h-2 sm:w-2.5 sm:h-2.5 bg-primary rounded-full mr-2"></span>
         <p className="uppercase text-gray-500 tracking-wide text-xs sm:text-sm inline-block">
           Open Positions
         </p>

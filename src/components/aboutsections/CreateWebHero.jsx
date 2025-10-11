@@ -5,7 +5,7 @@ const CreativeWebHero = () => {
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 text-center relative px-5 py-20 font-sans">
       {/* Header Tag */}
       <div className="flex items-center mb-5">
-        <div className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></div>
+        <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
         <span className="text-gray-500 font-medium text-sm">CreativeWeb</span>
       </div>
 
@@ -24,14 +24,6 @@ const CreativeWebHero = () => {
 
       {/* Scroll Indicator */}
       <div className="w-6 h-6 border-2 border-gray-500 rounded-full opacity-70 hover:opacity-100 transition"></div>
-
-      {/* Speak To Us Button */}
-      <a
-        href="#contact"
-        className="fixed right-10 bottom-10 w-28 h-28 bg-yellow-400 text-white font-semibold text-sm flex items-center justify-center rounded-full shadow-lg animate-pulse hover:animate-none hover:translate-y-[-2px] hover:shadow-2xl transition-all duration-300 md:w-24 md:h-24 md:text-xs md:right-5 md:bottom-5"
-      >
-        Speak To Us
-      </a>
     </div>
   );
 };

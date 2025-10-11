@@ -71,7 +71,7 @@ const CounterCard = ({ targetValue, label, visible }) => {
       <h1
         style={{
           fontSize: "80px",
-          color: "#FF9900",
+          color: "#fd7e14",
           margin: "0",
           fontWeight: "700",
         }}
