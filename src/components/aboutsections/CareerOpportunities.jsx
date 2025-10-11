@@ -1,142 +1,49 @@
-import React from 'react';
+import React from "react";
 
-// --- Styles as JavaScript Objects ---
-const styles = {
-  // Color/Theme Variables
-  accentPink: '#FF0066', // A vibrant pink from the image
-  darkText: '#101010',
-  lightText: '#555555',
-  lightBackground: '#FFFFFF',
-  
-  // Main Section
-  careerSection: {
-    padding: '80px 10%',
-    backgroundColor: 'var(--lightBackground)',
-    fontFamily: 'Arial, sans-serif', // Use a standard font
-  },
-
-  // Header
-  sectionHeader: {
-    marginBottom: '60px',
-  },
-  
-  dotPrefix: {
-    display: 'inline-block',
-    width: '10px',
-    height: '10px',
-    backgroundColor: 'orange',
-    borderRadius: '50%',
-    marginRight: '10px',
-    verticalAlign: 'middle',
-  },
-
-  subtitle: {
-    color: 'var(--lightText)',
-    fontSize: '14px',
-    textTransform: 'uppercase',
-    letterSpacing: '0.5px',
-    margin: '0',
-    display: 'inline-block',
-  },
-
-  mainTitle: {
-    color: 'var(--darkText)',
-    fontSize: '42px',
-    fontWeight: '500',
-    margin: '10px 0 0 0',
-  },
-
-  // Job Listing Item
-  jobItem: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: '25px 0',
-    borderBottom: '1px solid #EEEEEE', // Light separator line
-  },
-  
-  // Title (Job Role)
-  jobTitle: {
-    color: 'var(--darkText)',
-    fontSize: '24px',
-    fontWeight: '500',
-    margin: '0',
-  },
-
-  // Tag Container (Remote/Development tags)
-  tagsContainer: {
-    display: 'flex',
-    gap: '10px',
-  },
-
-  // Individual Tag (Pill)
-  tag: {
-    padding: '6px 15px',
-    borderRadius: '20px',
-    fontSize: '14px',
-    fontWeight: '600',
-    border: '1px solid #CCCCCC',
-    color: 'var(--darkText)',
-    whiteSpace: 'nowrap',
-  },
-};
-
-// Override the CSS variables with direct values for use in React's style prop
-const getStyle = (styleName) => {
-    const style = styles[styleName];
-    // Replace CSS variables with their actual values
-    return Object.fromEntries(
-        Object.entries(style).map(([key, value]) => {
-            if (typeof value === 'string') {
-                value = value.replace('var(--accentPink)', styles.accentPink);
-                value = value.replace('var(--darkText)', styles.darkText);
-                value = value.replace('var(--lightText)', styles.lightText);
-                value = value.replace('var(--lightBackground)', styles.lightBackground);
-            }
-            return [key, value];
-        })
-    );
-};
-
-// --- Job Listing Component ---
-const JobListing = ({ title, tags }) => (
-  <div style={getStyle('jobItem')}>
-    <h3 style={getStyle('jobTitle')}>{title}</h3>
-    <div style={getStyle('tagsContainer')}>
-      {tags.map((tag, index) => (
-        <span key={index} style={getStyle('tag')}>{tag}</span>
-      ))}
+const JobListing = ({ title, tags }) => {
+  return (
+    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center py-4 sm:py-6 border-b border-gray-200">
+      <h3 className="text-xl sm:text-2xl font-medium text-gray-900 mb-2 sm:mb-0">{title}</h3>
+      <div className="flex flex-wrap gap-2 sm:gap-3">
+        {tags.map((tag, index) => (
+          <span
+            key={index}
+            className="px-3 sm:px-4 py-1 text-xs sm:text-sm font-semibold rounded-full border border-gray-300 whitespace-nowrap"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
-
-// --- Main Career Component ---
 const CareerOpportunities = () => {
   return (
-    <div style={getStyle('careerSection')}>
-      
+    <div
+      className="
+        px-4 py-12       /* mobile */
+        sm:px-8 sm:py-16  /* tablets */
+        lg:px-20 lg:py-24  /* desktops */
+        bg-white font-sans
+      "
+    >
       {/* Header */}
-      <div style={getStyle('sectionHeader')}>
-        <span style={getStyle('dotPrefix')}></span>
-        <p style={getStyle('subtitle')}>Open Positions</p>
-        <h1 style={getStyle('mainTitle')}>Explore Exciting Career Opportunities with Us</h1>
+      <div className="mb-12 sm:mb-16">
+        <span className="inline-block w-2 h-2 sm:w-2.5 sm:h-2.5 bg-orange-500 rounded-full mr-2"></span>
+        <p className="uppercase text-gray-500 tracking-wide text-xs sm:text-sm inline-block">
+          Open Positions
+        </p>
+        <h1 className="text-2xl sm:text-4xl font-medium text-gray-900 mt-2 leading-snug">
+          Explore Exciting Career Opportunities with Us
+        </h1>
       </div>
 
-      {/* Listings */}
-      <div>
-        <JobListing 
-          title="Junior Front-End Developer" 
-          tags={["Semi Remote", "Development"]} 
-        />
-        <JobListing 
-          title="Copywriter (Part/Full-Time)" 
-          tags={["Remote", "Copywriting"]} 
-        />
-        {/* Add more listings here if needed */}
-        <div style={{...getStyle('jobItem'), borderBottom: 'none'}}> 
-            {/* The last item from the image had no border, so we override it here. */}
-        </div>
+      {/* Job Listings */}
+      <div className="flex flex-col gap-4 sm:gap-6">
+        <JobListing title="Junior Front-End Developer" tags={["Semi Remote", "Development"]} />
+        <JobListing title="Copywriter (Part/Full-Time)" tags={["Remote", "Copywriting"]} />
+        {/* Additional listings can go here */}
       </div>
     </div>
   );
