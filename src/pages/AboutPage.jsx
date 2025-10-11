@@ -4,7 +4,7 @@ import AgencyHighlights from "../components/aboutSections/AgencyHighlights";
 import CareerOpportunities from "../components/aboutSections/CareerOpportunities";
 import StatsSection from "../components/aboutSections/StatsSection";
 import ProfileCard from "../components/aboutSections/ProfileCard";
-function AboutUs() {
+function AboutPage() {
   return (
     <div>
     <AboutHero />
@@ -20,4 +20,4 @@ function AboutUs() {
   );
 }
 
-export default AboutUs;
+export default AboutPage;

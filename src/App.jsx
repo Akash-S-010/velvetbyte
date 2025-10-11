@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import ScrollProgressBar from "./components/ui/ScrollProgressBar";
-import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import ContactUs from "./pages/ContactUs";
@@ -12,6 +11,7 @@ import Navbar from "./components/Navbar";
 import FollowingCursor from "./components/ui/FollowingCursor";
 import NotFoundPage from "./pages/404Page";
 import WhatsappBtn from "./components/ui/WhatsappBtn";
+import AboutPage from "./pages/AboutPage";
 
 const App = () => {
   return (
@@ -24,7 +24,7 @@ const App = () => {
         <WhatsappBtn />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/aboutus" element={<About />} />
+          <Route path="/aboutus" element={<AboutPage />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/portfolio" element={<Portfolio />} />
