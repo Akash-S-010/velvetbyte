@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import ScrollProgressBar from "./components/ui/ScrollProgressBar";
+import Home from "./pages/Home"; // Add this if Home is used
+import AboutPage from "./pages/AboutPage";
 import Services from "./pages/Services";
 import ContactUs from "./pages/ContactUs";
 import Portfolio from "./pages/Portfolio";
@@ -10,7 +12,6 @@ import Navbar from "./components/Navbar";
 import FollowingCursor from "./components/ui/FollowingCursor";
 import NotFoundPage from "./pages/404Page";
 import WhatsappBtn from "./components/ui/WhatsappBtn";
-import AboutPage from "./pages/AboutPage";
 
 const App = () => {
   return (
