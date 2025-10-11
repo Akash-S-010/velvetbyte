@@ -4,10 +4,10 @@ import { useEffect, useRef } from "react";
 function SplashCursor({
   targetRef, // Add this prop
   // Add whatever props you like for customization
-  SIM_RESOLUTION = 128,
+  SIM_RESOLUTION = 100,
   DYE_RESOLUTION = 1440,
   CAPTURE_RESOLUTION = 512,
-  DENSITY_DISSIPATION = 3.5,
+  DENSITY_DISSIPATION = 1.5,
   VELOCITY_DISSIPATION = 2,
   PRESSURE = 0.1,
   PRESSURE_ITERATIONS = 20,
