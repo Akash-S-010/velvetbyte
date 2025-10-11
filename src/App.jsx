@@ -11,6 +11,7 @@ import ScrollToTop from "./components/ui/ScrollToTop";
 import Navbar from "./components/Navbar";
 import FollowingCursor from "./components/ui/FollowingCursor";
 import NotFoundPage from "./pages/404Page";
+import WhatsappBtn from "./components/ui/WhatsappBtn";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
       <Router>
         <Navbar />
         <ScrollToTop />
+        <WhatsappBtn />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/aboutus" element={<AboutUs />} />

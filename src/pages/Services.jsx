@@ -3,7 +3,6 @@ import StickySection from "../components/ui/StickySection";
 import videoBg from "../assets/videoBg.png";
 import serviceBg from "../assets/serviceBg.mp4";
 import ClientsSection from "../components/ui/ClientSection";
-import WhatsappBtn from "../components/ui/WhatsappBtn";
 
 const Services = () => {
   const services = [
@@ -118,7 +117,6 @@ const Services = () => {
 
   return (
     <section className="min-h-screen">
-      <WhatsappBtn />
       <div className="relative w-full h-[50vh] overflow-hidden">
         <video
           autoPlay

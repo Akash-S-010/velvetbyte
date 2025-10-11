@@ -5,7 +5,6 @@ import videoBg from "../assets/contactVideoBg.png";
 import contactBg from "../assets/contactBg.mp4";
 import { Mail, MapPin, Phone } from "lucide-react";
 import ClientsSection from "../components/ui/ClientSection";
-import WhatsappBtn from "../components/ui/WhatsappBtn";
 
 const ContactUs = () => {
   return (
@@ -123,7 +122,6 @@ const ContactUs = () => {
           </div>
         </div>
       </section>
-      <WhatsappBtn />
     </>
   );
 };

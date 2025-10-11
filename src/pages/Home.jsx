@@ -8,7 +8,6 @@ import ArticlePreviews from '../components/homeSections/ArticlePreviews'
 import CreativeWebSection from '../components/homeSections/CreativeWebSection'
 import Testimonial from '../components/homeSections/Testimonial'
 import ClientSection from '../components/ui/ClientSection'
-import WhatsappBtn from '../components/ui/WhatsappBtn'
 
 const Home = () => {
   return (
@@ -22,7 +21,6 @@ const Home = () => {
       <ServiceSection />
       <PortfolioSection />
       <Testimonial />
-      <WhatsappBtn />
     </>
   )
 }
