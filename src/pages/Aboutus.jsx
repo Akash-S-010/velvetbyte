@@ -1,5 +1,5 @@
 import React from "react";
-import CreativeWebHero from "../components/aboutsections/CreateWebHero";
+import CreativeWebHero from "../components/aboutSections/CreativeWebHero";
 import AgencyHighlights from "../components/aboutsections/AgencyHighlights";
 import CareerOpportunities from "../components/aboutsections/CareerOpportunities";
 import StatsSection from "../components/aboutsections/StatsSection";
