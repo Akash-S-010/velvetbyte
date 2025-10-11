@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import Button from "../ui/Button";
+import { SplashCursor } from "../ui/SplashCursor";
 
 const Hero = () => {
+  const heroRef = useRef(null);
+
   return (
-    <div className="min-h-screen w-full bg-white text-black relative">
+    
+    <div ref={heroRef} className="min-h-screen w-full bg-white text-black relative overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <SplashCursor targetRef={heroRef} />
+      </div>
       {/* Hero Section */}
       <main className="flex justify-center items-center text-center px-10 py-20 min-h-[calc(100vh-80px)] relative overflow-hidden">
         <div className="z-10 max-w-[650px]">

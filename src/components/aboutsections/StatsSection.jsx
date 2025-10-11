@@ -82,7 +82,6 @@ const CounterCard = ({ targetValue, label, visible }) => {
         style={{
           fontSize: "18px",
           color: "#000",
-          marginTop: "10px",
           fontWeight: "400",
         }}
       >
