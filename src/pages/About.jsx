@@ -1,9 +1,9 @@
 import React from "react";
 import CreativeWebHero from "../components/aboutSections/CreativeWebHero";
-import AgencyHighlights from "../components/aboutsections/AgencyHighlights";
-import CareerOpportunities from "../components/aboutsections/CareerOpportunities";
-import StatsSection from "../components/aboutsections/StatsSection";
-import ProfileCard from "../components/aboutsections/ProfileCard";
+import AgencyHighlights from "../components/aboutSections/AgencyHighlights";
+import CareerOpportunities from "../components/aboutSections/CareerOpportunities";
+import StatsSection from "../components/aboutSections/StatsSection";
+import ProfileCard from "../components/aboutSections/ProfileCard";
 function AboutUs() {
   return (
     <div>
