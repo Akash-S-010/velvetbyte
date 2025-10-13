@@ -1,6 +1,6 @@
 import { ReactLenis } from "lenis/react";
 import { useTransform, motion, useScroll } from "motion/react";
-import { useRef } from "react";
+import { Fragment, useRef } from "react";
 import Button from "../ui/Button";
 import { MoveRight } from "lucide-react";
 
@@ -135,10 +135,10 @@ export const Card = ({
         <div className="w-1/2 sm:w-[40%] flex justify-center md:justify-start ml-0 md:ml-40">
           <ul className="text-sm md:text-2xl space-y-1 md:space-y-4">
             {technologies.map((tech, idx) => (
-              <>
-                <li className="text-xs md:text-2xl font-medium md:font-semibold" key={idx}>{tech}</li>
+              <Fragment key={idx}>
+                <li className="font-semibold">{tech}</li>
                 <div className="h-0.5 bg-white/10"></div>
-              </>
+              </Fragment>
             ))}
           </ul>
         </div>
@@ -146,3 +146,4 @@ export const Card = ({
     </div>
   );
 };
+
