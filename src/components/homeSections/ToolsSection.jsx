@@ -108,10 +108,10 @@ const FeatureGrid = ({
                   >
                     <CardHeader className="p-0 pb-3">
                       <div className="mb-3 p-2 w-fit rounded-lg bg-gradient-to-br from-gray-400 via-gray-600 to-gray-900 text-white border border-gray-950">
-                        {React.createElement(feature.icon, {
-                          className: "h-6 w-6",
-                          ariaHidden: true,
-                        })}
+                        <feature.icon
+                          className="h-6 w-6"
+                          aria-hidden={true}
+                        />
                       </div>
                       <CardTitle>{feature.title}</CardTitle>
                     </CardHeader>
@@ -148,10 +148,10 @@ const FeatureGrid = ({
                   >
                     <CardHeader className="p-0 pb-3">
                       <div className="mb-3 p-2 w-fit rounded-lg bg-gradient-to-br from-gray-400 via-gray-600 to-gray-900 text-white border border-gray-950">
-                        {React.createElement(feature.icon, {
-                          className: "h-6 w-6",
-                          ariaHidden: true,
-                        })}
+                        <feature.icon
+                          className="h-6 w-6"
+                          aria-hidden={true}
+                        />
                       </div>
                       <CardTitle>{feature.title}</CardTitle>
                     </CardHeader>
@@ -181,10 +181,10 @@ const FeatureGrid = ({
                   >
                     <CardHeader className="p-0 pb-3">
                       <div className="mb-3 p-2 w-fit rounded-lg bg-gradient-to-br from-gray-400 via-gray-600 to-gray-900 text-white border border-gray-950">
-                        {React.createElement(feature.icon, {
-                          className: "h-6 w-6",
-                          ariaHidden: true,
-                        })}
+                        <feature.icon
+                          className="h-6 w-6"
+                          aria-hidden={true}
+                        />
                       </div>
                       <CardTitle>{feature.title}</CardTitle>
                     </CardHeader>
@@ -214,10 +214,10 @@ const FeatureGrid = ({
                   >
                     <CardHeader className="p-0 pb-3">
                       <div className="mb-3 p-2 w-fit rounded-lg bg-gradient-to-br from-gray-400 via-gray-600 to-gray-900 text-white border border-gray-950">
-                        {React.createElement(feature.icon, {
-                          className: "h-6 w-6",
-                          ariaHidden: true,
-                        })}
+                        <feature.icon
+                          className="h-6 w-6"
+                          aria-hidden={true}
+                        />
                       </div>
                       <CardTitle>{feature.title}</CardTitle>
                     </CardHeader>
