@@ -289,13 +289,13 @@ const Navbar = () => {
   };
 
   useEffect(() => {
+    let lastScrollY = window.scrollY;
+
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      setIsVisible(currentScrollY <= 0 || window.scrollY < lastScrollY);
+      setIsVisible(currentScrollY <= 0 || currentScrollY < lastScrollY);
       lastScrollY = currentScrollY;
     };
-
-    let lastScrollY = window.scrollY;
 
     setIsVisible(window.scrollY <= 0);
 
@@ -305,6 +305,7 @@ const Navbar = () => {
 
   return (
     <>
+      {/* Navbar Header */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 bg-white/60 backdrop-blur-xl transition-opacity duration-300 ${
           isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
@@ -312,12 +313,14 @@ const Navbar = () => {
       >
         <div className="mx-auto px-5 md:px-20">
           <div className="flex h-16 items-center justify-between">
+            {/* Logo */}
             <div className="flex items-center space-x-3">
               <Link to="/" className="flex items-center space-x-3">
                 <img src={logoDark} alt="logo" className="w-40" />
               </Link>
             </div>
 
+            {/* Right-side controls */}
             <div className="flex items-center space-x-4">
               <button
                 onClick={() => {
@@ -343,56 +346,63 @@ const Navbar = () => {
         </div>
       </header>
 
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <>
-            <motion.div
-              className="fixed inset-0 z-40 bg-black/20 backdrop-blur-xs"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setIsMobileMenuOpen(false)}
-            />
-            <motion.div
-              className="fixed right-4 z-50 overflow-hidden rounded-2xl bg-white border border-gray-200 p-6 shadow-2xl flex justify-between items-center max-w-xl"
-              variants={mobileMenuVariants}
-              initial="closed"
-              animate="open"
-              exit="closed"
-            >
-              {/* Left: Menu Links */}
-              <div className="flex-1 pr-10 md:mr-10 border-r border-gray-300">
-                {navItems.map((item) => (
-                  <motion.div key={item.name} variants={mobileItemVariants}>
-                    <Link
-                      to={item.to}
-                      className="text-gray-700 hover:text-black flex items-center rounded-lg px-3 py-2 font-medium transition-colors duration-200 group"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      <span>{item.name}</span>
-                      <div className="ml-6">
-                        <MoveRight className="h-5 w-5 text-primary opacity-0 group-hover:opacity-100" />
-                      </div>
-                    </Link>
-                  </motion.div>
-                ))}
-              </div>
+      {/* ✅ Mobile Menu (Fixed: Added relative wrapper) */}
+      <div className="relative z-[60]">
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <>
+              {/* Dark Overlay */}
+              <motion.div
+                className="fixed inset-0 z-40 bg-black/20 backdrop-blur-xs"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={() => setIsMobileMenuOpen(false)}
+              />
 
-              {/* Right: Contact Info */}
-              <div className="flex-1 text-gray-700 hidden md:block">
-                <h3 className="text-lg font-semibold mb-2 text-gray-900">
-                  Contact Info
-                </h3>
-                <p className="text-xs mb-2">📧 hello@velvetbyte.com</p>
-                <p className="text-xs mb-2">📞 +91 1234567891</p>
-                <p className="text-xs">🏢 Kochi, Kerala</p>
-              </div>
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
+              {/* Sliding Panel */}
+              <motion.div
+                className="fixed right-4 top-20 z-50 overflow-hidden rounded-2xl bg-white border border-gray-200 p-6 shadow-2xl flex justify-between items-start max-w-xl"
+                variants={mobileMenuVariants}
+                initial="closed"
+                animate="open"
+                exit="closed"
+              >
+                {/* Left: Menu Links */}
+                <div className="flex-1 pr-10 md:mr-10 border-r border-gray-300">
+                  {navItems.map((item) => (
+                    <motion.div key={item.name} variants={mobileItemVariants}>
+                      <Link
+                        to={item.to}
+                        className="text-gray-700 hover:text-black flex items-center rounded-lg px-3 py-2 font-medium transition-colors duration-200 group"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        <span>{item.name}</span>
+                        <div className="ml-6">
+                          <MoveRight className="h-5 w-5 text-primary opacity-0 group-hover:opacity-100" />
+                        </div>
+                      </Link>
+                    </motion.div>
+                  ))}
+                </div>
+
+                {/* Right: Contact Info */}
+                <div className="flex-1 text-gray-700 hidden md:block pl-6">
+                  <h3 className="text-lg font-semibold mb-2 text-gray-900">
+                    Contact Info
+                  </h3>
+                  <p className="text-xs mb-2">📧 hello@velvetbyte.com</p>
+                  <p className="text-xs mb-2">📞 +91 1234567891</p>
+                  <p className="text-xs">🏢 Kochi, Kerala</p>
+                </div>
+              </motion.div>
+            </>
+          )}
+        </AnimatePresence>
+      </div>
     </>
   );
 };
 
 export default Navbar;
+        
