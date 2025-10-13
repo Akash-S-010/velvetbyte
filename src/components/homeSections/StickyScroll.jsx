@@ -15,6 +15,7 @@ const StickyScroll = () => {
           className="mt-8 w-50 mx-auto"
           theme="white"
           text={"Get Started"}
+          onClick={()=>window.location.href="/services"}
         />
       </section>
 
@@ -24,7 +25,7 @@ const StickyScroll = () => {
       <section className="text-white w-full bg-black relative z-10 hidden md:block">
         <div className="grid grid-cols-2">
           <div className="sticky top-0 h-screen flex items-center justify-end">
-            <h1 className="text-2xl md:text-4xl lg:text-7xl font-semibold text-center tracking-tight leading-[120%]">
+            <h1 className="text-xl md:text-4xl lg:text-7xl font-semibold text-center tracking-tight leading-[120%]">
               We Have The Best
               <br />
               <span className="text-primary"> Solutions</span>

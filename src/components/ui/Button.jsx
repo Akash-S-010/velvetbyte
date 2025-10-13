@@ -10,7 +10,7 @@ const Button = ({ theme = "black", text, onClick, type, width, className }) => {
       onClick={onClick}
       className={`group flex ${
         width === "full" ? "w-full" : ""
-      } items-center justify-center px-6 py-2 text-md  hover:px-8 transition-all duration-300 cursor-pointer border-2 rounded-tl-xl rounded-br-xl relative hover:rounded-tl-none hover:rounded-br-none 
+      } items-center justify-center px-4 py-2 text-md  hover:px-8 transition-all duration-300 cursor-pointer border-2 rounded-tl-xl rounded-br-xl relative hover:rounded-tl-none hover:rounded-br-none 
         ${
           isBlackTheme
             ? "bg-black text-white border-white hover:bg-white hover:text-black"

@@ -21,7 +21,7 @@ const VideoSection = () => {
           Today's businesses need more than just digital tools—they need clear
           strategic direction, backed by deep customer insight.
         </p>
-        <Button text={"Get Started"} className="mt-4 sm:mt-6"/>
+        <Button text={"Get Started"} className="mt-4 sm:mt-6" onClick={() => window.location.href = "/services"} />
       </div>
     </section>
   );

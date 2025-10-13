@@ -11,7 +11,7 @@ const PortfolioSection = () => {
       category: 'Web Development',
       description: 'A fully responsive e-commerce website built with Shopify, featuring seamless payment integration and optimized UX.',
       image: 'https://velvetbyte.com/img/works/p4.jpg',
-      linkHref: '#',
+      linkHref: '/portfolio',
       linkText: 'View Project',
       icon: <ShoppingCart size={24} />,
     },
@@ -20,7 +20,7 @@ const PortfolioSection = () => {
       category: 'Web Design',
       description: 'A sleek, modern website for a London-based firm, designed with WordPress and tailored for brand identity.',
       image: 'https://velvetbyte.com/img/works/p1.jpg',
-      linkHref: '#',
+      linkHref: '/portfolio',
       linkText: 'View Project',
       icon: <Code size={24} />,
     },
@@ -29,7 +29,7 @@ const PortfolioSection = () => {
       category: 'Digital Marketing',
       description: 'A high-ROI social media campaign with targeted ads and SEO optimization, driving 50% more traffic.',
       image: 'https://t3.ftcdn.net/jpg/03/17/83/00/360_F_317830022_t2c7ZhvWlp68eumsnI4q4Bnw267bPwB9.jpg',
-      linkHref: '#',
+      linkHref: '/portfolio',
       linkText: 'View Project',
       icon: <BarChart2 size={24} />,
     },
@@ -38,7 +38,7 @@ const PortfolioSection = () => {
       category: 'Graphic Design',
       description: 'A complete brand overhaul with logo, brochures, and creative ads, crafted for a global audience.',
       image: 'https://velvetbyte.com/img/works/06.jpg',
-      linkHref: '#',
+      linkHref: '/portfolio',
       linkText: 'View Project',
       icon: <Palette size={24} />,
     },
@@ -47,7 +47,7 @@ const PortfolioSection = () => {
       category: 'UI/UX Design',
       description: 'An intuitive mobile app interface designed for user engagement, with interactive prototypes.',
       image: 'https://i.pinimg.com/736x/9c/6d/cf/9c6dcfb7317df7a432d397ebe7c11688.jpg',
-      linkHref: '#',
+      linkHref: '/portfolio',
       linkText: 'View Project',
       icon: <Smartphone size={24} />,
     },
@@ -56,7 +56,7 @@ const PortfolioSection = () => {
       category: 'Web Development',
       description: 'A custom portfolio site for a creative agency, showcasing their work with a modern, animated design.',
       image: 'https://brandpacks.com/wp-content/uploads/edd/2024/02/agency-portfolio-indd-00.jpg',
-      linkHref: '#',
+      linkHref: '/portfolio',
       linkText: 'View Project',
       icon: <Briefcase size={24} />,
     },
@@ -67,7 +67,7 @@ const PortfolioSection = () => {
       <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold">
             Our <span className='text-primary'>Portfolio</span>
           </h2>
           <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg text-gray-300 max-w-2xl mx-auto px-2">
