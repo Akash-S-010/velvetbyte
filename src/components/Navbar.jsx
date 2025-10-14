@@ -261,6 +261,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import logoDark from "../assets/logoDark.png";
+import { useNavigate } from "react-router-dom";
 
 const navItems = [
   {
@@ -296,6 +297,7 @@ const navItems = [
 ];
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation(); // current route
 
@@ -370,7 +372,7 @@ const Navbar = () => {
                     onClick={() => {
                       if (!isActive) {
                         setMenuOpen(false);
-                        window.location.href = item.to;
+                        navigate(item.to);
                       }
                     }}
                   >
