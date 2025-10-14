@@ -1,10 +1,9 @@
 import React from "react";
-import { FaLinkedin,  FaWhatsapp } from "react-icons/fa";
+import { FaLinkedin, FaWhatsapp } from "react-icons/fa";
 const ProfileCard = () => {
   const profiles = [
     {
-      avatarUrl:
-        "/images/crew/Arjun.jpg",
+      avatarUrl: "/images/crew/Arjun.jpg",
       name: "Arjun",
       title: "C E O",
       bio: "The Chief Executive Officer of the company",
@@ -30,7 +29,7 @@ const ProfileCard = () => {
       whatsappUrl: "https://wa.me/919999999999",
       tools: ["React", "Tailwind", "TypeScript"],
     },
-     {
+    {
       avatarUrl: "/images/crew/Gopika.jpeg",
       name: "Gopika K G",
       title: "Social Media Head",
@@ -73,7 +72,7 @@ const ProfileCard = () => {
       bio: "Graphic Designer who specialize in creating visually stunning and engaging designs that communicate your brand's message effectively.",
       linkedinUrl: "https://www.linkedin.com/in/dhanya-k-p-3ba63a363/",
       whatsappUrl: "https://wa.me/919999999999",
-      tools: ["Photoshop", "Illustrator"]
+      tools: ["Photoshop", "Illustrator"],
     },
     {
       avatarUrl: "/images/crew/Shaija.jpeg",
@@ -82,7 +81,7 @@ const ProfileCard = () => {
       bio: "Graphic Designer who specialize in creating visually stunning and engaging designs that communicate your brand's message effectively.",
       linkedinUrl: "https://www.linkedin.com/in/shaija-karunakaran-1b2624136/",
       whatsappUrl: "https://wa.me/919999999999",
-      tools: ["Photoshop", "Illustrator"]
+      tools: ["Photoshop", "Illustrator"],
     },
     {
       avatarUrl: "/images/crew/Reshma.jpeg",
@@ -91,7 +90,7 @@ const ProfileCard = () => {
       bio: "Full stack developer, crafting seamless web solutions with expertise in frontend and backend Technologies.",
       linkedinUrl: "https://www.linkedin.com/in/reshma-vijayan-sr/",
       whatsappUrl: "https://wa.me/919999999999",
-      tools: ["React", "Node.js","Express.js", "MongoDB"]
+      tools: ["React", "Node.js", "Express.js", "MongoDB"],
     },
     {
       avatarUrl: "/images/crew/Akash.jpeg",
@@ -100,7 +99,7 @@ const ProfileCard = () => {
       bio: "Creative frontend developer, designing stunning UIs, collaborating with backend for seamless integration.",
       linkedinUrl: "https://www.linkedin.com/in/akash-s-mahe/",
       whatsappUrl: "https://wa.me/918606727349",
-      tools: ["React", "Node.js","Express.js", "MongoDB"]
+      tools: ["React", "Node.js", "Express.js", "MongoDB"],
     },
     {
       avatarUrl: "https://placehold.co/100x100/10b981/ffffff?text=A",
@@ -109,7 +108,7 @@ const ProfileCard = () => {
       bio: "Full stack developer, crafting seamless web solutions with expertise in frontend and backend Technologies.",
       linkedinUrl: "https://www.linkedin.com/in/",
       whatsappUrl: "https://wa.me/918606778787",
-      tools: ["React", "Node.js","Express.js", "MongoDB"]
+      tools: ["React", "Node.js", "Express.js", "MongoDB"],
     },
     {
       avatarUrl: "/images/crew/Rifa.jpeg",
@@ -118,7 +117,7 @@ const ProfileCard = () => {
       bio: "Graphic designer and video editor, crafting stunning visuals and engaging content for brands and campaigns.",
       linkedinUrl: "https://www.linkedin.com/in",
       whatsappUrl: "https://wa.me/918600000000",
-      tools: ["Photoshop", "Illustrator", "Premiere Pro"]
+      tools: ["Photoshop", "Illustrator", "Premiere Pro"],
     },
   ];
 
@@ -148,7 +147,9 @@ const ProfileCard = () => {
           <h2 className="text-2xl font-semibold text-card-foreground">
             {profile.name}
           </h2>
-          <p className="text-sm  text-primary font-medium mt-2">{profile.title}</p>
+          <p className="text-sm  text-primary font-medium mt-2">
+            {profile.title}
+          </p>
 
           {/* Bio */}
           <p className="mt-3 text-muted text-sm text-muted-foreground leading-relaxed">
@@ -183,7 +184,10 @@ const ProfileCard = () => {
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
               >
-                <FaLinkedin size={30} className="text-gray-600 hover:text-blue-600 transition-colors"/>
+                <FaLinkedin
+                  size={30}
+                  className="text-gray-600 hover:text-blue-600 transition-colors"
+                />
               </a>
             )}
 
@@ -194,7 +198,10 @@ const ProfileCard = () => {
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
               >
-                <FaWhatsapp size={30} className="text-gray-600 hover:text-green-600 transition-colors"/>
+                <FaWhatsapp
+                  size={30}
+                  className="text-gray-600 hover:text-green-600 transition-colors"
+                />
               </a>
             )}
           </div>
