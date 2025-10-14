@@ -16,21 +16,21 @@ const AgencyHighlights = () => {
       <div className="section-header">
         <span className="dot-prefix"></span>
         <p className="subtitle">What Makes Us Different</p>
-        <h1 className="main-title">What makes us a leading web design agency</h1>
+        <h1 className="main-title">What makes us a leading web development company</h1>
       </div>
 
       <div className="highlights-container">
         <HighlightItem
-          title="Highly Rated"
-          description="No.1 UK & Europe ranked web agency on Clutch out of 70,000 other agencies. We're proud to be independently one of the best at what we do."
+          title="More Innovation"
+          description="From clean one-pagers to fully functional business websites, we build platforms that are fast, responsive, and tailored to your brand."
         />
         <HighlightItem
-          title="Fully Accredited"
-          description="We hold quality standard certifications, including ISO and Google Partner. We're a partner you can trust."
+          title="Proven Expertise"
+          description="Designs that look expensive, feel intuitive, and speak to your audience without draining your wallet"
         />
         <HighlightItem
-          title="Fully Bespoke"
-          description="Everything we do is designed unique to your requirements - no boring designs."
+          title="Startegic Vision"
+          description="Launch your eCommerce store the right way with Shopify. From theme setup to payment gateway integration, we handle everything."
         />
       </div>
 

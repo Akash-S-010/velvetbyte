@@ -6,20 +6,17 @@ const CreativeWebHero = () => {
       {/* Header Tag */}
       <div className="flex items-center mb-5">
         <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
-        <span className="text-gray-500 font-medium text-sm">CreativeWeb</span>
+        <span className="text-gray-500 font-medium text-sm">VelvetByte</span>
       </div>
 
       {/* Headline */}
       <h1 className="text-4xl md:text-5xl font-semibold text-gray-800 max-w-3xl mb-8 leading-tight">
-        We design bespoke & engaging websites for businesses and enterprises worldwide
+        Need a quick fix, a new feature, or a monthly dev partner? Hire us like a freelancer
       </h1>
 
       {/* Subtext */}
       <p className="text-lg md:text-base text-gray-500 max-w-3xl mb-12 leading-relaxed">
-        Founded in 2013, the company has evolved from a small boutique web design
-        studio into a thriving web design agency, designing & developing over 500
-        bespoke websites to date. We are an established, experienced, and trusted
-        team with over a decade of experience in providing bespoke web solutions.
+        We work with startups, small businesses, eCommerce brands, and service providers. Whether you need a basic site, a custom landing page, or a full online store, we’ve got you covered
       </p>
 
       {/* Scroll Indicator */}
