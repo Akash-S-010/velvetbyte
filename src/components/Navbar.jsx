@@ -260,7 +260,6 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import logoDark from "../assets/logoDark.png";
 
 const navItems = [
   {
@@ -312,23 +311,33 @@ const Navbar = () => {
   return (
     <>
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur-md border-b border-gray-200">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
         <div className="mx-auto px-5 md:px-20 flex h-16 items-center justify-between">
           <Link to="/" className="flex items-center space-x-3">
-            <img src={logoDark} alt="logo" className="w-40" />
+            <span className="text-2xl font-bold text-black">velvetbyte</span>
           </Link>
 
-          <motion.button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="text-gray-900 p-2 cursor-pointer transition hover:scale-105"
-            whileTap={{ scale: 0.9 }}
-          >
-            {menuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </motion.button>
+          {/* CTA Button - Added just before menu icon */}
+          <div className="flex items-center space-x-4">
+            <button
+            onClick={()=>window.location.href="/contact"}
+              className="px-4 py-2 bg-black text-white rounded-tl-2xl rounded-br-2xl text-sm font-semibold cursor-pointer hover:rounded-tl-xs hover:rounded-br-xs transition-all duration-300"
+            >
+              Get Started
+            </button>
+
+            <motion.button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="text-gray-900 p-2 cursor-pointer transition hover:scale-105"
+              whileTap={{ scale: 0.9 }}
+            >
+              {menuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </motion.button>
+          </div>
         </div>
       </header>
 
