@@ -4,32 +4,112 @@ const ProfileCard = () => {
   const profiles = [
     {
       avatarUrl:
-        "https://placehold.co/100x100/10b981/ffffff?text=A",
+        "/images/crew/ArjunJPG.jpg",
       name: "Arjun",
       title: "C E O",
-      bio: "The CEO of the company",
-      linkedinUrl: "https://linkedin.com/in/ravi-katiyar",
+      bio: "The Chief Executive Officer of the company",
+      linkedinUrl: "https://www.linkedin.com/in/arjunworks96/",
       whatsappUrl: "https://wa.me/911234567890",
-      tools: ["Figma", "Framer", "Adobe XD"],
+      tools: ["Shopify", "WordPress", "React"],
     },
     {
       avatarUrl: "https://placehold.co/100x100/10b981/ffffff?text=A",
-      name: "Vishak",
+      name: "Visakh C K",
       title: "C T O",
-      bio: "The CTO of the company",
-      linkedinUrl: "https://linkedin.com/in/anita-sharma",
+      bio: "The Chief Technical Officer of the company",
+      linkedinUrl: "https://www.linkedin.com/in/visakh-ck/",
       whatsappUrl: "https://wa.me/919876543210",
-      tools: ["React", "Tailwind", "TypeScript"],
+      tools: ["Shopify", "WordPress", "React"],
     },
     {
       avatarUrl: "https://placehold.co/100x100/6366f1/ffffff?text=K",
       name: "Akhil",
       title: "C O O",
-      bio: "The COO of the company",
+      bio: "The Chief Operating Officer of the company",
       linkedinUrl: "https://linkedin.com/in/karan-verma",
       whatsappUrl: "https://wa.me/919999999999",
       tools: ["React", "Tailwind", "TypeScript"],
-
+    },
+     {
+      avatarUrl: "/images/crew/Gopika.jpeg",
+      name: "Gopika K G",
+      title: "Social Media Head",
+      bio: "Digital marketer who specialize in SEO, Google Ads, and social media marketing to build brand visibility and drive real results.",
+      linkedinUrl: "https://www.linkedin.com/in/jumaila-marketing/",
+      whatsappUrl: "https://wa.me/919999999999",
+      tools: ["SMM", "SEM", "B2B", "B2C"],
+    },
+    {
+      avatarUrl: "/images/crew/Jumaila.jpeg",
+      name: "Jumaila M",
+      title: "Social Media Executive",
+      bio: "Digital marketer who specialize in SEO, Google Ads, and social media marketing to build brand visibility and drive real results.",
+      linkedinUrl: "https://www.linkedin.com/in/jumaila-marketing/",
+      whatsappUrl: "https://wa.me/919999999999",
+      tools: ["SMM", "SEO", "Google Ads"],
+    },
+    {
+      avatarUrl: "/images/crew/Abi.jpeg",
+      name: "Abhinav",
+      title: "Graphic Designer",
+      bio: "Graphic Designer who specialize in creating visually stunning and engaging designs that communicate your brand's message effectively.",
+      linkedinUrl: "https://www.linkedin.com/in/jumaila-marketing/",
+      whatsappUrl: "https://wa.me/919999999999",
+      tools: ["SMM", "SEO", "Google Ads"],
+    },
+    {
+      avatarUrl: "/images/crew/Dhanya.jpeg",
+      name: "Dhanya K P",
+      title: "Social Media Executive",
+      bio: "Digital marketer who creating and executing effective online strategies, helping brands expand their reach and achieve their objectives.",
+      linkedinUrl: "https://www.linkedin.com/in/dhanya-k-p-3ba63a363/",
+      whatsappUrl: "https://wa.me/919999999999",
+      tools: ["SMM", "Content Creation", "SEO"],
+    },
+    {
+      avatarUrl: "/images/crew/Rubitha.jpeg",
+      name: "Rubitha T A",
+      title: "Graphic Designer",
+      bio: "Graphic Designer who specialize in creating visually stunning and engaging designs that communicate your brand's message effectively.",
+      linkedinUrl: "https://www.linkedin.com/in/dhanya-k-p-3ba63a363/",
+      whatsappUrl: "https://wa.me/919999999999",
+      tools: ["Photoshop", "Illustrator"]
+    },
+    {
+      avatarUrl: "/images/crew/Shaija.jpeg",
+      name: "Shaija Karunakaran",
+      title: "Graphic Designer",
+      bio: "Graphic Designer who specialize in creating visually stunning and engaging designs that communicate your brand's message effectively.",
+      linkedinUrl: "https://www.linkedin.com/in/shaija-karunakaran-1b2624136/",
+      whatsappUrl: "https://wa.me/919999999999",
+      tools: ["Photoshop", "Illustrator"]
+    },
+    {
+      avatarUrl: "/images/crew/Reshma.jpeg",
+      name: "Reshma Sam",
+      title: "Full Stack Developer",
+      bio: "Full stack developer, crafting seamless web solutions with expertise in frontend and backend Technologies.",
+      linkedinUrl: "https://www.linkedin.com/in/reshma-vijayan-sr/",
+      whatsappUrl: "https://wa.me/919999999999",
+      tools: ["React", "Node.js","Express.js", "MongoDB"]
+    },
+    {
+      avatarUrl: "/images/crew/Akash.png",
+      name: "Akash S",
+      title: "Frontend Developer",
+      bio: "Creative frontend developer, designing stunning UIs, collaborating with backend for seamless integration.",
+      linkedinUrl: "https://www.linkedin.com/in/akash-s-mahe/",
+      whatsappUrl: "https://wa.me/918606727349",
+      tools: ["React", "Node.js","Express.js", "MongoDB"]
+    },
+    {
+      avatarUrl: "https://placehold.co/100x100/10b981/ffffff?text=A",
+      name: "Anshifa",
+      title: "Frontend Developer",
+      bio: "Full stack developer, crafting seamless web solutions with expertise in frontend and backend Technologies.",
+      linkedinUrl: "https://www.linkedin.com/in/akash-s-mahe/",
+      whatsappUrl: "https://wa.me/918606727349",
+      tools: ["React", "Node.js","Express.js", "MongoDB"]
     },
   ];
 
@@ -45,7 +125,7 @@ const ProfileCard = () => {
             <img
               src={profile.avatarUrl}
               alt={`${profile.name}'s avatar`}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-top"
               onError={(e) => {
                 e.target.onerror = null;
                 e.target.src = `https://placehold.co/96x96/6366f1/white?text=${profile.name?.charAt(
