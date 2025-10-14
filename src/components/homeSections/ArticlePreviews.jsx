@@ -4,23 +4,25 @@ import React from 'react';
 const ArticlePreviews = () => {
   const articlesData = [
     {
-      title: 'AI Websites: The Future of Lead Generation',
+      title: 'Affordable website design that doesn’t look cheap',
+
       summary:
-        "Most Websites Don't Convert. Here Are 5 AI Fixes. A good website is not everything—98% of the visitors will exit...",
+        "At Velvetbyte, we believe technology is more than just code — it’s a way to create meaningful impact",
       tags: ['Website Design'],
       imageUrl: 'https://i.postimg.cc/YC6FXW5f/igor-miske-JVSgc-V8-vb4-unsplash.jpg',
     },
     {
-      title: '8 Interactive Website Examples & Creative Animations',
+      title: 'Clean, custom websites that load fast and work everywhere',
+
       summary:
-        'One of the things we focus on as an website design agency is staying sharp on what makes a website...',
+        'Our goal is simple yet powerful: to empower businesses with innovative digital solutions that deliver real results',
       tags: ['Website Design', 'Web Development'],
       imageUrl: 'https://i.postimg.cc/k5MyKs2w/solidpixels-TCBw4j-AIJDY-unsplash.jpg',
     },
     {
-      title: 'Fewer Revisions, Faster Approvals – How to Manage the Web Design Feedback Loop',
+      title: 'Freelance flexibility, agency-quality results',
       summary:
-        'If you have worked on a design project, you likely understand how frustrating endless revisions can be, if feedback loops...',
+         'We’re a web development company in Kerala that builds conversion-ready websites for businesses across industries',
       tags: ['Website Design'],
       imageUrl: 'https://i.postimg.cc/7Z93HzKJ/analysis-strategy-study-information-business-planning.jpg',
     },
