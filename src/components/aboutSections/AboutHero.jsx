@@ -21,6 +21,12 @@ const CreativeWebHero = () => {
 
       {/* Scroll Indicator */}
       <div className="w-6 h-6 border-2 border-gray-500 rounded-full opacity-70 hover:opacity-100 transition"></div>
+      <div
+  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[60px] md:text-[250px] font-black pointer-events-none whitespace-nowrap z-0"
+  style={{ color: 'rgba(0, 0, 0, 0.025)' }}
+>
+  VELVET
+</div>
     </div>
   );
 };
