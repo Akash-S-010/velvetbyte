@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import StickySection from "../components/ui/StickySection";
 import videoBg from "../assets/videoBg.png";
 import serviceBg from "../assets/serviceBg.mp4";
 import ClientsSection from "../components/ui/ClientSection";
 
 const Services = () => {
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
+  const handleVideoLoad = () => {
+    setVideoLoaded(true);
+  };
+
   const services = [
     {
       title: "Website Development",
@@ -118,6 +124,12 @@ const Services = () => {
   return (
     <section className="min-h-screen">
       <div className="relative w-full h-[50vh] overflow-hidden">
+        {!videoLoaded && (
+          <div
+            className="absolute top-0 left-0 w-full h-full object-cover sm:object-fill bg-gray-300"
+            style={{ backgroundImage: `url(${videoBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+          ></div>
+        )}
         <video
           autoPlay
           loop
@@ -125,7 +137,8 @@ const Services = () => {
           playsInline
           poster={videoBg}
           preload="auto"
-          className="absolute top-0 left-0 w-full h-full object-cover sm:object-fill"
+          onLoadedData={handleVideoLoad}
+          className={`absolute top-0 left-0 w-full h-full object-cover sm:object-fill ${videoLoaded ? '' : 'hidden'}`}
         >
           <source src={serviceBg} type="video/mp4" />
           Your browser does not support the video tag.

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../components/ui/Button";
 import FloatingInput from "../components/ui/FloatingInput";
 import videoBg from "../assets/contactVideoBg.png";
@@ -7,9 +7,21 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import ClientsSection from "../components/ui/ClientSection";
 
 const ContactUs = () => {
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
+  const handleVideoLoad = () => {
+    setVideoLoaded(true);
+  };
+
   return (
     <>
       <div className="relative w-full h-[50vh] overflow-hidden">
+        {!videoLoaded && (
+          <div
+            className="absolute top-0 left-0 w-full h-full object-cover sm:object-fill bg-gray-300"
+            style={{ backgroundImage: `url(${videoBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+          ></div>
+        )}
         <video
           autoPlay
           loop
@@ -17,7 +29,8 @@ const ContactUs = () => {
           playsInline
           poster={videoBg}
           preload="auto"
-          className="absolute top-0 left-0 w-full h-full object-cover sm:object-fill"
+          onLoadedData={handleVideoLoad}
+          className={`absolute top-0 left-0 w-full h-full object-cover sm:object-fill ${videoLoaded ? '' : 'hidden'}`}
         >
           <source src={contactBg} type="video/mp4" />
           Your browser does not support the video tag.
