@@ -27,7 +27,7 @@ const Hero = () => {
               Web Development <br />Company
             </span>
           </h1>
-         <p>
+         <p className="mb-4">
   We're VelvetByte,{" "}
   <span className="font-semibold text-black">a creative web development company</span>, doing honest work at honest prices.{" "}
   <span className="font-semibold text-black">Project-based work</span> for aspiring and established businesses and enterprises.
