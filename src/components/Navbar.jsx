@@ -130,7 +130,7 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
           >
             {/* Grid Menu */}
-            <div className="grid md:grid-cols-3 gap-6 py-10">
+            <div className="grid md:grid-cols-3 gap-6 py-8">
               {navItems.map((item) => {
                 const isActive = location.pathname === item.to;
                 return (
