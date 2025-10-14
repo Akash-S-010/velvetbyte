@@ -4,7 +4,7 @@ const ProfileCard = () => {
   const profiles = [
     {
       avatarUrl:
-        "/images/crew/ArjunJPG.jpg",
+        "/images/crew/Arjun.jpg",
       name: "Arjun",
       title: "C E O",
       bio: "The Chief Executive Officer of the company",
@@ -35,7 +35,7 @@ const ProfileCard = () => {
       name: "Gopika K G",
       title: "Social Media Head",
       bio: "Digital marketer who specialize in SEO, Google Ads, and social media marketing to build brand visibility and drive real results.",
-      linkedinUrl: "https://www.linkedin.com/in/jumaila-marketing/",
+      linkedinUrl: "https://www.linkedin.com/in/gopika-k-g-5b057b2a5/",
       whatsappUrl: "https://wa.me/919999999999",
       tools: ["SMM", "SEM", "B2B", "B2C"],
     },
