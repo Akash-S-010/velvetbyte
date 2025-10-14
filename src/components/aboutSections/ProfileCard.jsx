@@ -94,7 +94,7 @@ const ProfileCard = () => {
       tools: ["React", "Node.js","Express.js", "MongoDB"]
     },
     {
-      avatarUrl: "/images/crew/Akash.png",
+      avatarUrl: "/images/crew/Akash.jpeg",
       name: "Akash S",
       title: "Frontend Developer",
       bio: "Creative frontend developer, designing stunning UIs, collaborating with backend for seamless integration.",
@@ -107,9 +107,18 @@ const ProfileCard = () => {
       name: "Anshifa",
       title: "Frontend Developer",
       bio: "Full stack developer, crafting seamless web solutions with expertise in frontend and backend Technologies.",
-      linkedinUrl: "https://www.linkedin.com/in/akash-s-mahe/",
-      whatsappUrl: "https://wa.me/918606727349",
+      linkedinUrl: "https://www.linkedin.com/in/",
+      whatsappUrl: "https://wa.me/918606778787",
       tools: ["React", "Node.js","Express.js", "MongoDB"]
+    },
+    {
+      avatarUrl: "/images/crew/Rifa.jpeg",
+      name: "Rifa Rouf",
+      title: "Graphic Designer & Video Editor",
+      bio: "Graphic designer and video editor, crafting stunning visuals and engaging content for brands and campaigns.",
+      linkedinUrl: "https://www.linkedin.com/in",
+      whatsappUrl: "https://wa.me/918600000000",
+      tools: ["Photoshop", "Illustrator", "Premiere Pro"]
     },
   ];
 
