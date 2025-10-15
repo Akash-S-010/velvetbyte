@@ -86,7 +86,7 @@ const Navbar = () => {
     <>
       {/* Header - ✅ Added scroll visibility classes */}
       <header
-        className={`fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 transition-opacity duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 bg-white transition duration-300 ${
           isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
