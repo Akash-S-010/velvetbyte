@@ -3,7 +3,7 @@ import { FaLinkedin, FaWhatsapp } from "react-icons/fa";
 const ProfileCard = () => {
   const profiles = [
     {
-      avatarUrl: "/images/crew/Arjun.jpg",
+      avatarUrl: "/images/crew/Arjun.png",
       name: "Arjun",
       title: "C E O",
       bio: "The Chief Executive Officer of the company",
