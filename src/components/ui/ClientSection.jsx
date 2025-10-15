@@ -2,24 +2,20 @@ import React from "react";
 
 const clients = [
   {
-    name: "Google",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png",
+    name: "Fullmoon",
+    logo: "/images/client_logos/Fullmoon.jpg",
   },
   {
-    name: "Amazon",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1280px-Amazon_logo.svg.png",
+    name: "Selorae",
+    logo: "/images/client_logos/Selorae.png",
   },
   {
-    name: "Microsoft",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/1280px-Microsoft_logo_%282012%29.svg.png",
+    name: "Blacmelo",
+    logo: "/images/client_logos/Blacmelo.png",
   },
   {
-    name: "Netflix",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png",
-  },
-  {
-    name: "Spotify",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Shopify_logo_2018.svg/1280px-Shopify_logo_2018.svg.png",
+    name: "Vikriti",
+    logo: "/images/client_logos/Vikriti.avif",
   },
 ];
 
