@@ -66,14 +66,7 @@ const projects = [
     colSpan: "col-span-1",
     rowSpan: "row-span-1",
   },
-  {
-    id: 9,
-    title: "FullMoon Cinema",
-    category: "Film Production Company Website",
-    image: "/images/portfolio/Fullmoon.png",
-    colSpan: "col-span-1",
-    rowSpan: "row-span-1",
-  },
+  
 ];
 
 const ImageGallery = () => {
