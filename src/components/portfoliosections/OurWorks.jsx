@@ -1,38 +1,60 @@
 import React from "react";
 
-// --- Data for the portfolio items (I've added titles) ---
+// --- Data for the portfolio items (with two new cards added) ---
 const works = [
   {
-    title: "Blacmelo Web Design", // Added title
-    description: "A beautiful web design built with React and Tailwind, focusing on responsiveness and modern aesthetics.",
-    image: "https://i.postimg.cc/DfjH717v/clothes-laptop-bed-arrangement-high-angle.jpg",
+    title: "Blacmelo Web Design",
+    description:
+      "A beautiful web design built with React and Tailwind, focusing on responsiveness and modern aesthetics.",
+    image:
+      "https://i.postimg.cc/DfjH717v/clothes-laptop-bed-arrangement-high-angle.jpg",
     link: "https://blacmelo.com/",
   },
   {
-    title: "Vkriti E-commerce", // Added title
-    description: "E-commerce platform with modern UI/UX and fast performance, designed for high-volume sales and ease of use.",
-    image: "https://i.postimg.cc/kXYTxskD/friends-shopping-second-hand-market.jpg",
+    title: "Vkriti E-commerce",
+    description:
+      "E-commerce platform with modern UI/UX and fast performance, designed for high-volume sales and ease of use.",
+    image:
+      "https://i.postimg.cc/kXYTxskD/friends-shopping-second-hand-market.jpg",
     link: "https://vkriti.com/",
   },
   {
-    title: "Nsmediaco Blog", // Added title
-    description: "A mobile-responsive blog using Next.js and Markdown for rapid content delivery and an optimal reading experience.",
-    image: "https://i.postimg.cc/c41xbRXw/professional-equipment-camera-tripod-stand-field-front-prepared-table-evening-time.jpg",
+    title: "Nsmediaco Blog",
+    description:
+      "A mobile-responsive blog using Next.js and Markdown for rapid content delivery and an optimal reading experience.",
+    image:
+      "https://i.postimg.cc/c41xbRXw/professional-equipment-camera-tripod-stand-field-front-prepared-table-evening-time.jpg",
     link: "https://nsmediaco.com/",
+  },
+  {
+    title: "Groom Meeting Details",
+    description:
+      "A luxury wedding portfolio showcasing elegant details — from the groom’s attire to accessories — captured with style and precision.",
+    image:
+      "https://i.postimg.cc/L8M7sV1h/groom-meeting-details-jacket-shoes-watches-buttons-wedding-day.jpg",
+    link: "https://selorae.com/",
+  },
+  {
+    title: "Fullmoon Cinema",
+    description:
+      "A cinematic project highlighting the art of storytelling through visuals, creativity, and immersive motion design.",
+    image:
+      "https://i.postimg.cc/3JhC4ftm/collage-about-movie-time-with-hands-holding-camera.jpg",
+    link: "https://fullmooncinema.com/",
   },
 ];
 
 // --- Classy & Attractive Styles ---
 const classyStyles = {
   section: {
-    padding: "6rem 2rem", // Increased padding
-    backgroundColor: "#ffffff", // Pure white background for class
+    padding: "6rem 2rem",
+    backgroundColor: "#ffffff",
     textAlign: "center",
-    fontFamily: "'Helvetica Neue', Arial, sans-serif", // Classy font stack
+    fontFamily: "'Helvetica Neue', Arial, sans-serif",
   },
   title: {
-    fontSize: "3rem", // Larger, more impactful title
-    fontWeight: 300, // Lighter font weight for sophistication
+    fontSize: "3rem",
+    fontWeight: 300,
     marginBottom: "1rem",
     color: "#1a1a1a",
     letterSpacing: "1px",
@@ -46,25 +68,27 @@ const classyStyles = {
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "center",
-    gap: "2.5rem", // Increased gap
+    gap: "2.5rem",
+    maxWidth: "1100px", // keeps layout centered and 3 per row
+    margin: "0 auto",
   },
   card: {
     backgroundColor: "#fff",
-    borderRadius: "8px", // Slightly softer corners
-    border: "1px solid #eee", // Subtle border for definition
-    boxShadow: "0 8px 30px rgba(0, 0, 0, 0.05)", // Softer, more pronounced shadow
+    borderRadius: "8px",
+    border: "1px solid #eee",
+    boxShadow: "0 8px 30px rgba(0, 0, 0, 0.05)",
     overflow: "hidden",
-    width: "320px", // Slightly wider card
+    width: "320px",
     transition: "transform 0.4s ease, box-shadow 0.4s ease",
     cursor: "pointer",
   },
   image: {
     width: "100%",
-    height: "200px", // Taller image area
+    height: "200px",
     objectFit: "cover",
   },
   content: {
-    padding: "1.5rem", // More internal padding
+    padding: "1.5rem",
     textAlign: "left",
   },
   cardTitle: {
@@ -80,7 +104,7 @@ const classyStyles = {
     lineHeight: 1.5,
   },
   button: {
-    backgroundColor: "black", // A sophisticated forest green or deep navy would also work
+    backgroundColor: "#FF9900", // orange button
     color: "white",
     border: "none",
     padding: "0.7rem 1.5rem",
@@ -93,9 +117,8 @@ const classyStyles = {
     fontWeight: 600,
     letterSpacing: "0.5px",
   },
-  // Button hover style (will be applied inline via onMouseEnter)
   buttonHover: {
-    backgroundColor: "#388e3c",
+    backgroundColor: "#e68900", // darker orange hover
     transform: "translateY(-1px)",
   },
 };
@@ -116,29 +139,33 @@ const OurWorks = () => {
             key={index}
             style={{
               ...classyStyles.card,
-              // Apply hover styles for card
-              transform: hoveredCard === index ? "translateY(-10px)" : "translateY(0)",
-              boxShadow: hoveredCard === index ? "0 15px 40px rgba(0, 0, 0, 0.1)" : classyStyles.card.boxShadow,
+              transform:
+                hoveredCard === index ? "translateY(-10px)" : "translateY(0)",
+              boxShadow:
+                hoveredCard === index
+                  ? "0 15px 40px rgba(0, 0, 0, 0.1)"
+                  : classyStyles.card.boxShadow,
             }}
             onMouseEnter={() => setHoveredCard(index)}
             onMouseLeave={() => setHoveredCard(null)}
           >
-            <img 
-              src={work.image} 
-              alt={work.title || `Project ${index + 1}`} 
-              style={classyStyles.image} 
+            <img
+              src={work.image}
+              alt={work.title || `Project ${index + 1}`}
+              style={classyStyles.image}
             />
             <div style={classyStyles.content}>
-              <h3 style={classyStyles.cardTitle}>{work.title || `Project ${index + 1}`}</h3>
+              <h3 style={classyStyles.cardTitle}>
+                {work.title || `Project ${index + 1}`}
+              </h3>
               <p style={classyStyles.description}>{work.description}</p>
               <a
                 href={work.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
-                    ...classyStyles.button,
-                    // Apply hover styles for button
-                    ...(hoveredButton === index ? classyStyles.buttonHover : {}),
+                  ...classyStyles.button,
+                  ...(hoveredButton === index ? classyStyles.buttonHover : {}),
                 }}
                 onMouseEnter={() => setHoveredButton(index)}
                 onMouseLeave={() => setHoveredButton(null)}
@@ -154,3 +181,4 @@ const OurWorks = () => {
 };
 
 export default OurWorks;
+

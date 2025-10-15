@@ -6,7 +6,7 @@ import OurWorks from '../components/portfoliosections/OurWorks'
 function Portfolio() {
   return (
     <div>
-        <WebsiteCostChart/>
+        
           <OurWorks/>
         <CostSection/>
         <ComparisonTable/>

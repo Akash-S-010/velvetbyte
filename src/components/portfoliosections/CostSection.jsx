@@ -50,9 +50,28 @@ const CostSection = () => {
         Cost of Building Your Own Website in 2025
       </h2>
       <p style={styles.paragraph}>
-        Thinking about building your own website? DIY website builders have profoundly evolved, making it easier than ever to
-        create a professional looking site without needing any coding skills whatsoever. But is it the right choice for you? Let's
-        break down the costs, pros, and cons so you can decide with confidence.
+       
+   We work with startups, small businesses, eCommerce brands, and service providers. Whether you need a basic site, a custom landing page, or a full online store, we’ve got you covered.
+   . We offer budget-friendly website packages tailored for freelancers, early-stage founders, and small businesses. You don’t need a huge budget to make a strong online impression.
+
+
+
+      
+  
+    
+   
+  
+  
+    
+    
+  
+       
+                
+
+
+
+   
+
       </p>
       <div style={styles.dotIndicator}></div>
     </div>
