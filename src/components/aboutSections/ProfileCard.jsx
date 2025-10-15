@@ -77,11 +77,11 @@ const ProfileCard = () => {
     {
       avatarUrl: "/images/crew/Shaija.jpeg",
       name: "Shaija Karunakaran",
-      title: "Graphic Designer",
-      bio: "Graphic Designer who specialize in creating visually stunning and engaging designs that communicate your brand's message effectively.",
+      title: "Digital Marketer",
+      bio: "Digital marketer who specialize in SEO, Google Ads, and social media marketing to build brand visibility and drive real results.",
       linkedinUrl: "https://www.linkedin.com/in/shaija-karunakaran-1b2624136/",
       whatsappUrl: "https://wa.me/",
-      tools: ["Photoshop", "Illustrator"],
+      tools: ["Content Creation", "SEO", "Email Marketing"],
     },
     {
       avatarUrl: "/images/crew/Reshma.jpeg",
