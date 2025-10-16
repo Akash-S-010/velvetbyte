@@ -37,7 +37,7 @@ const projects = [
   {
     id: 5,
     title: "Reveler",
-    category: "Branding",
+    category: "Branding Work",
     image: "/images/portfolio/reveler.jpg",
     colSpan: "col-span-1",
     rowSpan: "row-span-1",
@@ -61,8 +61,24 @@ const projects = [
   {
     id: 8,
     title: "Real Estate Team Website",
-    category: "Website",
+    category: "Website for Real Estate Firm",
     image: "/images/portfolio/RealEstate.jpg",
+    colSpan: "col-span-1",
+    rowSpan: "row-span-1",
+  },
+  {
+    id: 9,
+    title: "Full Moon Cinema",
+    category: "Website for Film Production Company",
+    image: "/images/portfolio/Fullmoon.png",
+    colSpan: "col-span-2",
+    rowSpan: "row-span-1",
+  },
+  {
+    id: 10,
+    title: "Ns Media",
+    category: "Website for It Company",
+    image: "/images/portfolio/Nsmedia.png",
     colSpan: "col-span-1",
     rowSpan: "row-span-1",
   },
@@ -72,7 +88,7 @@ const projects = [
 const ImageGallery = () => {
   return (
     <div className="container mx-auto px-4 py-16 bg-white-200">
-      <h2 className="text-2xl md:text-6xl font-semibold text-center text-gray-800 mb-6 md:mb-14">
+      <h2 className="text-2xl md:text-5xl font-semibold text-center text-black mb-6 md:mb-14">
         Explore Our <span className='text-primary'>Works</span>
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[250px] lg:auto-rows-[400px]">
