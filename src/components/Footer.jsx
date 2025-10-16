@@ -104,7 +104,7 @@ const Footer = () => {
 
           {/* Social Media Icons */}
           <div className="flex justify-center gap:2 md:gap-4 mt-8">
-            <a href="#" className="hover:text-primary">
+            <a href="https://www.instagram.com/velvet_byte?igsh=MWFlZXZlMnlnaXM4bw==" className="hover:text-primary">
               <FaInstagram size={24} />
             </a>
             <a href="#" className="hover:text-primary">
