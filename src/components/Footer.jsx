@@ -81,8 +81,8 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="tel:+10234567890" className="hover:text-primary">
-                  +91 9876543234
+                <a href="tel:+91 8304826261" className="hover:text-primary">
+                  +91 8304826261
                 </a>
               </li>
             </ul>
@@ -107,7 +107,7 @@ const Footer = () => {
             <a href="https://www.instagram.com/velvet_byte?igsh=MWFlZXZlMnlnaXM4bw==" className="hover:text-primary">
               <FaInstagram size={24} />
             </a>
-            <a href="#" className="hover:text-primary">
+            <a href="https://www.facebook.com/profile.php?id=61570463492944" className="hover:text-primary">
               <FaFacebook size={24} />
             </a>
             <a

@@ -130,7 +130,7 @@ const ContactUs = () => {
               <p className="text-gray-500 mt-1 mb-3">
                 Available during working hours.
               </p>
-              <span className="text-primary font-semibold">+91 9876543210</span>
+              <span className="text-primary font-semibold">+91 8304826261</span>
             </div>
           </div>
         </div>
