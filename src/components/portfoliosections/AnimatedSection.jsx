@@ -39,7 +39,7 @@ const AnimatedSection = () => {
   };
 
   return (
-    <div style={wrapperStyle}>
+    <div style={wrapperStyle} className="bg-white pt-10">
       <section style={sectionStyle} className="animated-section">
         <h1 style={headingStyle} className="animated-heading">
           <span className="word word1">Design</span>{" "}

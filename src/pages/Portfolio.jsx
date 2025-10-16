@@ -7,8 +7,7 @@ import ImageGallery from '../components/portfoliosections/ImageGallery'
 import AnimatedSection from '../components/portfoliosections/AnimatedSection'
 function Portfolio() {
   return (
-    <div>
-        
+    <div className='bg-gray-100'>
       <ImageGallery />
         <AnimatedSection/>
           <OurWorks/>
