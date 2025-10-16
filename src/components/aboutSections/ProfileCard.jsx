@@ -21,7 +21,7 @@ const ProfileCard = () => {
       tools: ["Shopify", "WordPress", "React"],
     },
     {
-      avatarUrl: "https://placehold.co/100x100/6366f1/ffffff?text=K",
+      avatarUrl: "/images/crew/Akhil.png",
       name: "Akhil Das",
       title: "C O O",
       bio: "The Chief Operating Officer of the company",

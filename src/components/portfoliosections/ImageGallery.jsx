@@ -77,7 +77,7 @@ const projects = [
   {
     id: 10,
     title: "Ns Media",
-    category: "Website for It Company",
+    category: "Portfolio website for It Company",
     image: "/images/portfolio/Nsmedia.png",
     colSpan: "col-span-1",
     rowSpan: "row-span-1",

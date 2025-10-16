@@ -91,7 +91,9 @@ const Footer = () => {
 
         {/* Brand Name */}
         <div className="text-center mt-12 py-12 border-t border-line border-b ">
-            <h1 className="text-2xl md:text-5xl font-semibold text-muted">Unlock Your <span className="text-primary">Success</span></h1>
+          <h1 className="text-2xl md:text-5xl font-semibold text-muted">
+            Unlock Your <span className="text-primary">Success</span>
+          </h1>
         </div>
 
         <div className=" flex justify-between">
@@ -103,12 +105,15 @@ const Footer = () => {
           {/* Social Media Icons */}
           <div className="flex justify-center gap:2 md:gap-4 mt-8">
             <a href="#" className="hover:text-primary">
-              <FaFacebook size={24} />
-            </a>
-            <a href="#" className="hover:text-primary">
               <FaInstagram size={24} />
             </a>
             <a href="#" className="hover:text-primary">
+              <FaFacebook size={24} />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/velvetbyte/posts/?feedView=all"
+              className="hover:text-primary"
+            >
               <FaLinkedin size={24} />
             </a>
           </div>
