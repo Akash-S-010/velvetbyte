@@ -1,5 +1,5 @@
 import React from "react";
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 
@@ -74,7 +74,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="mailto:support@skillbyte.com"
+                  href="mailto:support@velvetbyte.com"
                   className="hover:text-primary"
                 >
                   support@velvetbyte.com
@@ -82,7 +82,7 @@ const Footer = () => {
               </li>
               <li>
                 <a href="tel:+10234567890" className="hover:text-primary">
-                  +1 (023) 456-7890
+                  +91 9876543234
                 </a>
               </li>
             </ul>
@@ -101,18 +101,15 @@ const Footer = () => {
           </div>
 
           {/* Social Media Icons */}
-          <div className="flex justify-center gap-6 mt-8">
+          <div className="flex justify-center gap:2 md:gap-4 mt-8">
             <a href="#" className="hover:text-primary">
-              <Facebook size={24} />
+              <FaFacebook size={24} />
             </a>
             <a href="#" className="hover:text-primary">
-              <Twitter size={24} />
+              <FaInstagram size={24} />
             </a>
             <a href="#" className="hover:text-primary">
-              <Instagram size={24} />
-            </a>
-            <a href="#" className="hover:text-primary">
-              <Linkedin size={24} />
+              <FaLinkedin size={24} />
             </a>
           </div>
         </div>

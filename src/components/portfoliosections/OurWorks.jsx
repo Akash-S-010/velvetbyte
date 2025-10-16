@@ -104,7 +104,7 @@ const classyStyles = {
     lineHeight: 1.5,
   },
   button: {
-    backgroundColor: "#FF9900", // orange button
+    backgroundColor: "#fd7e14", // primary button
     color: "white",
     border: "none",
     padding: "0.7rem 1.5rem",
@@ -118,7 +118,7 @@ const classyStyles = {
     letterSpacing: "0.5px",
   },
   buttonHover: {
-    backgroundColor: "#e68900", // darker orange hover
+    backgroundColor: "#000000", // darker orange hover
     transform: "translateY(-1px)",
   },
 };
