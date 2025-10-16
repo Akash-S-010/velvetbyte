@@ -1,0 +1,61 @@
+.logos-container {
+  overflow: hidden;
+  padding: 60px 0;
+  white-space: nowrap;
+  position: relative;
+}
+.logos-container:before, .logos-container:after {
+  position: absolute;
+  top: 0;
+  width: 100px; /* Default width for smaller screens */
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+@media (min-width: 768px) { /* Medium screens and up */
+  .logos-container:before, .logos-container:after {
+    width: 250px;
+  }
+}
+.logos-container:before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+.logos-container:after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+.logo-track {
+  display: flex;
+  width: max-content;
+  animation: slide 25s linear infinite;
+}
+.logo-item {
+  flex-shrink: 0;
+  margin: 0 20px; /* Default margin for smaller screens */
+  height: 45px; /* Smaller height for mobile */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) { /* Medium screens and up */
+  .logo-item {
+    margin: 0 40px;
+    height: 60px; /* Larger height for desktop */
+  }
+}
+.logo-item img {
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
