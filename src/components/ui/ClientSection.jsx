@@ -5,7 +5,7 @@ const clients = [
   { name: "Fullmoon", logo: "/images/client_logos/Fullmoon.jpg" },
   { name: "Selorae", logo: "/images/client_logos/Selorae.png" },
   { name: "Blacmelo", logo: "/images/client_logos/Blacmelo.png" },
-  { name: "Vikriti", logo: "/images/client_logos/Vikriti.png" },
+  { name: "Vikriti", logo: "/images/client_logos/Vkriti.avif" },
   { name: "PureMed", logo: "/images/client_logos/Puremed.png" },
   { name: "Soda", logo: "/images/client_logos/SODA.png" },
 ];
