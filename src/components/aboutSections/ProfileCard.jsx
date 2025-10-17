@@ -1,5 +1,5 @@
 import React from "react";
-import { FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 const ProfileCard = () => {
   const profiles = [
     {
@@ -8,7 +8,6 @@ const ProfileCard = () => {
       title: "C E O",
       bio: "The Chief Executive Officer of the company",
       linkedinUrl: "https://www.linkedin.com/in/arjunworks96/",
-      whatsappUrl: "https://wa.me/918921658090",
       tools: ["Shopify", "WordPress", "React"],
     },
     {
@@ -17,7 +16,6 @@ const ProfileCard = () => {
       title: "C T O",
       bio: "The Chief Technical Officer of the company",
       linkedinUrl: "https://www.linkedin.com/in/visakh-ck/",
-      whatsappUrl: "https://wa.me/917025841398",
       tools: ["Shopify", "WordPress", "React"],
     },
     {
@@ -26,8 +24,7 @@ const ProfileCard = () => {
       title: "C O O",
       bio: "The Chief Operating Officer of the company",
       linkedinUrl: "https://linkedin.com/in/karan-verma",
-      whatsappUrl: "https://wa.me/919539118807",
-      tools: ["React", "Tailwind", "TypeScript"],
+      tools: ["Photoshop", "Illustrator", "Coreldraw"],
     },
     {
       avatarUrl: "/images/crew/Gopika.jpeg",
@@ -35,7 +32,6 @@ const ProfileCard = () => {
       title: "Social Media Head",
       bio: "Digital marketer who specialize in SEO, Google Ads, and social media marketing to build brand visibility and drive real results.",
       linkedinUrl: "https://www.linkedin.com/in/gopika-k-g-5b057b2a5/",
-      whatsappUrl: "https://wa.me/",
       tools: ["SMM", "SEM", "B2B", "B2C"],
     },
     {
@@ -44,7 +40,6 @@ const ProfileCard = () => {
       title: "Social Media Executive",
       bio: "Digital marketer who specialize in SEO, Google Ads, and social media marketing to build brand visibility and drive real results.",
       linkedinUrl: "https://www.linkedin.com/in/jumaila-marketing/",
-      whatsappUrl: "https://wa.me/",
       tools: ["SMM", "SEO", "Google Ads"],
     },
     {
@@ -53,7 +48,6 @@ const ProfileCard = () => {
       title: "Graphic Designer",
       bio: "Graphic Designer who specialize in creating visually stunning and engaging designs that communicate your brand's message effectively.",
       linkedinUrl: "https://www.linkedin.com/in/jumaila-marketing/",
-      whatsappUrl: "https://wa.me/",
       tools: ["SMM", "SEO", "Google Ads"],
     },
     {
@@ -62,7 +56,6 @@ const ProfileCard = () => {
       title: "Social Media Executive",
       bio: "Digital marketer who creating and executing effective online strategies, helping brands expand their reach and achieve their objectives.",
       linkedinUrl: "https://www.linkedin.com/in/dhanya-k-p-3ba63a363/",
-      whatsappUrl: "https://wa.me/",
       tools: ["SMM", "Content Creation", "SEO"],
     },
     {
@@ -71,7 +64,6 @@ const ProfileCard = () => {
       title: "Graphic Designer",
       bio: "Graphic Designer who specialize in creating visually stunning and engaging designs that communicate your brand's message effectively.",
       linkedinUrl: "https://www.linkedin.com/in/dhanya-k-p-3ba63a363/",
-      whatsappUrl: "https://wa.me/",
       tools: ["Photoshop", "Illustrator"],
     },
     {
@@ -80,7 +72,6 @@ const ProfileCard = () => {
       title: "Digital Marketer",
       bio: "Digital marketer who specialize in SEO, Google Ads, and social media marketing to build brand visibility and drive real results.",
       linkedinUrl: "https://www.linkedin.com/in/shaija-karunakaran-1b2624136/",
-      whatsappUrl: "https://wa.me/",
       tools: ["Content Creation", "SEO", "Email Marketing"],
     },
     {
@@ -89,7 +80,6 @@ const ProfileCard = () => {
       title: "Full Stack Developer",
       bio: "Full stack developer, crafting seamless web solutions with expertise in frontend and backend Technologies.",
       linkedinUrl: "https://www.linkedin.com/in/reshma-vijayan-sr/",
-      whatsappUrl: "https://wa.me/",
       tools: ["React", "Node.js", "Express.js", "MongoDB"],
     },
     {
@@ -98,7 +88,6 @@ const ProfileCard = () => {
       title: "Frontend Developer",
       bio: "Creative frontend developer, designing stunning UIs, collaborating with backend for seamless integration.",
       linkedinUrl: "https://www.linkedin.com/in/akash-s-mahe/",
-      whatsappUrl: "https://wa.me/918606727349",
       tools: ["React", "Node.js", "Express.js", "MongoDB"],
     },
     {
@@ -107,7 +96,6 @@ const ProfileCard = () => {
       title: "Full Stack Developer",
       bio: "Full stack developer, crafting seamless web solutions with expertise in frontend and backend Technologies.",
       linkedinUrl: "https://www.linkedin.com/in/",
-      whatsappUrl: "https://wa.me/918606778787",
       tools: ["React", "Node.js", "Express.js", "MongoDB"],
     },
     {
@@ -116,7 +104,6 @@ const ProfileCard = () => {
       title: "Graphic Designer & Video Editor",
       bio: "Graphic designer and video editor, crafting stunning visuals and engaging content for brands and campaigns.",
       linkedinUrl: "https://www.linkedin.com/in",
-      whatsappUrl: "https://wa.me/918600000000",
       tools: ["Photoshop", "Illustrator", "Premiere Pro"],
     },
   ];
@@ -128,6 +115,17 @@ const ProfileCard = () => {
           key={index}
           className="relative w-full h-full  border border-primary/50 max-w-xs sm:max-w-sm overflow-hidden rounded-2xl  p-6 text-center transition-all duration-500 ease-out shadow-lg hover:shadow-xl hover:scale-[1.02] cursor-pointer"
         >
+          {profile.linkedinUrl && (
+            <a
+              href={profile.linkedinUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="absolute top-4 right-4 text-gray-600 hover:text-blue-600 transition-colors"
+            >
+              <FaLinkedin size={24} />
+            </a>
+          )}
           {/* Avatar */}
           <div className="w-24 h-24 mx-auto mb-3 rounded-full border-2 border-primary/50 overflow-hidden">
             <img
@@ -175,36 +173,7 @@ const ProfileCard = () => {
             </div>
           )}
 
-          {/* Social Icons */}
-          <div className="flex justify-center items-center gap-4 mt-6">
-            {profile.linkedinUrl && (
-              <a
-                href={profile.linkedinUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-              >
-                <FaLinkedin
-                  size={30}
-                  className="text-gray-600 hover:text-blue-600 transition-colors"
-                />
-              </a>
-            )}
 
-            {profile.whatsappUrl && (
-              <a
-                href={profile.whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="WhatsApp"
-              >
-                <FaWhatsapp
-                  size={30}
-                  className="text-gray-600 hover:text-green-600 transition-colors"
-                />
-              </a>
-            )}
-          </div>
         </div>
       ))}
     </div>
