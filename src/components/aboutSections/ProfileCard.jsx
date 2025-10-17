@@ -1,5 +1,6 @@
 import React from "react";
 import { FaLinkedin } from "react-icons/fa";
+
 const ProfileCard = () => {
   const profiles = [
     {
@@ -113,67 +114,70 @@ const ProfileCard = () => {
       {profiles.map((profile, index) => (
         <div
           key={index}
-          className="relative w-full h-full  border border-primary/50 max-w-xs sm:max-w-sm overflow-hidden rounded-2xl  p-6 text-center transition-all duration-500 ease-out shadow-lg hover:shadow-xl hover:scale-[1.02] cursor-pointer"
+          className="relative w-full max-w-xs sm:max-w-sm overflow-hidden rounded-2xl bg-white border border-primary/40 shadow-md hover:shadow-xl cursor-pointer transition duration-300 ease-in-out"
         >
+          {/* 🔹 Top section with background image */}
+          <div
+            className="relative h-24 bg-cover bg-right"
+            style={{
+              backgroundImage: `url("/images/crew/profile_background.png")`,
+            }}
+          >
+            {/* 🔹 Avatar positioned bottom-left, overlapping the banner */}
+            <div className="absolute left-6 bottom-[-2.5rem] w-20 h-20 rounded-full border-2 border-primary/50 overflow-hidden shadow-lg">
+              <img
+                src={profile.avatarUrl}
+                alt={`${profile.name}'s avatar`}
+                className="w-full h-full object-cover object-top"
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = `https://placehold.co/96x96/ffffff/000?text=${profile.name?.charAt(
+                    0
+                  )}`;
+                }}
+              />
+            </div>
+          </div>
           {profile.linkedinUrl && (
             <a
               href={profile.linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="absolute top-4 right-4 text-gray-600 hover:text-blue-600 transition-colors"
+              className="absolute top-27 right-4 text-gray-700 hover:text-blue-500 transition-colors"
             >
               <FaLinkedin size={24} />
             </a>
           )}
-          {/* Avatar */}
-          <div className="w-24 h-24 mx-auto mb-3 rounded-full border-2 border-primary/50 overflow-hidden">
-            <img
-              src={profile.avatarUrl}
-              alt={`${profile.name}'s avatar`}
-              className="w-full h-full object-cover object-top"
-              onError={(e) => {
-                e.target.onerror = null;
-                e.target.src = `https://placehold.co/96x96/6366f1/white?text=${profile.name?.charAt(
-                  0
-                )}`;
-              }}
-            />
-          </div>
 
-          {/* Name & Title */}
-          <h2 className="text-2xl font-semibold text-card-foreground">
-            {profile.name}
-          </h2>
-          <p className="text-sm  text-primary font-medium mt-2">
-            {profile.title}
-          </p>
+          {/* 🔹 Bottom content section (left-aligned) */}
+          <div className="pt-14 pb-6 px-6 text-black text-left">
+            <h2 className="text-xl font-semibold">{profile.name}</h2>
+            <p className="text-sm text-primary font-semibold mt-1">
+              {profile.title}
+            </p>
+            <p className="mt-3 text-sm text-gray-700 leading-relaxed">
+              {profile.bio}
+            </p>
 
-          {/* Bio */}
-          <p className="mt-3 text-muted text-sm text-muted-foreground leading-relaxed">
-            {profile.bio}
-          </p>
-
-          {/* Tools Section (only if tools provided) */}
-          {profile.tools && profile.tools.length > 0 && (
-            <div className="mt-5">
-              <h3 className="text-xs uppercase tracking-wide text-muted-foreground mb-2">
-                Tools & Skills
-              </h3>
-              <div className="flex flex-wrap justify-center gap-2">
-                {profile.tools.map((tool, idx) => (
-                  <span
-                    key={idx}
-                    className="px-3 py-1 text-xs rounded-full bg-primary/10 border border-primary/50 "
-                  >
-                    {tool}
-                  </span>
-                ))}
+            {profile.tools?.length > 0 && (
+              <div className="mt-4">
+                <h3 className="text-xs uppercase tracking-wide text-gray-500 mb-2">
+                  Tools & Skills
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {profile.tools.map((tool, idx) => (
+                    <span
+                      key={idx}
+                      className="px-3 py-1 text-xs rounded-full bg-primary/20 border border-primary/40"
+                    >
+                      {tool}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
-          )}
-
-
+            )}
+          </div>
         </div>
       ))}
     </div>
