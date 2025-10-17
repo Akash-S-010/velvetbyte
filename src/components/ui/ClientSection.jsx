@@ -18,7 +18,7 @@ export default function ClientsSection() {
     <section className="bg-white mb-20 relative overflow-hidden py-4 md:py-10">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
-        <h2 className="text-2xl md:text-5xl font-semibold text-gray-800 mb-6 md:mb-10 text-center">
+        <h2 className="text-2xl md:text-5xl font-semibold text-gray-800 mb-4 md:mb-10 text-center">
           Trusted By Leading
           <br />
           <span className="text-primary">Companies</span>

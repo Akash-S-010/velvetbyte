@@ -7,7 +7,7 @@ import ProfileCard from "../components/aboutSections/ProfileCard";
 import ClientSection from "../components/ui/ClientSection";
 function AboutPage() {
   return (
-    <div>
+    <div className="bg-white">
       <AboutHero />
       <ClientSection />
       <StatsSection />
