@@ -12,8 +12,8 @@ const ProfileCard = () => {
       tools: ["Shopify", "WordPress", "React"],
     },
     {
-      avatarUrl: "/images/crew/Visak.png",
-      name: "Visakh C K",
+      avatarUrl: "https://placehold.co/100x100/10b981/ffffff?text=V",
+      name: "Visakh",
       title: "C T O",
       bio: "The Chief Technical Officer of the company",
       linkedinUrl: "https://www.linkedin.com/in/visakh-ck/",
