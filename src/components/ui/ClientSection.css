@@ -1,61 +1,88 @@
 .logos-container {
   overflow: hidden;
-  padding: 60px 0;
-  white-space: nowrap;
+  padding: 40px 0;
   position: relative;
 }
-.logos-container:before, .logos-container:after {
+
+.logos-container::before,
+.logos-container::after {
   position: absolute;
   top: 0;
-  width: 100px; /* Default width for smaller screens */
+  width: 80px;
   height: 100%;
   content: "";
   z-index: 2;
 }
 
-@media (min-width: 768px) { /* Medium screens and up */
-  .logos-container:before, .logos-container:after {
-    width: 250px;
+@media (min-width: 768px) {
+  .logos-container::before,
+  .logos-container::after {
+    width: 180px;
   }
 }
-.logos-container:before {
+
+.logos-container::before {
   left: 0;
-  background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));
+  background: linear-gradient(to right, #fff 50%, rgba(255, 255, 255, 0));
 }
-.logos-container:after {
+
+.logos-container::after {
   right: 0;
-  background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
+  background: linear-gradient(to left, #fff 50%, rgba(255, 255, 255, 0));
 }
+
+/* Animation track */
 .logo-track {
   display: flex;
   width: max-content;
   animation: slide 25s linear infinite;
 }
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Logo items */
 .logo-item {
   flex-shrink: 0;
-  margin: 0 20px; /* Default margin for smaller screens */
-  height: 45px; /* Smaller height for mobile */
+  margin: 0 16px;
+  height: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-@media (min-width: 768px) { /* Medium screens and up */
-  .logo-item {
-    margin: 0 40px;
-    height: 60px; /* Larger height for desktop */
-  }
-}
 .logo-item img {
   height: 100%;
-  max-width: 100%;
+  max-width: 120px;
   object-fit: contain;
+  opacity: 0.85;
+  filter: grayscale(100%);
+  transition: filter 0.4s ease, opacity 0.4s ease;
 }
-@keyframes slide {
-  from {
-    transform: translateX(0);
+
+.logo-item img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Medium screens */
+@media (min-width: 640px) {
+  .logo-item {
+    margin: 0 24px;
+    height: 45px;
   }
-  to {
-    transform: translateX(-50%);
+}
+
+/* Large screens */
+@media (min-width: 1024px) {
+  .logo-item {
+    margin: 0 36px;
+    height: 55px;
   }
 }
