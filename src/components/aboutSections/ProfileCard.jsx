@@ -49,7 +49,7 @@ const ProfileCard = () => {
       title: "Graphic Designer",
       bio: "Graphic Designer who specialize in creating visually stunning and engaging designs that communicate your brand's message effectively.",
       linkedinUrl: "https://www.linkedin.com/in/jumaila-marketing/",
-      tools: ["SMM", "SEO", "Google Ads"],
+      tools: ["Photoshop", "Illustrator"],
     },
     {
       avatarUrl: "/images/crew/Dhanya.jpeg",
