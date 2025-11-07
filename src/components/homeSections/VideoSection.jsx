@@ -1,6 +1,5 @@
 import React from "react";
 import Button from "../ui/Button";
-import video from "../../assets/3d_abstract.mp4";
 
 const VideoSection = () => {
   return (
@@ -12,7 +11,7 @@ const VideoSection = () => {
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover sm:object-fill backdrop-blur-2xl"
       >
-        <source src={video} type="video/mp4" />
+        <source src="https://cdn.pixabay.com/video/2023/02/11/150253-798222949_large.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="absolute inset-0 opacity-50 bg-black backdrop-blur z-2"></div>
