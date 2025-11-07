@@ -31,6 +31,32 @@ const services = [
     color: "#fd7e14",
   },
   {
+    title: "Mobile Application Development",
+    description:
+      "We craft cross-platform mobile applications with seamless user journeys, performance tuning, and integrations that keep your audience engaged on every device. From concept to launch, our team delivers polished apps tailored to your business goals.",
+    technologies: [
+      "iOS & Android Development",
+      "Cross-Platform Frameworks",
+      "Immersive UI/UX Design",
+      "Backend & API Integrations",
+      "App Store Deployment",
+    ],
+    color: "#000000",
+  },
+  {
+    title: "Creative Production Services",
+    description:
+      "Bring your brand stories to life with cinematic visuals, immersive photography, and striking graphics. We handle end-to-end production to showcase your products and experiences with memorable impact.",
+    technologies: [
+      "Photography (Product, Fashion, Wedding, etc.)",
+      "Cinematography",
+      "Product 3D Visualization & Animation Ads",
+      "CGI / Motion Graphics Ads",
+      "Drone Aerial Photography",
+    ],
+    color: "#fd7e14",
+  },
+  {
     title: "Digital Marketing",
     description:
       "As a Google certified web design agency, we provide complete SEO and digital marketing solutions, all managed in-house by our dedicated account managers. Our team offers a variety of digital marketing services across multiple channels, ensuring measurable ROI for your business.",
@@ -42,18 +68,6 @@ const services = [
       "Email Marketing",
     ],
     color: "#000000",
-  },
-  {
-    title: "Graphic Design",
-    description:
-      "Our creative agency is a team of professionals focused on helping your brand grow through stunning graphic designs. Our talented London-based team specializes in creating brand identities that capture the essence of your business, aligning with your audience's expectations.",
-    technologies: [
-      "Creative Ads",
-      "Branding",
-      "Poster Designing",
-      "Brochure Designing",
-    ],
-    color: "#fd7e14",
   },
 ];
 
