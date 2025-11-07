@@ -10,7 +10,7 @@ const PortfolioSection = () => {
       title: 'E-commerce Platform',
       category: 'Web Development',
       description: 'A fully responsive e-commerce website built with Shopify, featuring seamless payment integration and optimized UX.',
-      image: 'https://velvetbyte.com/img/works/p4.jpg',
+      image: 'https://i.pinimg.com/736x/13/f7/0d/13f70dd0534797f49992d64c6d4f43ec.jpg',
       linkHref: '/portfolio',
       linkText: 'View Project',
       icon: <ShoppingCart size={24} />,
