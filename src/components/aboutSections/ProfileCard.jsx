@@ -109,7 +109,7 @@ const ProfileCard = () => {
     },
     ,
     {
-      avatarUrl: "/images/crew/ilham.jpeg",
+      avatarUrl: "/images/crew/ilham.JPG",
       name: "Ilham",
       title: "Creative Head",
       bio: "Graphic designer and video editor, crafting stunning visuals and engaging content for brands and campaigns.",
