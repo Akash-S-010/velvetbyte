@@ -5,15 +5,15 @@ const testimonials = [
   {
     text: "VelvetByte built our Shopify store from scratch and it's been a game-changer. The design is clean, checkout is smooth, and we've seen a 50% increase in conversions. They handled everything from product setup to payment integration perfectly.",
     image:
-      "https://ui-avatars.com/api/?name=Sarah+Mitchell&background=fd7e14&color=fff&size=128&bold=true",
-    name: "Sarah Mitchell",
+      "https://ui-avatars.com/api/?name=Anjali+Nair&background=fd7e14&color=fff&size=128&bold=true",
+    name: "Anjali Nair",
     role: "E-commerce Business Owner",
   },
   {
     text: "We needed a fast, modern website and VelvetByte delivered a stunning React site that loads instantly. The animations are smooth, it's fully responsive, and our bounce rate dropped by 35%. Highly professional work!",
     image:
-      "https://ui-avatars.com/api/?name=Alex+Chen&background=000000&color=fff&size=128&bold=true",
-    name: "Alex Chen",
+      "https://ui-avatars.com/api/?name=Arjun+Menon&background=000000&color=fff&size=128&bold=true",
+    name: "Arjun Menon",
     role: "Tech Startup Founder",
   },
   {
@@ -26,43 +26,43 @@ const testimonials = [
   {
     text: "Their digital marketing strategy transformed our online presence. From SEO to social media campaigns, VelvetByte knows how to drive real results. Our website traffic increased 3x and lead generation is up 60%!",
     image:
-      "https://ui-avatars.com/api/?name=James+Rodriguez&background=000000&color=fff&size=128&bold=true",
-    name: "James Rodriguez",
+      "https://ui-avatars.com/api/?name=Rajesh+Kumar&background=000000&color=fff&size=128&bold=true",
+    name: "Rajesh Kumar",
     role: "Marketing Director",
   },
   {
     text: "I needed a complete rebrand and VelvetByte nailed it. They created our logo, brand guidelines, business cards, and social media templates. Everything is cohesive, professional, and our brand finally stands out in the market.",
     image:
-      "https://ui-avatars.com/api/?name=Emma+Taylor&background=fd7e14&color=fff&size=128&bold=true",
-    name: "Emma Taylor",
+      "https://ui-avatars.com/api/?name=Lakshmi+Pillai&background=fd7e14&color=fff&size=128&bold=true",
+    name: "Lakshmi Pillai",
     role: "Small Business Owner",
   },
   {
     text: "VelvetByte designed all our marketing materials - brochures, flyers, and digital ads. The graphic design quality is exceptional and really captures our brand identity. Our campaigns look premium and professional now.",
     image:
-      "https://ui-avatars.com/api/?name=David+Kumar&background=000000&color=fff&size=128&bold=true",
-    name: "David Kumar",
+      "https://ui-avatars.com/api/?name=Aditya+Sharma&background=000000&color=fff&size=128&bold=true",
+    name: "Aditya Sharma",
     role: "Creative Director",
   },
   {
     text: "They built our mobile app for both iOS and Android and the experience is flawless. The UI is intuitive, performance is excellent, and our users love it. VelvetByte handled everything from design to deployment seamlessly.",
     image:
-      "https://ui-avatars.com/api/?name=Lisa+Anderson&background=fd7e14&color=fff&size=128&bold=true",
-    name: "Lisa Anderson",
+      "https://ui-avatars.com/api/?name=Divya+Krishnan&background=fd7e14&color=fff&size=128&bold=true",
+    name: "Divya Krishnan",
     role: "Product Manager",
   },
   {
     text: "We hired VelvetByte to build a custom e-commerce platform with advanced features. They delivered a powerful, scalable solution with inventory management, analytics, and seamless payment processing. Outstanding work!",
     image:
-      "https://ui-avatars.com/api/?name=Michael+Patel&background=000000&color=fff&size=128&bold=true",
-    name: "Michael Patel",
+      "https://ui-avatars.com/api/?name=Vishnu+Varma&background=000000&color=fff&size=128&bold=true",
+    name: "Vishnu Varma",
     role: "Retail Business Owner",
   },
   {
     text: "VelvetByte created a beautiful portfolio website for my freelance business using React. It's fast, modern, and showcases my work perfectly. I've been getting more client inquiries since launching it!",
     image:
-      "https://ui-avatars.com/api/?name=Sophie+Williams&background=fd7e14&color=fff&size=128&bold=true",
-    name: "Sophie Williams",
+      "https://ui-avatars.com/api/?name=Meera+Suresh&background=fd7e14&color=fff&size=128&bold=true",
+    name: "Meera Suresh",
     role: "Freelance Designer",
   },
 ];
