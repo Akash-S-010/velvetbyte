@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import StickySection from "../components/ui/StickySection";
-import videoBg from "../assets/videoBg.png";
-import serviceBg from "../assets/serviceBg.mp4";
+// import videoBg from "../assets/videoBg.png";
+// import serviceBg from "../assets/serviceBg.mp4";
 import ClientsSection from "../components/ui/ClientSection";
 
 const Services = () => {
@@ -15,7 +15,7 @@ const Services = () => {
     {
       title: "Website Development",
       images: [
-        "https://velvetbyte.com/img/works/p4.jpg",
+        "https://i.pinimg.com/1200x/dd/fa/89/ddfa893277c1e91cc7bca6a4a4a6e3c7.jpg",
         "https://i.pinimg.com/736x/b3/5e/33/b35e337ad27fdba7ef5abfb3006212bd.jpg",
         "https://i.pinimg.com/1200x/3d/75/d9/3d75d9c75fd2332493c9872c634200e7.jpg",
         "https://velvetbyte.com/img/works/p1.jpg",
@@ -123,8 +123,8 @@ const Services = () => {
 
   return (
     <section className="min-h-screen">
-      <div className="relative w-full h-[50vh] overflow-hidden">
-        {!videoLoaded && (
+      <div className="relative w-full h-[20vh] md:h-[60vh] overflow-hidden">
+        {/* {!videoLoaded && (
           <div
             className="absolute top-0 left-0 w-full h-full object-cover sm:object-fill bg-gray-300"
             style={{ backgroundImage: `url(${videoBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
@@ -149,12 +149,22 @@ const Services = () => {
             Services We <br />
             <span className="text-primary">Confidently</span> Deliver.
           </h2>
+        </div> */}
+        <div className="h-full flex items-end justify-center pb-4 bg-black">
+          <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-6xl text-white font-light md:leading-30">
+            Explore Our
+            <span className="block text-5xl  sm:text-[9vw] md:text-[12vw] font-bold">
+              Core
+              <span className="text-primary"> Services.</span>
+            </span>
+          </h2>
         </div>
       </div>
+
+      <StickySection services={services} />
       <div className="mt-20">
         <ClientsSection />
       </div>
-      <StickySection services={services} />
     </section>
   );
 };

@@ -6,6 +6,8 @@ const FloatingInput = ({
   onChange,
   type = "text",
   id,
+  name,
+  error,
   ...props
 }) => {
   const [isFocused, setIsFocused] = useState(false);
@@ -30,18 +32,22 @@ const FloatingInput = ({
   const shrinkLabel = isFocused || value?.length > 0;
 
   // Generate unique id if not provided
-  const inputId = id || `floating-input-${label.replace(/\s+/g, "-").toLowerCase()}`;
+  const inputId =
+    id || `floating-input-${label.replace(/\s+/g, "-").toLowerCase()}`;
 
   return (
     <div className="relative w-full">
       <input
         id={inputId}
         type={type}
+        name={name}
         value={value}
         onChange={handleChange}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
-        className="w-full text-xl md:text-xl border-b-2 border-gray-300 bg-transparent outline-none py-3"
+        className={`w-full text-xl md:text-xl border-b-2 ${
+          error ? "border-red-500" : "border-gray-300"
+        } bg-transparent outline-none py-3`}
         {...props}
       />
       <label
@@ -53,10 +59,15 @@ const FloatingInput = ({
         {label}
       </label>
       <span
-        className={`absolute bottom-0 left-0 h-0.5 w-full bg-primary transform transition-transform duration-300 ease-in-out ${
+        className={`absolute bottom-0 left-0 h-0.5 w-full ${
+          error ? "bg-red-500" : "bg-primary"
+        } transform transition-transform duration-300 ease-in-out ${
           shrinkLabel ? "scale-x-100" : "scale-x-0"
         } origin-left`}
       ></span>
+      {error && (
+        <p className="text-red-500 text-sm mt-1 absolute -bottom-6">{error}</p>
+      )}
     </div>
   );
 };

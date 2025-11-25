@@ -29,7 +29,7 @@ const StickySections = ({ services }) => {
                         key={i}
                         src={img}
                         alt={`${service.title} ${i + 1}`}
-                        className="w-full h-32 sm:h-40 md:h-48 object-cover rounded-lg"
+                        className="w-full h-32 sm:h-40 md:h-48 object-cover object-top rounded-lg"
                         loading="lazy"
                       />
                     ))}
