@@ -1,7 +1,7 @@
 import React from 'react'
 import Hero from '../components/homeSections/Hero'
 import VideoSection from '../components/homeSections/VideoSection'
-// import PortfolioSection from '../components/homeSections/PortfolioSection'
+import PortfolioSection from '../components/homeSections/PortfolioSection'
 import ServiceSection from '../components/homeSections/ServiceSection'
 import StickyScroll from '../components/homeSections/StickyScroll'
 import ArticlePreviews from '../components/homeSections/ArticlePreviews'
@@ -22,7 +22,7 @@ const Home = () => {
       <StickyScroll />
       <ServiceSection />
       <PortfolioSection />
-      {/* <Testimonial /> */}
+      <Testimonial />
     </>
   )
 }

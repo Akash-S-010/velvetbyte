@@ -1,75 +1,88 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
-    text: "This ERP revolutionized our operations, streamlining finance and inventory. The cloud-based platform keeps us productive, even remotely.",
-    image: "https://randomuser.me/api/portraits/women/1.jpg",
-    name: "Briana Patton",
-    role: "Operations Manager",
+    text: "VelvetByte built our Shopify store from scratch and it's been a game-changer. The design is clean, checkout is smooth, and we've seen a 50% increase in conversions. They handled everything from product setup to payment integration perfectly.",
+    image:
+      "https://ui-avatars.com/api/?name=Sarah+Mitchell&background=fd7e14&color=fff&size=128&bold=true",
+    name: "Sarah Mitchell",
+    role: "E-commerce Business Owner",
   },
   {
-    text: "Implementing this ERP was smooth and quick. The customizable, user-friendly interface made team training effortless.",
-    image: "https://randomuser.me/api/portraits/men/2.jpg",
-    name: "Bilal Ahmed",
-    role: "IT Manager",
+    text: "We needed a fast, modern website and VelvetByte delivered a stunning React site that loads instantly. The animations are smooth, it's fully responsive, and our bounce rate dropped by 35%. Highly professional work!",
+    image:
+      "https://ui-avatars.com/api/?name=Alex+Chen&background=000000&color=fff&size=128&bold=true",
+    name: "Alex Chen",
+    role: "Tech Startup Founder",
   },
   {
-    text: "The support team is exceptional, guiding us through setup and providing ongoing assistance, ensuring our satisfaction.",
-    image: "https://randomuser.me/api/portraits/women/3.jpg",
-    name: "Saman Malik",
-    role: "Customer Support Lead",
+    text: "VelvetByte developed a full-stack web application for our business with custom dashboards, user authentication, and real-time features. The platform is robust, scalable, and exactly what we needed. Excellent development team!",
+    image:
+      "https://ui-avatars.com/api/?name=Priya+Kapoor&background=fd7e14&color=fff&size=128&bold=true",
+    name: "Priya Kapoor",
+    role: "SaaS Company CEO",
   },
   {
-    text: "This ERP's seamless integration enhanced our business operations and efficiency. Highly recommend for its intuitive interface.",
-    image: "https://randomuser.me/api/portraits/men/4.jpg",
-    name: "Omar Raza",
-    role: "CEO",
-  },
-  {
-    text: "Its robust features and quick support have transformed our workflow, making us significantly more efficient.",
-    image: "https://randomuser.me/api/portraits/women/5.jpg",
-    name: "Zainab Hussain",
-    role: "Project Manager",
-  },
-  {
-    text: "The smooth implementation exceeded expectations. It streamlined processes, improving overall business performance.",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-    name: "Aliza Khan",
-    role: "Business Analyst",
-  },
-  {
-    text: "Our business functions improved with a user-friendly design and positive customer feedback.",
-    image: "https://randomuser.me/api/portraits/men/7.jpg",
-    name: "Farhan Siddiqui",
+    text: "Their digital marketing strategy transformed our online presence. From SEO to social media campaigns, VelvetByte knows how to drive real results. Our website traffic increased 3x and lead generation is up 60%!",
+    image:
+      "https://ui-avatars.com/api/?name=James+Rodriguez&background=000000&color=fff&size=128&bold=true",
+    name: "James Rodriguez",
     role: "Marketing Director",
   },
   {
-    text: "They delivered a solution that exceeded expectations, understanding our needs and enhancing our operations.",
-    image: "https://randomuser.me/api/portraits/women/8.jpg",
-    name: "Sana Sheikh",
-    role: "Sales Manager",
+    text: "I needed a complete rebrand and VelvetByte nailed it. They created our logo, brand guidelines, business cards, and social media templates. Everything is cohesive, professional, and our brand finally stands out in the market.",
+    image:
+      "https://ui-avatars.com/api/?name=Emma+Taylor&background=fd7e14&color=fff&size=128&bold=true",
+    name: "Emma Taylor",
+    role: "Small Business Owner",
   },
   {
-    text: "Using this ERP, our online presence and conversions significantly improved, boosting business performance.",
-    image: "https://randomuser.me/api/portraits/men/9.jpg",
-    name: "Hassan Ali",
-    role: "E-commerce Manager",
+    text: "VelvetByte designed all our marketing materials - brochures, flyers, and digital ads. The graphic design quality is exceptional and really captures our brand identity. Our campaigns look premium and professional now.",
+    image:
+      "https://ui-avatars.com/api/?name=David+Kumar&background=000000&color=fff&size=128&bold=true",
+    name: "David Kumar",
+    role: "Creative Director",
+  },
+  {
+    text: "They built our mobile app for both iOS and Android and the experience is flawless. The UI is intuitive, performance is excellent, and our users love it. VelvetByte handled everything from design to deployment seamlessly.",
+    image:
+      "https://ui-avatars.com/api/?name=Lisa+Anderson&background=fd7e14&color=fff&size=128&bold=true",
+    name: "Lisa Anderson",
+    role: "Product Manager",
+  },
+  {
+    text: "We hired VelvetByte to build a custom e-commerce platform with advanced features. They delivered a powerful, scalable solution with inventory management, analytics, and seamless payment processing. Outstanding work!",
+    image:
+      "https://ui-avatars.com/api/?name=Michael+Patel&background=000000&color=fff&size=128&bold=true",
+    name: "Michael Patel",
+    role: "Retail Business Owner",
+  },
+  {
+    text: "VelvetByte created a beautiful portfolio website for my freelance business using React. It's fast, modern, and showcases my work perfectly. I've been getting more client inquiries since launching it!",
+    image:
+      "https://ui-avatars.com/api/?name=Sophie+Williams&background=fd7e14&color=fff&size=128&bold=true",
+    name: "Sophie Williams",
+    role: "Freelance Designer",
   },
 ];
 
 const TestimonialsColumn = ({ className, testimonials, duration }) => {
   return (
-    <div className={className}>
+    <div className={className} style={{ willChange: "transform" }}>
       <motion.div
-        animate={{ translateY: '-50%' }}
+        animate={{ translateY: "-50%" }}
         transition={{
           duration: duration || 10,
           repeat: Infinity,
-          ease: 'linear',
-          repeatType: 'loop',
+          ease: "linear",
+          repeatType: "loop",
         }}
         className="flex flex-col gap-6 pb-6 bg-white"
+        style={{
+          willChange: "transform",
+          transform: "translate3d(0, 0, 0)", // Force GPU acceleration
+        }}
       >
         {Array(2)
           .fill(0)
@@ -88,10 +101,21 @@ const TestimonialsColumn = ({ className, testimonials, duration }) => {
                       src={image}
                       alt={name}
                       className="h-10 w-10 rounded-full"
+                      loading="eager"
+                      decoding="async"
+                      style={{
+                        transform: "translate3d(0, 0, 0)", // Prevent sub-pixel rendering issues
+                        backfaceVisibility: "hidden",
+                        WebkitBackfaceVisibility: "hidden",
+                      }}
                     />
                     <div className="flex flex-col">
-                      <div className="font-medium tracking-tight leading-5">{name}</div>
-                      <div className="leading-5 opacity-60 tracking-tight">{role}</div>
+                      <div className="font-medium tracking-tight leading-5">
+                        {name}
+                      </div>
+                      <div className="leading-5 opacity-60 tracking-tight">
+                        {role}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -119,7 +143,8 @@ const Testimonial = () => {
           className="flex flex-col items-center justify-center mx-auto"
         >
           <h2 className="text-center text-2xl sm:text-4xl md:text-6xl font-semibold tracking-tighter mt-5">
-            <span className='text-primary'>Trusted</span> By <br />Startups and Entrepreneurs
+            <span className="text-primary">Trusted</span> By <br />
+            Startups and Entrepreneurs
           </h2>
           <p className="text-center text-xs md:text-lg mt-5 opacity-75">
             See what our customers have to say about us.
@@ -128,17 +153,21 @@ const Testimonial = () => {
 
         <div className="flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
           <TestimonialsColumn testimonials={firstColumn} duration={15} />
-          <TestimonialsColumn testimonials={thirdColumn} duration={15} className="hidden md:block" />
+          <TestimonialsColumn
+            testimonials={thirdColumn}
+            duration={15}
+            className="hidden md:block"
+          />
           <TestimonialsColumn
             testimonials={secondColumn}
             className="hidden md:block"
             duration={19}
           />
-          <TestimonialsColumn
+          {/* <TestimonialsColumn
             testimonials={thirdColumn}
             className="hidden lg:block"
             duration={17}
-          />
+          /> */}
         </div>
       </div>
     </section>
