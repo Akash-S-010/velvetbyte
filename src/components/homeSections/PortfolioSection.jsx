@@ -3,8 +3,10 @@ import { motion } from 'framer-motion';
 import { ShoppingCart, Code, BarChart2, Palette, Smartphone, Briefcase, MoveRight } from 'lucide-react';
 import Card from '../ui/Card';
 import Button from '../ui/Button';
+import { useNavigate } from 'react-router-dom';
 
 const PortfolioSection = () => {
+  const navigate = useNavigate()
   const projects = [
     {
       title: 'E-commerce Platform',
@@ -98,7 +100,7 @@ const PortfolioSection = () => {
         </div>
 
         {/* Call to Action */}
-          <Button text="View All Projects" className={"mt-14 mx-auto"}/>
+          <Button text="View All Projects" className={"mt-14 mx-auto"} onClick={()=>navigate("/portfolio")}/>
       </div>
     </section>
   );

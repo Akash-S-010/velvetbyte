@@ -22,7 +22,7 @@ const Home = () => {
       <StickyScroll />
       <ServiceSection />
       <PortfolioSection />
-      <Testimonial />
+      {/* <Testimonial /> */}
     </>
   )
 }
