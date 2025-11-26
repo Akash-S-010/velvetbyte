@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import Button from "../components/ui/Button";
 import FloatingInput from "../components/ui/FloatingInput";
 // import videoBg from "../assets/contactVideoBg.png";
@@ -22,6 +23,29 @@ const ContactUs = () => {
 
   const handleVideoLoad = () => {
     setVideoLoaded(true);
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.25, 0.46, 0.45, 0.94],
+      },
+    },
   };
 
   // Form validation
@@ -173,13 +197,23 @@ const ContactUs = () => {
           </h2>
         </div> */}
         <div className="h-full flex items-end justify-center pb-4">
-          <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-6xl text-white font-light md:leading-30">
-            Ready to Start Your
-            <span className="block text-5xl  sm:text-[9vw] md:text-[12vw] font-bold">
+          <motion.h2
+            className="text-xl sm:text-3xl md:text-4xl lg:text-6xl text-white font-light md:leading-30"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.span variants={itemVariants} className="block">
+              Ready to Start Your
+            </motion.span>
+            <motion.span
+              variants={itemVariants}
+              className="block text-5xl  sm:text-[9vw] md:text-[12vw] font-bold"
+            >
               Next
               <span className="text-primary"> Project ?</span>
-            </span>
-          </h2>
+            </motion.span>
+          </motion.h2>
         </div>
       </div>
       {/* Contact Form */}

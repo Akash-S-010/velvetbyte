@@ -2,7 +2,7 @@ import React from "react";
 
 const CreativeWebHero = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 text-center relative px-5 py-20 font-sans">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-white text-center relative px-5 py-20 font-sans">
       {/* Header Tag */}
       <div className="flex items-center mb-5">
         <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>

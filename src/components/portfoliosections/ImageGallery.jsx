@@ -80,9 +80,6 @@ const projects = [
 const ImageGallery = () => {
   return (
     <div className="container mx-auto px-4 py-16 bg-white-200">
-      <h2 className="text-2xl md:text-5xl font-semibold text-center text-black mb-6 md:mb-14">
-        Explore Our <span className='text-primary'>Works</span>
-      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[250px] lg:auto-rows-[400px]">
         {projects.map((project) => (
           <motion.div
