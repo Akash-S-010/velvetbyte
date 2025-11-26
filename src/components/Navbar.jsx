@@ -178,7 +178,7 @@ const Navbar = () => {
                     {/* Only show button if not active page */}
                     {!isActive && (
                       <div className="mt-6">
-                        <button className="px-5 py-2 rounded-md text-sm font-semibold transition-all bg-primary text-white hover:bg-primary/80">
+                        <button className="hover:cursor-pointer px-5 py-2 rounded-md text-sm font-semibold transition-all bg-primary text-white hover:bg-orange-500">
                           Visit
                         </button>
                       </div>
