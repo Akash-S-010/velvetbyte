@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Button from "../components/ui/Button";
 import FloatingInput from "../components/ui/FloatingInput";
-// import videoBg from "../assets/contactVideoBg.png";
-// import contactBg from "../assets/contactBg.mp4";
 import { Mail, MapPin, Phone } from "lucide-react";
 import ClientsSection from "../components/ui/ClientSection";
 import SuccessModal from "../components/ui/SuccessModal";
@@ -162,40 +160,6 @@ const ContactUs = () => {
   return (
     <>
       <div className="relative w-full h-[20vh] md:h-[60vh] overflow-hidden bg-black">
-        {/* {!videoLoaded && (
-          <div
-            className="absolute top-0 left-0 w-full h-full object-cover sm:object-fill bg-gray-300"
-            style={{
-              backgroundImage: `url(${videoBg})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          ></div>
-        )}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          poster={videoBg}
-          preload="auto"
-          onLoadedData={handleVideoLoad}
-          className={`absolute top-0 left-0 w-full h-full object-cover sm:object-fill ${
-            videoLoaded ? "" : "hidden"
-          }`}
-        >
-          <source src={contactBg} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div className="absolute inset-0 opacity-20 bg-black z-2"></div>
-        <div className="relative z-10 flex items-center h-full text-white text-start px-5 md:px-20">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-semibold md:leading-18">
-            Ready to Start
-            <br />
-            Your Next
-            <span className="text-primary"> Project ?</span>
-          </h2>
-        </div> */}
         <div className="h-full flex items-end justify-center pb-4">
           <motion.h2
             className="text-xl sm:text-3xl md:text-4xl lg:text-6xl text-white font-light md:leading-30"

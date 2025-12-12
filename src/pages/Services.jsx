@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import StickySection from "../components/ui/StickySection";
-// import videoBg from "../assets/videoBg.png";
-// import serviceBg from "../assets/serviceBg.mp4";
 import ClientsSection from "../components/ui/ClientSection";
 
 const Services = () => {
@@ -148,32 +146,6 @@ const Services = () => {
   return (
     <section className="min-h-screen">
       <div className="relative w-full h-[20vh] md:h-[60vh] overflow-hidden">
-        {/* {!videoLoaded && (
-          <div
-            className="absolute top-0 left-0 w-full h-full object-cover sm:object-fill bg-gray-300"
-            style={{ backgroundImage: `url(${videoBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-          ></div>
-        )}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          poster={videoBg}
-          preload="auto"
-          onLoadedData={handleVideoLoad}
-          className={`absolute top-0 left-0 w-full h-full object-cover sm:object-fill ${videoLoaded ? '' : 'hidden'}`}
-        >
-          <source src={serviceBg} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div className="absolute inset-0 opacity-50 bg-black z-2"></div>
-        <div className="relative z-10 flex items-center h-full text-white text-start px-5 md:px-20">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-semibold md:leading-18">
-            Services We <br />
-            <span className="text-primary">Confidently</span> Deliver.
-          </h2>
-        </div> */}
         <div className="h-full flex items-end justify-center pb-4 bg-black">
           <motion.h2
             className="text-xl sm:text-3xl md:text-4xl lg:text-6xl text-white font-light md:leading-30"
