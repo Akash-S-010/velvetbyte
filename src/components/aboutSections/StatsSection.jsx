@@ -2,9 +2,9 @@ import React, { useEffect, useState, useRef } from "react";
 
 const StatsSection = () => {
   const stats = [
-    { id: 1, value: 25, label: "Team Specialists" },
-    { id: 2, value: 500, label: "Bespoke Websites" },
-    { id: 3, value: 503, label: "Clients across the globe" },
+    { id: 1, value: 15, label: "Team Specialists", suffix: "" },
+    { id: 2, value: 25, label: "Bespoke Websites", suffix: "+" },
+    { id: 3, value: 25, label: "Clients across the globe", suffix: "+" },
   ];
 
   const [visible, setVisible] = useState(false);
@@ -40,14 +40,14 @@ const StatsSection = () => {
           targetValue={stat.value}
           label={stat.label}
           visible={visible}
+          suffix={stat.suffix}
         />
       ))}
     </section>
   );
 };
 
-
-const CounterCard = ({ targetValue, label, visible }) => {
+const CounterCard = ({ targetValue, label, visible, suffix }) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -73,10 +73,10 @@ const CounterCard = ({ targetValue, label, visible }) => {
           fontSize: "80px",
           color: "#fd7e14",
           margin: "0",
-          fontWeight: "700",
+          fontWeight: "500",
         }}
       >
-        {count}
+        {count}{suffix}
       </h1>
       <p
         style={{

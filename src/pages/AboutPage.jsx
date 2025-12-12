@@ -11,7 +11,7 @@ function AboutPage() {
       <AboutHero />
       <ClientSection />
       <StatsSection />
-      <div className="mt-10">
+      <div className="mt-38 mb-20">
         <h1 className="text-2xl md:text-3xl lg:text-5xl text-center font-semibold mb-6 md:mb-10">
           Meet Our <span className="text-primary">Team</span>
         </h1>
